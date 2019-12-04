@@ -17,6 +17,8 @@ public class LineChartsValues {
 		} else {
 			this.C = 0.7;
 		}
+		
+		//popopo
 	}
 	
 	public Double getAlcoolValue(double t) {
