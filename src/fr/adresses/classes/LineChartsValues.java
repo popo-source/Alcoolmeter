@@ -6,6 +6,7 @@ public class LineChartsValues {
 	private Person person;
 	private double M;
 	private double C;
+	private boolean eat;
 	
 	XYChart.Series<Number, Number> series1 = new XYChart.Series<>();
 	
@@ -17,6 +18,10 @@ public class LineChartsValues {
 		} else {
 			this.C = 0.7;
 		}
+	}
+	
+	public void setEat() {
+		
 	}
 	
 	public Double getAlcoolValue(double t) {
