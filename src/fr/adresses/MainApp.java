@@ -17,9 +17,7 @@ public class MainApp extends Application {
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AlcoolApp");
 	}
-	
-	//Yeaaaaaah
-	//JAAAMAAAAAAAAAM
+
 
 	public static void main(String[] args) {
 		launch(args);
