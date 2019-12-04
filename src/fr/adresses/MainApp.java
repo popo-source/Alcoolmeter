@@ -26,7 +26,6 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("AlcoolApp");
 	}
 
-
 	/*
 	 * ???TODO RootLayout FXML
 	 * ???TODO RootLayoutController
@@ -49,7 +48,6 @@ public class MainApp extends Application {
 	 * 
 	 * 
 	 */
-	
 	
 	public boolean showGraphic(Person person) {
 		try {
