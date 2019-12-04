@@ -17,8 +17,6 @@ public class LineChartsValues {
 		} else {
 			this.C = 0.7;
 		}
-		
-		
 	}
 	
 	public Double getAlcoolValue(double t) {
