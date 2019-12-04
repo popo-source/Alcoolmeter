@@ -80,6 +80,10 @@ public class MainApp extends Application {
 	       }
 	}
 	
+	public ObservableList<Person> getPersonData() {
+        return personData;
+    }
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
