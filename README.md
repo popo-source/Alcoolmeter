@@ -1,3 +1,3 @@
 # Alcoolmeter
 
-# Paul Hauser // Lucas Gigondan // Gill Flasch-Trauth
+# Paul Hauser // Lucas Gigondan // Gill Flassch-Trauth
