@@ -19,6 +19,29 @@ public class MainApp extends Application {
 	}
 
 
+	/*
+	 * ???TODO RootLayout FXML
+	 * ???TODO RootLayoutController
+	 * ???TODO Save in RootLayout as a XML file
+	 * 
+	 * TODO MainOverview FXML
+	 * TODO MainOverviewController
+	 * 
+	 * TODO PersonEditDialog FXML
+	 * TODO PersonEditDialogController
+	 * 
+	 * TODO AlcoolEditDialog FXML
+	 * TODO AlcoolEditDialogController
+	 * 
+	 * TODO GraphicOverview FXML
+	 * TODO GraphicOverviewController
+	 * 
+	 *
+	 * 
+	 * 
+	 * 
+	 */
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
