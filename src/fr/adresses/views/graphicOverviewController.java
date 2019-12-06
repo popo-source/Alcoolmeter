@@ -36,7 +36,7 @@ public class graphicOverviewController{
 		FirstName.setText(person.getFirstName());
 		LastName.setText(person.getLastName());
 		Sex.setText(person.getSex());
-		Weight.setText(person.getWeight());
+		Weight.setText(Double.toString(person.getWeight()));
     }
 	
 	

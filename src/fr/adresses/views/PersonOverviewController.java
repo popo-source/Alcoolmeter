@@ -34,25 +34,24 @@ public class PersonOverviewController {
 	@FXML
 	private Label eatLabel;
 
-	// Reference to the main application.
+	
 	private MainApp main;
 
-	/**
-	 * The constructor.
-	 * The constructor is called before the initialize() method.
-	 */
+	public void setMain(MainApp main) {
+		this.main = main;
+		personTable.setItems(main.getPersonData());
+	}
+
 	public PersonOverviewController() {
 	}
 	private void showPersonDetails(Person person) {
 		if (person != null) {
-			// Fill the labels with info from the person object.
 			firstNameLabel.setText(person.getFirstName());
 			lastNameLabel.setText(person.getLastName());
-			weightLabel.setText(person.getWeight());
+			weightLabel.setText(Double.toString(person.getWeight()));
 			sexLabel.setText(person.getSex());
 
 		} else {
-			// Person is null, remove all the text.
 			firstNameLabel.setText("");
 			lastNameLabel.setText("");
 			weightLabel.setText("");
@@ -62,23 +61,22 @@ public class PersonOverviewController {
 	}
 	private void showPersonConsommation(Alcool alcool) {
 		if (alcool != null) {
-			// Fill the labels with info from the alcool object.
 			alcoolNameLabel.setText(alcool.getAlcoolName());
 			doseLabel.setText(Integer.toString(alcool.getDose()));
 
 		} else {
-			// alcool is null, remove all the text.
 			firstNameLabel.setText("");
 			lastNameLabel.setText("");
 		}
 	}
 
 	
-
+	
 	/**
 	 * Initializes the controller class. This method is automatically called
 	 * after the fxml file has been loaded.
 	 */
+	/*
 	@FXML
 	private void initialize() {
 		// Initialize the person table with the two columns.
@@ -90,7 +88,7 @@ public class PersonOverviewController {
 		// Clear person details.
 		showPersonDetails(null);
 		showPersonConsommation(null);
-		showPersonEat(null);
+		
 
 		// Listen for selection changes and show the person details when changed.
 		personTable.getSelectionModel().selectedItemProperty().addListener(
@@ -113,16 +111,11 @@ public class PersonOverviewController {
 		}
 	}
 
-
+	*/
 	/**
 	 * Is called by the main application to give a reference back to itself.
 	 * 
 	 * @param main
 	 */
-	public void setMain(MainApp main) {
-		this.main = main;
-
-		// Add observable list data to the table
-		personTable.setItems(main.getPersonData());
-	}
+	
 }

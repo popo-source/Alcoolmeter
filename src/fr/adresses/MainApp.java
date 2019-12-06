@@ -57,35 +57,6 @@ public class MainApp extends Application {
 	 * 
 	 */
 	
-	public boolean showGraphic(Person person) {
-		try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/GraphicOverview.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
-
-            Stage dialogStage = new Stage();
-            dialogStage.setTitle(person.getFirstName());
-            dialogStage.initModality(Modality.WINDOW_MODAL);
-            dialogStage.initOwner(primaryStage);
-            Scene scene = new Scene(page);
-            dialogStage.setScene(scene);
-
-            LineChartsValues values = new LineChartsValues(person);
-            
-            graphicOverviewController controller = loader.getController();
-            controller.setDialogStage(dialogStage);
-            controller.setPerson(person);
-            controller.setChart(values.getChart());
-
-            dialogStage.showAndWait();
-            return controller.isOkClicked();
-            
-	       } catch (IOException e) {
-	           e.printStackTrace();
-	           return false;
-	       }
-	}
-	
 	public ObservableList<Person> getPersonData() {
         return personData;
     }

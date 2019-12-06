@@ -13,7 +13,7 @@ public class LineChartsValues {
 	
 	public LineChartsValues(Person person) {
 		this.person = person;
-		this.M = Double.parseDouble(person.getWeight());
+		this.M = person.getWeight();
 		if(person.getSex().toString()=="weiblich") {
 			this.C = 0.6;
 		} else {
