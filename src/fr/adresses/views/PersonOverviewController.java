@@ -35,7 +35,7 @@ public class PersonOverviewController {
 	private Label eatLabel;
 
 	// Reference to the main application.
-	private Main main;
+	private MainApp main;
 
 	/**
 	 * The constructor.
@@ -73,16 +73,7 @@ public class PersonOverviewController {
 		}
 	}
 
-	private void showPersonEat(Eat eat) {
-		if (eat != null) {
-			// Fill the labels with info from the eat object.
-			eatLabel.setText(Boolean.toString(eat.getEat()));
-
-		} else {
-			// eat is null, remove all the text.
-			eatLabel.setText("");
-		}
-	}
+	
 
 	/**
 	 * Initializes the controller class. This method is automatically called
