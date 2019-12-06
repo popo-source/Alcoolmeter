@@ -14,7 +14,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+/**
+ * 
+ * @author MBach
+ *
+ */
 public class MainApp extends Application {
 
 	private Stage primaryStage;
