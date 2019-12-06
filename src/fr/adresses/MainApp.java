@@ -45,11 +45,14 @@ public class MainApp extends Application {
 	 * TODO AlcoolEditDialog FXML
 	 * TODO AlcoolEditDialogController
 	 * 
+	 * TODO AlcoolQuantityEditDialog FXML
+	 * TODO AlcoolQuantityEditDialogController
+	 * 
 	 * TODO GraphicOverview FXML
 	 * TODO GraphicOverviewController
 	 * 
-	 *
-	 * 
+	 * TODO DeleteView FXML
+	 * TODO DeleteViewController
 	 * 
 	 * 
 	 */
