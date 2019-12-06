@@ -1,5 +1,6 @@
-package fr.adresses.classes;
+package fr.adresses.utilitary;
 
+import fr.adresses.classes.Person;
 import javafx.scene.chart.XYChart;
 
 public class LineChartsValues {

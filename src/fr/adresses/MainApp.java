@@ -3,7 +3,8 @@ package fr.adresses;
 
 import java.io.IOException;
 
-import fr.adresses.classes.LineChartsValues;
+import fr.adresses.classes.Alcool;
+import fr.adresses.utilitary.LineChartsValues;
 import fr.adresses.classes.Person;
 import fr.adresses.views.graphicOverviewController;
 import javafx.application.Application;
@@ -24,8 +25,12 @@ public class MainApp extends Application {
 	private Stage primaryStage;
 	private ObservableList<Person> personData = FXCollections.observableArrayList();
 	
+	private ObservableList<Alcool> alcoolData = FXCollections.observableArrayList();
+	
 	@Override
 	public void start(Stage primaryStage) {
+		
+		
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AlcoolApp");
 	}

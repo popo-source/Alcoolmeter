@@ -48,7 +48,7 @@ public class PersonOverviewController {
 			// Fill the labels with info from the person object.
 			firstNameLabel.setText(person.getFirstName());
 			lastNameLabel.setText(person.getLastName());
-			weightLabel.setText(Integer.toString(person.getWeight()));
+			weightLabel.setText(person.getWeight());
 			sexLabel.setText(person.getSex());
 
 		} else {
@@ -119,7 +119,7 @@ public class PersonOverviewController {
 	 * 
 	 * @param main
 	 */
-	public void setMain(Main main) {
+	public void setMain(MainApp main) {
 		this.main = main;
 
 		// Add observable list data to the table

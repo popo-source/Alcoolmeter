@@ -7,7 +7,8 @@ import javafx.beans.property.StringProperty;
 
 public class Alcool {
 	private final StringProperty alcoolName;
-	private final IntegerProperty dose;
+	private IntegerProperty quantity;
+	private final IntegerProperty degree;
 	
 	 public Alcool() {
 	        this(null, null);
@@ -16,10 +17,13 @@ public class Alcool {
 	public Alcool(String alcoolName, String dose) {
 
 		this.alcoolName = new SimpleStringProperty("rhum");
-		this.dose = new SimpleIntegerProperty(3);
+		this.degree = new SimpleIntegerProperty(3);
+		this.quantity = new SimpleIntegerProperty(0);
 	}
 
-	 public String getAlcoolName() {
+	
+	
+	public String getAlcoolName() {
 	        return alcoolName.get();
 	    }
 
@@ -32,14 +36,14 @@ public class Alcool {
 	    }
 
 	    public int getDose() {
-	        return dose.get();
+	        return degree.get();
 	    }
 
 	    public void setDose(int dose) {
-	        this.dose.set(dose);
+	        this.degree.set(dose);
 	    }
 	    
 	    public IntegerProperty doseProperty() {
-	        return dose;
+	        return degree;
 	    }
 }
