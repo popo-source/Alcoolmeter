@@ -16,7 +16,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 /**
  * 
- * m.bachmann
+ * matthias.bachmann
  *
  */
 public class MainApp extends Application {
