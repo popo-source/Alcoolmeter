@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
 
 	private Stage primaryStage;
+	private BorderPane rootLayout;
 	
 	private ObservableList<Person> personData = FXCollections.observableArrayList();
 	private ObservableList<Alcool> alcoolData = FXCollections.observableArrayList();
@@ -66,7 +67,7 @@ public class MainApp extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("views/RootLayout.fxml"));
-			Pane rootLayout = loader.load();
+			rootLayout = (BorderPane) loader.load();
 			
 			Scene scene = new Scene(rootLayout);
 	        primaryStage.setScene(scene);
@@ -75,6 +76,7 @@ public class MainApp extends Application {
 	        controller.setMainApp(this);
 	        
 	        primaryStage.show();
+	        
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
