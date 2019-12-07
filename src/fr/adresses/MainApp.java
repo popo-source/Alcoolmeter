@@ -38,8 +38,8 @@ public class MainApp extends Application {
 	}
 
 	/*
-	 * ???TODO RootLayout FXML
-	 * ???TODO RootLayoutController
+	 * ???TODO RootLayout FXML --> TODO to complete
+	 * ???TODO RootLayoutController --> TODO to complete
 	 * ???TODO Save in RootLayout as a XML file
 	 * 
 	 * TODO MainOverview FXML
