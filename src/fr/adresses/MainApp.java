@@ -78,9 +78,6 @@ public class MainApp extends Application {
 	        
 	        RootLayoutController controller = loader.getController();
 	        controller.setMainApp(this);
-	        
-	        
-	        
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -96,8 +93,6 @@ public class MainApp extends Application {
 			
 			MainOverviewController controller = loader.getController();
 			controller.setMainApp(this);
-			
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
