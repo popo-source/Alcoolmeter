@@ -5,10 +5,9 @@ package fr.adresses;
 
 import java.io.IOException;
 
-import ch.makery.address.MainApp;
-import ch.makery.address.view.PersonOverviewController;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
+import fr.adresses.views.MainOverviewController;
 import fr.adresses.views.RootLayoutController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -85,7 +84,6 @@ public class MainApp extends Application {
 		}
 	}
 	
-	
 	public void showMainOverview() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
@@ -93,14 +91,12 @@ public class MainApp extends Application {
 			AnchorPane personOverview = (AnchorPane) loader.load();
 			
 			rootLayout.setCenter(personOverview);
-
-       
+			
 			MainOverviewController controller = loader.getController();
 			controller.setMainApp(this);
-
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	
