@@ -5,6 +5,8 @@ package fr.adresses;
 
 import java.io.IOException;
 
+import ch.makery.address.MainApp;
+import ch.makery.address.view.PersonOverviewController;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
 import fr.adresses.views.RootLayoutController;
@@ -35,6 +37,7 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("AlcoolApp");
         
         initRootLayout();
+        showMainOverview();
 	}
 
 	/*
@@ -81,6 +84,25 @@ public class MainApp extends Application {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	public void showMainOverview() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
+			AnchorPane personOverview = (AnchorPane) loader.load();
+			
+			rootLayout.setCenter(personOverview);
+
+       
+			MainOverviewController controller = loader.getController();
+			controller.setMainApp(this);
+
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+	}
+	
 	
 	
 	
