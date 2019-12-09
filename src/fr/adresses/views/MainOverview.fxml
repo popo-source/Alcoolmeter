@@ -10,16 +10,18 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.adresses.views.MainOverviewController">
    <children>
-      <BorderPane prefHeight="400.0" prefWidth="600.0">
+      <BorderPane>
          <left>
             <TableView prefHeight="298.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn prefWidth="104.0" text="Firstname" />
                 <TableColumn prefWidth="95.0" text="Lastname" />
               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
             </TableView>
          </left>
          <right>
@@ -28,11 +30,11 @@
                 <TableColumn prefWidth="100.0" text="Alcool you drink" />
                 <TableColumn prefWidth="99.0" text="Quantity" />
               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
             </TableView>
          </right>
-         <top>
-            <Label text="Alcooltest" BorderPane.alignment="CENTER" />
-         </top>
          <bottom>
             <VBox prefHeight="85.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
@@ -61,6 +63,9 @@
                 <TableColumn prefWidth="97.0" text="Alcool" />
                 <TableColumn prefWidth="102.0" text="Degree" />
               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
             </TableView>
          </center>
       </BorderPane>
