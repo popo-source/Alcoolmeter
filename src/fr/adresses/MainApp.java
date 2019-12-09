@@ -37,6 +37,8 @@ public class MainApp extends Application {
         
         initRootLayout();
         showMainOverview();
+        
+        primaryStage.show();
 	}
 
 	/*
@@ -77,7 +79,7 @@ public class MainApp extends Application {
 	        RootLayoutController controller = loader.getController();
 	        controller.setMainApp(this);
 	        
-	        primaryStage.show();
+	        
 	        
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -87,13 +89,15 @@ public class MainApp extends Application {
 	public void showMainOverview() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
-			AnchorPane personOverview = (AnchorPane) loader.load();
+			loader.setLocation(MainApp.class.getResource("views/MainOverview.fxml"));
+			AnchorPane mainOverview = (AnchorPane) loader.load();
 			
-			rootLayout.setCenter(personOverview);
+			rootLayout.setCenter(mainOverview);
 			
 			MainOverviewController controller = loader.getController();
 			controller.setMainApp(this);
+			
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
