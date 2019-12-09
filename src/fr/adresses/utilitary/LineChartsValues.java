@@ -1,9 +1,11 @@
-package fr.adresses.classes;
+package fr.adresses.utilitary;
 
+import fr.adresses.classes.Person;
 import javafx.scene.chart.XYChart;
 
 public class LineChartsValues {
 	private Person person;
+	private double V;
 	private double M;
 	private double C;
 	private boolean eat;
@@ -12,7 +14,7 @@ public class LineChartsValues {
 	
 	public LineChartsValues(Person person) {
 		this.person = person;
-		this.M = Double.parseDouble(person.getWeight());
+		this.M = person.getWeight();
 		if(person.getSex().toString()=="weiblich") {
 			this.C = 0.6;
 		} else {
@@ -20,8 +22,12 @@ public class LineChartsValues {
 		}
 	}
 	
-	public void setEat() {
-		
+	public void setEat(boolean eat) {
+		this.eat = eat;
+	}
+	
+	public void setQuantity(double quantity) {
+		this.V = quantity;
 	}
 	
 	public Double getAlcoolValue(double t) {
@@ -30,6 +36,8 @@ public class LineChartsValues {
 		//double M = 80;//M la masse corporelle (en kg)
 		double m = 12;//m la masse d'éthanol pur (en grammes), où m = 0,79 V, où V est le volume en mL ou en centimètres cubes
 		//double C = 0.7;//coefficient de diffusion C (qui vaut 0,7 si on est un homme, ou 0,6 si on est une femme),
+		
+		
 		
 		double A = (w*m*T / (C * M))*t*(Math.exp(-t));
 		return A;

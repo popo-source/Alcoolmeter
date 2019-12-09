@@ -1,5 +1,7 @@
 package fr.adresses.classes;
 
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -7,17 +9,17 @@ public class Person {
 	private final StringProperty firstName;
     private final StringProperty lastName;
     private final StringProperty sex;
-    private final StringProperty weight;
+    private final DoubleProperty weight;
     
     public Person() {
         this(null, null, null, null);
     }
     
-    public Person(String firstName, String lastName, String sex, String weight) {
+    public Person(String firstName, String lastName, String sex, Double weight) {
     	this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
         this.sex = new SimpleStringProperty(sex);
-        this.weight = new SimpleStringProperty(weight);
+        this.weight = new SimpleDoubleProperty(weight);
     }
 
 	//FirstName
@@ -54,13 +56,13 @@ public class Person {
 	}
 	
 	//Weight
-	public String getWeight() {
+	public Double getWeight() {
 		return weight.get();
 	}
-	public void setWeight(String weight) {
+	public void setWeight(Double weight) {
 		this.weight.set(weight);
 	}
-	public StringProperty weightProperty() {
+	public DoubleProperty weightProperty() {
 		return weight;
 	}
 }
