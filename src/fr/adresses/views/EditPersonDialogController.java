@@ -38,6 +38,12 @@ public class EditPersonDialogController {
 		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
 		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
 		weightColumn.setCellValueFactory(cellData -> cellData.getValue().weightProperty());
+
+	    // Clear person details.
+	    showPersonDetails(null);
+
+	    personTable.getSelectionModel().selectedItemProperty().addListener(
+	            (observable, oldValue, newValue) -> showPersonDetails(newValue));
 	}
 
 	private void showPersonDetails(Person person) {

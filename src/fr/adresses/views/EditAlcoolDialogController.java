@@ -34,6 +34,12 @@ public class EditAlcoolDialogController {
         // Initialize the alcool table with the two columns.
         alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
         degreeColumn.setCellValueFactory(cellData -> cellData.getValue().degreeProperty());
+     
+        // Clear alcool details.
+	    showAlcoolDetails(null);
+
+	    alcoolTable.getSelectionModel().selectedItemProperty().addListener(
+	            (observable, oldValue, newValue) -> showPersonDetails(newValue));
     }
     
 	private void showAlcoolDetails(Alcool alcool) {

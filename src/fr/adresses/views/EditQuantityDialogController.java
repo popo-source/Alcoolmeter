@@ -33,6 +33,12 @@ public class EditQuantityDialogController {
 		// Initialize the alcool table with the two columns.
 		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolSelectProperty());
 		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
+		
+		// Clear person details.
+	    showSelectedAlcoolDetails(null);
+
+	    selectedAlcoolTable.getSelectionModel().selectedItemProperty().addListener(
+	            (observable, oldValue, newValue) -> showPersonDetails(newValue));
 	}
 
 	private void showSelectedAlcoolDetails(Alcool selectedAlcool) {
