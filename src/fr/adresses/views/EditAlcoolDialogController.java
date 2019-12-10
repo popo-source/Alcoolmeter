@@ -12,15 +12,16 @@ public class EditAlcoolDialogController {
 
 
     @FXML
-    private Label alcoolNameLabel;
+    private Textfield alcoolNameField;
     @FXML
-    private Label degreeLabel;
+    private Textfield degreeLabelField;
 
-   
-    // Reference to the main application.
-    private MainApp mainApp;
+public EditAlcoolDialogController() {
+    }   
 
-    public EditAlcoolDialogController() {
-    }
-
+private MainApp mainApp;
+	
+	public void setMainApp(MainApp mainApp) {
+		this.mainApp = mainApp;
+	}
 }

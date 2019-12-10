@@ -41,7 +41,6 @@ public class EditPersonDialogController {
 		if (weightField.getText() == null || weightField.getText().length() == 0) {
 			errorMessage += "No valid weight!\n";
 		} else {
-			// try to parse the postal code into an int.
 			try {
 				Integer.parseInt(weightField.getText());
 			} catch (NumberFormatException e) {
