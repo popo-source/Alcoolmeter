@@ -4,6 +4,9 @@ import java.io.IOException;
 
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
+import fr.adresses.views.EditAlcoolDialogController;
+import fr.adresses.views.EditPersonDialogController;
+import fr.adresses.views.EditQuantityDialogController;
 import fr.adresses.views.MainOverviewController;
 import fr.adresses.views.RootLayoutController;
 import javafx.application.Application;
@@ -67,7 +70,7 @@ public class MainApp extends Application {
 		}
 	}
 	
-	public void showPersonOverview() {
+	public void showPersonEditDialogOverview() {
 	    try {
 	        // Load person overview.
 	        FXMLLoader loaderPerson = new FXMLLoader();
@@ -86,7 +89,7 @@ public class MainApp extends Application {
 	    }
 	}
 	
-	public void showAlcoolOverview() {
+	public void showAlcoolEditDialogOverview() {
 	    try {
 	        // Load alcool overview.
 	        FXMLLoader loaderAlcool = new FXMLLoader();
@@ -105,7 +108,7 @@ public class MainApp extends Application {
 	    }
 	}
 	
-	public void showQuantityOverview() {
+	public void showQuantityEditQuantityOverview() {
 	    try {
 	        // Load quantity overview.
 	        FXMLLoader loaderQuantity = new FXMLLoader();
