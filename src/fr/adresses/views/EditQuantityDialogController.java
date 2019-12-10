@@ -23,22 +23,14 @@ public class EditQuantityDialogController {
 	
 	private boolean isInputValid() {
 		String errorMessage = "";
-
-		if (firstNameField.getText() == null || firstNameField.getText().length() == 0) {
-			errorMessage += "No valid first name!\n";
-		}
-		if (lastNameField.getText() == null || lastNameField.getText().length() == 0) {
-			errorMessage += "No valid last name!\n";
-		}
-
-		if (weightField.getText() == null || weightField.getText().length() == 0) {
-			errorMessage += "No valid weight!\n";
+		
+		if (quantityField.getText() == null || quantityField.getText().length() == 0) {
+			errorMessage += "No valid quantity!\n";
 		} else {
-			// try to parse the postal code into an int.
 			try {
-				Integer.parseInt(weightField.getText());
+				Integer.parseInt(quantityField.getText());
 			} catch (NumberFormatException e) {
-				errorMessage += "No valid weight (must be an integer)!\n";
+				errorMessage += "No valid quantity (must be an integer)!\n";
 			}
 		}
 
