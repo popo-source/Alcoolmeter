@@ -29,10 +29,21 @@ public class EditQuantityDialogController {
 	}
 
 	@FXML
-	private void initializeAlcoolSelect() {
+	private void initializeSelectedAlcool() {
 		// Initialize the alcool table with the two columns.
 		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolSelectProperty());
 		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
+	}
+
+	private void showSelectedAlcoolDetails(Alcool selectedAlcool) {
+		if (selectedAlcool != null) {
+			selectedAlcoolLabel.setText(selectedAlcool.getSelectedAlcool());
+			quantityLabel.setText(Integer.toString(selectedAlcool.getQuantity()));
+
+		} else {
+			selectedAlcoolLabel.setText("");
+			quantityLabel.setText("");
+		}
 	}
 
 	public void setMainApp(MainApp mainApp) {

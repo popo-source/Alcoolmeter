@@ -6,6 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import fr.adresses.MainApp;
 import fr.adresses.classes.Alcool;
+import fr.adresses.classes.Person;
 
 public class EditAlcoolDialogController {
 
@@ -34,7 +35,18 @@ public class EditAlcoolDialogController {
         alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
         degreeColumn.setCellValueFactory(cellData -> cellData.getValue().degreeProperty());
     }
+    
+	private void showAlcoolDetails(Alcool alcool) {
+		if (alcool != null) {
+			alcoolNameLabel.setText(alcool.getAlcoolName());
+			degreeLabel.setText(Integer.toString(alcool.getDegree()));
 
+		} else {
+			alcoolNameLabel.setText("");
+			degreeLabel.setText("");
+		}
+	}
+	
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
 
