@@ -9,13 +9,10 @@ import javafx.stage.Stage;
 
 
 public class graphicOverviewController{
+	
 	private boolean okClicked = false;
+	
 	private Stage dialogStage;
-	
-	
-	public void setChart(XYChart.Series<Number, Number> serie) {
-		chart1.getData().add(serie);
-	}
 	
 	@FXML
 	private LineChart<Number, Number> chart1;
@@ -26,6 +23,10 @@ public class graphicOverviewController{
 		dialogStage.close();
 	}
 	
+	public void setChart(XYChart.Series<Number, Number> serie) {
+		chart1.getData().add(serie);
+	}
+	
 	public boolean isOkClicked() {
         return okClicked;
     }
@@ -33,9 +34,5 @@ public class graphicOverviewController{
 	public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
     }
-	
-	
-	
-	
 	
 }

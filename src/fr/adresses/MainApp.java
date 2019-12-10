@@ -4,11 +4,13 @@ import java.io.IOException;
 
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
+import fr.adresses.utilitary.LineChartsValues;
 import fr.adresses.views.EditAlcoolDialogController;
 import fr.adresses.views.EditPersonDialogController;
 import fr.adresses.views.EditQuantityDialogController;
 import fr.adresses.views.MainOverviewController;
 import fr.adresses.views.RootLayoutController;
+import fr.adresses.views.graphicOverviewController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,6 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
@@ -67,8 +70,50 @@ public class MainApp extends Application {
 			controller.setMainApp(this);
 		} catch (IOException e) {
 			e.printStackTrace();
+			
 		}
 	}
+	
+	public boolean showGraphicOverview(Person person) {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainApp.class.getResource("views/GraphicOverview.fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle(person.getFirstName());
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            LineChartsValues values = new LineChartsValues(person);
+            
+            graphicOverviewController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setChart(values.getChart());
+
+            dialogStage.showAndWait();
+            return controller.isOkClicked();
+		}catch(IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public void showPersonEditDialogOverview() {
 	    try {
