@@ -1,8 +1,5 @@
 package fr.adresses;
 
-
-
-
 import java.io.IOException;
 
 import fr.adresses.classes.Alcool;
@@ -28,14 +25,6 @@ public class MainApp extends Application {
 	private ObservableList<Alcool> alcoolData = FXCollections.observableArrayList();
 	private ObservableList<Alcool> selectedAlcoolData = FXCollections.observableArrayList();
 	
-	/*
-	 * 
-	 * 
-	 * popopopopopopopo
-	 * 
-	 */
-
-	
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
@@ -46,32 +35,6 @@ public class MainApp extends Application {
         
         primaryStage.show();
 	}
-
-	/*
-	 * ???TODO RootLayout FXML --> TODO to complete
-	 * ???TODO RootLayoutController --> TODO to complete
-	 * ???TODO Save in RootLayout as a XML file
-	 * 
-	 * TODO MainOverview FXML
-	 * TODO MainOverviewController
-	 * 
-	 * TODO PersonEditDialog FXML
-	 * TODO PersonEditDialogController
-	 * 
-	 * TODO AlcoolEditDialog FXML
-	 * TODO AlcoolEditDialogController
-	 * 
-	 * TODO AlcoolQuantityEditDialog FXML
-	 * TODO AlcoolQuantityEditDialogController
-	 * 
-	 * TODO GraphicOverview FXML
-	 * TODO GraphicOverviewController
-	 * 
-	 * TODO DeleteView FXML
-	 * TODO DeleteViewController
-	 * 
-	 * 
-	 */
 	
 	public void initRootLayout() {
 		try {
@@ -104,7 +67,62 @@ public class MainApp extends Application {
 		}
 	}
 	
+	public void showPersonOverview() {
+	    try {
+	        // Load person overview.
+	        FXMLLoader loaderPerson = new FXMLLoader();
+	        loaderPerson.setLocation(MainApp.class.getResource("views/EditPersonDialog.fxml"));
+	        AnchorPane personOverview = (AnchorPane) loaderPerson.load();
+
+	        // Set person overview into the center of root layout.
+	        rootLayout.setCenter(personOverview);
+
+	        // Give the controller access to the main app.
+	        EditPersonDialogController controllerPerson = loaderPerson.getController();
+	        controllerPerson.setMainApp(this);
+
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
 	
+	public void showAlcoolOverview() {
+	    try {
+	        // Load alcool overview.
+	        FXMLLoader loaderAlcool = new FXMLLoader();
+	        loaderAlcool.setLocation(MainApp.class.getResource("views/EditAlcoolDialog.fxml"));
+	        AnchorPane alcoolOverview = (AnchorPane) loaderAlcool.load();
+
+	        // Set alcool overview into the center of root layout.
+	        rootLayout.setCenter(alcoolOverview);
+
+	        // Give the controller access to the main app.
+	        EditAlcoolDialogController controllerAlcool = loaderAlcool.getController();
+	        controllerAlcool.setMainApp(this);
+
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	public void showQuantityOverview() {
+	    try {
+	        // Load quantity overview.
+	        FXMLLoader loaderQuantity = new FXMLLoader();
+	        loaderQuantity.setLocation(MainApp.class.getResource("views/EditQuantityDialog.fxml"));
+	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
+
+	        // Set quantity overview into the center of root layout.
+	        rootLayout.setCenter(quantityOverview);
+
+	        // Give the controller access to the main app.
+	        EditQuantityDialogController controllerQuantity = loaderQuantity.getController();
+	        controllerQuantity.setMainApp(this);
+
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
 	
 	
 	public ObservableList<Person> getPersonData() {
