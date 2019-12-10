@@ -10,6 +10,8 @@ import javafx.scene.control.TableView;
 
 public class MainOverviewController {
 
+	private MainApp mainApp;
+	
 	@FXML
 	private TableView<Person> personTable;
 	@FXML
@@ -33,6 +35,16 @@ public class MainOverviewController {
 	@FXML
 	private TableColumn<Alcool, String> quantityColumn;
 
+	
+	
+	public void setMainApp(MainApp mainApp) {
+		this.mainApp = mainApp;
+		//personTable.setItems(mainApp.getPersonData());
+		//alcoolTable.setItems(mainApp.getAlcoolData());
+		//selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
+	}
+	
+	
 	/*
 	@FXML
 	private Label firstNameLabel;
@@ -43,7 +55,7 @@ public class MainOverviewController {
 	private Label selectedAlcoolLabel;
 	private Label quantityLabel;
 
-	private MainApp mainApp;
+	
 
 	@FXML
 	private void initializePerson() {
@@ -118,12 +130,7 @@ public class MainOverviewController {
 			quantityLabel.setText("");
 		}
 	}
-	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp;
-		personTable.setItems(mainApp.getPersonData());
-		alcoolTable.setItems(mainApp.getAlcoolData());
-		selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
-	}
+	
 */
 
 }
