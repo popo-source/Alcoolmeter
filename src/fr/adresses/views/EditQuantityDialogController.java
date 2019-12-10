@@ -10,14 +10,14 @@ import fr.adresses.classes.Alcool;
 public class EditQuantityDialogController {
 
 	@FXML
-	private TableView<Alcool> alcoolSelectTable;
+	private TableView<Alcool> selectedAlcoolTable;
 	@FXML
-	private TableColumn<Alcool, String> alcoolSelectColumn;
+	private TableColumn<Alcool, String> selectedAlcoolColumn;
 	@FXML
 	private TableColumn<Alcool, String> quantityColumn;
 
 	@FXML
-	private Label alcoolSelectLabel;
+	private Label selectedAlcoolLabel;
 	@FXML
 	private Label quantityLabel;
 
@@ -31,7 +31,7 @@ public class EditQuantityDialogController {
 	@FXML
 	private void initializeAlcoolSelect() {
 		// Initialize the alcool table with the two columns.
-		alcoolSelectColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolSelectProperty());
+		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolSelectProperty());
 		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
 	}
 
@@ -39,6 +39,6 @@ public class EditQuantityDialogController {
 		this.mainApp = mainApp;
 
 		// Add observable list data to the table
-		alcoolSelectTable.setItems(mainApp.getalcoolSelectData());
+		selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
 	}
 }

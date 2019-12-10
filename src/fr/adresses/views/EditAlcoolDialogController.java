@@ -39,6 +39,6 @@ public class EditAlcoolDialogController {
         this.mainApp = mainApp;
 
         // Add observable list data to the table
-       alcoolTable.setItems(mainApp.getalcoolData());
+       alcoolTable.setItems(mainApp.getAlcoolData());
     }
 }
