@@ -3,11 +3,10 @@ package fr.adresses.views;
 import fr.adresses.MainApp;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
-import fr.adresses.views.EditPersonDialogController;
-import fr.adresses.views.DeleteOverviewController;
-import fr.adresses.views.EditAlcoolDialogController;
-import fr.adresses.views.EditQuantityDialogController;
-import fr.adresses.views.graphicOverviewController;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class MainOverviewController {
 	
