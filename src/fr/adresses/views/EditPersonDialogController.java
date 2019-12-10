@@ -50,8 +50,8 @@ public class EditPersonDialogController {
 		if (person != null) {
 			firstNameLabel.setText(person.getFirstName());
 			lastNameLabel.setText(person.getLastName());
-			weightLabel.setText(Integer.toString(person.getWeight()));
-			sexLabel.setText(person.getStreet());
+			weightLabel.setText(Double.toString(person.getWeight()));
+			sexLabel.setText(person.getSex());
 
 		} else {
 			firstNameLabel.setText("");
