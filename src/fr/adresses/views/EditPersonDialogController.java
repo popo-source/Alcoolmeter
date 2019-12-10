@@ -21,8 +21,7 @@ public class EditPersonDialogController {
 	
 	public EditPersonDialogController() {
 	}
-<<<<<<< HEAD
-=======
+
 
 	@FXML
 	private void initializePerson() {
@@ -59,5 +58,5 @@ public class EditPersonDialogController {
 		// Add observable list data to the table
 		personTable.setItems(mainApp.getPersonData());
 	}
->>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
+
 }
