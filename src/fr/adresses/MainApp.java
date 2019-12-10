@@ -80,20 +80,20 @@ public class MainApp extends Application {
 			loader.setLocation(MainApp.class.getResource("views/GraphicOverview.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 
-            Stage dialogStage = new Stage();
-            dialogStage.setTitle(person.getFirstName());
-            dialogStage.initModality(Modality.WINDOW_MODAL);
-            dialogStage.initOwner(primaryStage);
+            Stage graphicStage = new Stage();
+            graphicStage.setTitle(person.getFirstName());
+            graphicStage.initModality(Modality.WINDOW_MODAL);
+            graphicStage.initOwner(primaryStage);
             Scene scene = new Scene(page);
-            dialogStage.setScene(scene);
+            graphicStage.setScene(scene);
 
             LineChartsValues values = new LineChartsValues(person);
             
             graphicOverviewController controller = loader.getController();
-            controller.setDialogStage(dialogStage);
+            controller.setDialogStage(graphicStage);
             controller.setChart(values.getChart());
 
-            dialogStage.showAndWait();
+            graphicStage.showAndWait();
             return controller.isOkClicked();
 		}catch(IOException e) {
 			e.printStackTrace();
@@ -102,73 +102,79 @@ public class MainApp extends Application {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public void showPersonEditDialogOverview() {
+	public boolean showPersonEditDialogOverview(Person person) {
 	    try {
-	        // Load person overview.
 	        FXMLLoader loaderPerson = new FXMLLoader();
 	        loaderPerson.setLocation(MainApp.class.getResource("views/EditPersonDialog.fxml"));
 	        AnchorPane personOverview = (AnchorPane) loaderPerson.load();
 
-	        // Set person overview into the center of root layout.
-	        rootLayout.setCenter(personOverview);
-
-	        // Give the controller access to the main app.
+	        Stage dialogStage = new Stage();
+            dialogStage.setTitle("Person");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(personOverview);
+            dialogStage.setScene(scene);
+	        
 	        EditPersonDialogController controllerPerson = loaderPerson.getController();
 	        controllerPerson.setMainApp(this);
-
+	        controllerPerson.setDialogStage(dialogStage);
+	        dialogStage.showAndWait();
+            return controllerPerson.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
+	        return false;
 	    }
 	}
 	
-	public void showAlcoolEditDialogOverview() {
+	
+	public boolean showAlcoolEditDialogOverview(Alcool alcool) {
 	    try {
-	        // Load alcool overview.
 	        FXMLLoader loaderAlcool = new FXMLLoader();
 	        loaderAlcool.setLocation(MainApp.class.getResource("views/EditAlcoolDialog.fxml"));
 	        AnchorPane alcoolOverview = (AnchorPane) loaderAlcool.load();
+	        
+	        Stage dialogStage = new Stage();
+            dialogStage.setTitle("Alcool");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(alcoolOverview);
+            dialogStage.setScene(scene);
 
-	        // Set alcool overview into the center of root layout.
-	        rootLayout.setCenter(alcoolOverview);
-
-	        // Give the controller access to the main app.
+	        
 	        EditAlcoolDialogController controllerAlcool = loaderAlcool.getController();
 	        controllerAlcool.setMainApp(this);
-
+	        controllerAlcool.setAlcool(alcool);
+	        controllerAlcool.setDialogStage(dialogStage);
+	        dialogStage.showAndWait();
+            return controllerAlcool.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
+	        return false;
 	    }
 	}
 	
-	public void showQuantityEditQuantityOverview() {
+	public boolean showQuantityEditQuantityOverview(Alcool alcool) {
 	    try {
-	        // Load quantity overview.
 	        FXMLLoader loaderQuantity = new FXMLLoader();
 	        loaderQuantity.setLocation(MainApp.class.getResource("views/EditQuantityDialog.fxml"));
 	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
 
-	        // Set quantity overview into the center of root layout.
-	        rootLayout.setCenter(quantityOverview);
-
-	        // Give the controller access to the main app.
+	        Stage dialogStage = new Stage();
+            dialogStage.setTitle("Quantity");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(quantityOverview);
+            dialogStage.setScene(scene);
+	        
 	        EditQuantityDialogController controllerQuantity = loaderQuantity.getController();
 	        controllerQuantity.setMainApp(this);
-
+	        controllerQuantity.setAlcool(alcool);
+	        controllerQuantity.setDialogStage(dialogStage);
+	        dialogStage.showAndWait();
+	        return controllerQuantity.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
+	        return false;
 	    }
 	}
 	

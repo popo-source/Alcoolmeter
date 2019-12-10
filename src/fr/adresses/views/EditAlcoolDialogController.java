@@ -1,26 +1,87 @@
 package fr.adresses.views;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Stage;
 import fr.adresses.MainApp;
 import fr.adresses.classes.Alcool;
-import fr.adresses.classes.Person;
 
 public class EditAlcoolDialogController {
-
+	
+	private MainApp mainApp;
+	private Stage dialogStage;
+	private boolean okClicked = false;
+	private Alcool alcool;
 
     @FXML
-    private Textfield alcoolNameField;
+    private TextField alcoolNameField;
     @FXML
-    private Textfield degreeLabelField;
+    private TextField degreeLabelField;
 
-public EditAlcoolDialogController() {
+    public EditAlcoolDialogController() {
     }   
 
-private MainApp mainApp;
-	
+    public void setAlcool(Alcool alcool) {
+        this.alcool = alcool;
+        alcoolNameField.setText(alcool.getAlcoolName());
+        degreeLabelField.setText(Double.toString(alcool.getDegree()));
+    }
+    
+    @FXML
+    private void handleOk() {
+    	if (isInputValid()) {
+            alcool.setAlcoolName(alcoolNameField.getText());
+            alcool.setDegree(Double.parseDouble(degreeLabelField.getText()));
+            okClicked = true;
+            dialogStage.close();
+        }
+    }
+    
+    @FXML
+    private void handleCancel() {
+    	dialogStage.close();
+    }
+    
+    
+    public boolean isOkClicked() {
+        return okClicked;
+    }
+    
+    
+    private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (alcoolNameField.getText() == null || alcoolNameField.getText().length() == 0) {
+            errorMessage += "No valid alcool name!\n";
+        }
+        if (degreeLabelField.getText() == null || degreeLabelField.getText().length() == 0) {
+            errorMessage += "No valid last name!\n";
+        } else {
+			try {
+				Double.parseDouble(degreeLabelField.getText());
+			} catch (NumberFormatException e) {
+				errorMessage += "No valid quantity (must be an integer)!\n";
+			}
+		}
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.initOwner(dialogStage);
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+            alert.showAndWait();
+            return false;
+        }
+    }
+
+    public void setDialogStage(Stage dialogStage) {
+        this.dialogStage = dialogStage;
+    }
+    
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp;
 	}

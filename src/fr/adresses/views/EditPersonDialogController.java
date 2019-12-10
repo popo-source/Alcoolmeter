@@ -1,33 +1,80 @@
 package fr.adresses.views;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import fr.adresses.MainApp;
-import fr.adresses.classes.Person;
+
 
 public class EditPersonDialogController {
 
+	private MainApp mainApp;
+	private Stage dialogStage;
+	private boolean okClicked = false;
 
+	
 	@FXML
-	private Textfield firstNameField;
+	private TextField firstNameField;
 	@FXML
-	private Textfield lastNameField;
+	private TextField lastNameField;
 	@FXML
-	private Texfield weightField;
+	private TextField weightField;
+	
+	/*
+	 * 
+	 * Pour programmer les checkbox:
+	 * 
+	 * créer 2 checkbox 
+	 * 		- masculin
+	 * 		- feminin
+	 * 
+	 * -----> verifier que les deux ne sont pas coché en même temps pour valider l'entrée.
+	 * 
+	 * 
+	 */
+	
 	@FXML
-	private Checkbox sexCheckbox;
+	private CheckBox sexCheckbox;
 
+	
+	
 	public EditPersonDialogController() {
 	}
 
-	private MainApp mainApp;
-
+	
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp;
 	}
 
+	public void setDialogStage(Stage dialogStage) {
+		this.dialogStage = dialogStage;
+	}
+	
+	public boolean isOkClicked() {
+        return okClicked;
+    }
+	
+	
+	@FXML
+	private void handleOk() {
+		if(isInputValid()) {
+			
+			/*
+			 * mettre a jour la person ici
+			 * 
+			 * 
+			 */
+			
+			
+			okClicked = true;
+			dialogStage.close();
+		}
+		
+	}
+	
 	private boolean isInputValid() {
 		String errorMessage = "";
 
@@ -37,7 +84,6 @@ public class EditPersonDialogController {
 		if (lastNameField.getText() == null || lastNameField.getText().length() == 0) {
 			errorMessage += "No valid last name!\n";
 		}
-
 		if (weightField.getText() == null || weightField.getText().length() == 0) {
 			errorMessage += "No valid weight!\n";
 		} else {
@@ -47,19 +93,15 @@ public class EditPersonDialogController {
 				errorMessage += "No valid weight (must be an integer)!\n";
 			}
 		}
-
 		if (errorMessage.length() == 0) {
 			return true;
 		} else {
-			// Show the error message.
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.initOwner(dialogStage);
 			alert.setTitle("Invalid Fields");
 			alert.setHeaderText("Please correct invalid fields");
 			alert.setContentText(errorMessage);
-
 			alert.showAndWait();
-
 			return false;
 		}
 	}
