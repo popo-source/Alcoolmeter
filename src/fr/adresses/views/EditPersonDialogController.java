@@ -11,52 +11,55 @@ public class EditPersonDialogController {
 
 
 	@FXML
-	private Label firstNameLabel;
+	private Textfield firstNameField;
 	@FXML
-	private Label lastNameLabel;
+	private Textfield lastNameField;
 	@FXML
-	private Label weightLabel;
+	private Texfield weightField;
 	@FXML
-	private Label sexLabel;
-	
+	private Checkbox sexCheckbox;
+
 	public EditPersonDialogController() {
-	}
-
-
-	@FXML
-	private void initializePerson() {
-		// Initialize the person table with the two columns.
-		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
-		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
-		weightColumn.setCellValueFactory(cellData -> cellData.getValue().weightProperty());
-
-	    // Clear person details.
-	    showPersonDetails(null);
-
-	    personTable.getSelectionModel().selectedItemProperty().addListener(
-	            (observable, oldValue, newValue) -> showPersonDetails(newValue));
-	}
-
-	private void showPersonDetails(Person person) {
-		if (person != null) {
-			firstNameLabel.setText(person.getFirstName());
-			lastNameLabel.setText(person.getLastName());
-			weightLabel.setText(Double.toString(person.getWeight()));
-			sexLabel.setText(person.getSex());
-
-		} else {
-			firstNameLabel.setText("");
-			lastNameLabel.setText("");
-			weightLabel.setText("");
-			sexLabel.setText("");
-		}
 	}
 
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp;
-
-		// Add observable list data to the table
-		personTable.setItems(mainApp.getPersonData());
 	}
+	
+	private boolean isInputValid() {
+		String errorMessage = "";
 
+		if (firstNameField.getText() == null || firstNameField.getText().length() == 0) {
+			errorMessage += "No valid first name!\n";
+		}
+		if (lastNameField.getText() == null || lastNameField.getText().length() == 0) {
+			errorMessage += "No valid last name!\n";
+		}
+
+		if (weightField.getText() == null || weightField.getText().length() == 0) {
+			errorMessage += "No valid weight!\n";
+		} else {
+			// try to parse the postal code into an int.
+			try {
+				Integer.parseInt(weightField.getText());
+			} catch (NumberFormatException e) {
+				errorMessage += "No valid weight (must be an integer)!\n";
+			}
+		}
+
+		if (errorMessage.length() == 0) {
+			return true;
+		} else {
+			// Show the error message.
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.initOwner(dialogStage);
+			alert.setTitle("Invalid Fields");
+			alert.setHeaderText("Please correct invalid fields");
+			alert.setContentText(errorMessage);
+
+			alert.showAndWait();
+
+			return false;
+		}
+	}
 }

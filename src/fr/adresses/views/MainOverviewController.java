@@ -37,10 +37,38 @@ public class MainOverviewController {
 	private Label selectedAlcoolLabel;
 	
 	private MainApp mainApp;
-	//
 	
+	@FXML
+	private void initializePerson() {
+		// Initialize the person table with the two columns.
+		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
+		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+		weightColumn.setCellValueFactory(cellData -> cellData.getValue().weightProperty());
+
+		// Clear person details.
+		showPersonDetails(null);
+
+		personTable.getSelectionModel().selectedItemProperty().addListener(
+				(observable, oldValue, newValue) -> showPersonDetails(newValue));
+	}
+
+	private void showPersonDetails(Person person) {
+		if (person != null) {
+			firstNameLabel.setText(person.getFirstName());
+			lastNameLabel.setText(person.getLastName());
+			weightLabel.setText(Double.toString(person.getWeight()));
+			sexLabel.setText(person.getSex());
+
+		} else {
+			firstNameLabel.setText("");
+			lastNameLabel.setText("");
+			weightLabel.setText("");
+			sexLabel.setText("");
+		}
+	}
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp;
+		personTable.setItems(mainApp.getPersonData());
 	}
 	
 	
