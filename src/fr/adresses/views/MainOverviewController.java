@@ -33,6 +33,7 @@ public class MainOverviewController {
 	@FXML
 	private TableColumn<Alcool, String> quantityColumn;
 
+	/*
 	@FXML
 	private Label firstNameLabel;
 	private Label lastNameLabel;
@@ -123,6 +124,6 @@ public class MainOverviewController {
 		alcoolTable.setItems(mainApp.getAlcoolData());
 		selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
 	}
-
+*/
 
 }
