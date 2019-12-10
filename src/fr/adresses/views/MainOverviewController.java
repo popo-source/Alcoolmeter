@@ -38,6 +38,7 @@ public class MainOverviewController {
 	private Label selectedAlcoolLabel;
 	
 	private MainApp mainApp;
+	//
 	
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp;
