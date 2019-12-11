@@ -26,14 +26,14 @@ public class MainOverviewController {
 	@FXML
 	private TableColumn<Alcool, String> alcoolNameColumn;
 	@FXML
-	private TableColumn<Alcool, Double> degreeColumn;
+	private TableColumn<Alcool, String> degreeColumn;
 
 	@FXML
 	private TableView<Alcool> selectedAlcoolTable;
 	@FXML
 	private TableColumn<Alcool, String> selectedAlcoolColumn;
 	@FXML
-	private TableColumn<Alcool, Double> quantityColumn;
+	private TableColumn<Alcool, String> quantityColumn;
 
 	
 	
@@ -54,13 +54,13 @@ public class MainOverviewController {
 	@FXML
 	private void initializeAlcool() {
 		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
-		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().degreeProperty());
+		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().getStringPropertyDegree());
 	}
 	
 	@FXML
 	private void initializeSelectedAlcool() {
 		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
-		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
+		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().getStringPropertyQuantity());
 	}
 	
 	

@@ -43,8 +43,8 @@ public class Alcool {
 	public DoubleProperty degreeProperty() {
 		return degree;
 	}
-	public String getStringDegree() {
-		return Double.toString(degree.get());
+	public SimpleStringProperty getStringPropertyDegree() {
+		return new SimpleStringProperty(Double.toString(degree.get()));
 	}
 	
 	
@@ -58,8 +58,8 @@ public class Alcool {
 	public DoubleProperty quantityProperty() {
 		return quantity;
 	}
-	public String getStringQuantity() {
-		return Double.toString(quantity.get());
+	public SimpleStringProperty getStringPropertyQuantity() {
+		return new SimpleStringProperty(Double.toString(quantity.get()));
 	}
 	
 	
