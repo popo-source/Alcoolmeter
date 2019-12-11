@@ -68,6 +68,13 @@ public class MainOverviewController {
 	
 	@FXML
 	private void handleNew() {
+		/*
+		 * --> à compléter:
+		 * 	???? créer une nouvelle fenêtre de choix????:
+		 * 								- Person?
+		 * 								- Alcool?
+		 * 
+		 */
 		Person tempPerson = personTable.getSelectionModel();
 		Alcool tempAlcool = alcoolTable.getSelectionModel();
 		
