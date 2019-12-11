@@ -83,7 +83,6 @@ public class MainOverviewController {
 				}
 			}
 		}
-		
 	}
 	
 	@FXML
@@ -130,11 +129,11 @@ public class MainOverviewController {
         			}
         		} else {
         			Alert alert = new Alert(AlertType.WARNING);
-        		alert.initOwner(mainApp.getPrimaryStage());
-        		alert.setTitle("No Selection");
-        		alert.setHeaderText("No Item Selected");
-        		alert.setContentText("Please select an item in the tables.");
-        		alert.showAndWait();
+        			alert.initOwner(mainApp.getPrimaryStage());
+        			alert.setTitle("No Selection");
+        			alert.setHeaderText("No Item Selected");
+        			alert.setContentText("Please select an item in the tables.");
+        			alert.showAndWait();
         		}
         	}
         }
