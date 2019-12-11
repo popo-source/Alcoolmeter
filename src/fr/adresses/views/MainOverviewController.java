@@ -1,6 +1,5 @@
 package fr.adresses.views;
 
-import ch.makery.address.util.DateUtil;
 import fr.adresses.MainApp;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
@@ -60,7 +59,7 @@ public class MainOverviewController {
 	
 	@FXML
 	private void initializeSelectedAlcool() {
-		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
+		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
 		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
 	}
 	

@@ -65,4 +65,7 @@ public class Person {
 	public DoubleProperty weightProperty() {
 		return weight;
 	}
+	public String getStringWeight() {
+		return Double.toString(weight.get());
+	}
 }
