@@ -123,6 +123,7 @@ public class MainOverviewController {
 		
 		Object selectedObject;
 		
+		if()
 		
 		if(mainApp.showDeleteOverview(selectedObject)) {
 			
