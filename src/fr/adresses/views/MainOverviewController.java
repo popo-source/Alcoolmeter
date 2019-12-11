@@ -121,6 +121,13 @@ public class MainOverviewController {
 		Alcool selectedAlcool = alcoolTable.getSelectionModel().getSelectedItem();
 		Alcool selectedSelectedAlcool = selectedAlcoolTable.getSelectionModel().getSelectedItem();
 		
+		Object selectedObject;
+		
+		
+		if(mainApp.showDeleteOverview(selectedObject)) {
+			
+		}
+		
 		
 	}
 	

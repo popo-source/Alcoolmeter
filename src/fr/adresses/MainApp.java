@@ -193,7 +193,7 @@ public class MainApp extends Application {
 	        
 	        EditQuantityDialogController controllerQuantity = loaderQuantity.getController();
 	        controllerQuantity.setMainApp(this);
-	        controllerQuantity.setAlcool(object);
+	        controllerQuantity.setObject(object);
 	        controllerQuantity.setDialogStage(dialogStage);
 	        dialogStage.showAndWait();
 	        return controllerQuantity.isOkClicked();
