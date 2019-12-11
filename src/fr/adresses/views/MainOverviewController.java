@@ -18,32 +18,48 @@ public class MainOverviewController {
 	private TableColumn<Person, String> firstNameColumn;
 	@FXML
 	private TableColumn<Person, String> lastNameColumn;
-	@FXML
-	private TableColumn<Person, String> weightColumn;
 
 	@FXML
 	private TableView<Alcool> alcoolTable;
 	@FXML
 	private TableColumn<Alcool, String> alcoolNameColumn;
 	@FXML
-	private TableColumn<Alcool, String> degreeColumn;
+	private TableColumn<Alcool, Double> degreeColumn;
 
 	@FXML
 	private TableView<Alcool> selectedAlcoolTable;
 	@FXML
 	private TableColumn<Alcool, String> selectedAlcoolColumn;
 	@FXML
-	private TableColumn<Alcool, String> quantityColumn;
+	private TableColumn<Alcool, Double> quantityColumn;
 
 	
 	
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp;
-		//personTable.setItems(mainApp.getPersonData());
-		//alcoolTable.setItems(mainApp.getAlcoolData());
-		//selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
+		personTable.setItems(mainApp.getPersonData());
+		alcoolTable.setItems(mainApp.getAlcoolData());
+		selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
 	}
 	
+	
+	@FXML
+	private void initializePerson() {
+		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
+		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+	}
+	
+	@FXML
+	private void initializeAlcool() {
+		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
+		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().degreeProperty());
+	}
+	
+	@FXML
+	private void initializeSelectedAlcool() {
+		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
+		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
+	}
 	
 	/*
 	@FXML
@@ -57,19 +73,7 @@ public class MainOverviewController {
 
 	
 
-	@FXML
-	private void initializePerson() {
-		// Initialize the person table with the two columns.
-		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
-		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
-		weightColumn.setCellValueFactory(cellData -> cellData.getValue().weightProperty());
-
-		// Clear person details.
-		showPersonDetails(null);
-
-		personTable.getSelectionModel().selectedItemProperty().addListener(
-				(observable, oldValue, newValue) -> showPersonDetails(newValue));
-	}
+	
 
 	@FXML
 	private void initializeAlcool() {
