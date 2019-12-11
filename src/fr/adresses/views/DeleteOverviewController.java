@@ -1,32 +1,61 @@
 package fr.adresses.views;
 
-import fr.adresses.MainApp;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 public class DeleteOverviewController {
-	private boolean okClick=false;
-	private boolean noClick=false;
+	private boolean okClicked=false;
 	private Stage dialogStage;
-	@FXML
-	private void handleOk() 
 	
-	{
-		okClick=true;
-		//int selectedIndex = TableColumn.getSelectionModel().getSelectedIndex();
-		dialogStage.close();
-		
-	}
+	/*
+	 * 
+	 * à faire avec les tableau selectionnées 
+	 * sinon cela ne marche pas
+	 * --> tableview...
+	 * 
+	 * 
+	 */
+	
+	private Person person;
+	private Alcool alcool;
+	
+	
+	
 	@FXML
-	private void handleNo() 
-	{
-		noClick=true;
+	private void handleOk(){
+		okClicked=true;
 		dialogStage.close();
 		
 	}
+	
+	@FXML
+	private void handleNo(){
+		dialogStage.close();
+		
+	}
+	
+	public boolean isOkClicked() {
+        return okClicked;
+    }
+	
+	public void setDialogStage(Stage dialogStage) {
+		this.dialogStage = dialogStage;
+	}
+	
+	
+	/*
+	 * 
+	 * public void selectedAlcool(Alcool alcool) {
+			this.alcool = alcool;
+		}
+	
+		public void selectedPerson(Person person) {
+			this.person = person;
+		}
+	 * 
+	 * 
+	 */
+	
 }
