@@ -178,7 +178,30 @@ public class MainApp extends Application {
 	}
 	
 	
-	
+	public boolean showDeleteOverview(Object object) {
+	    try {
+	        FXMLLoader loaderQuantity = new FXMLLoader();
+	        loaderQuantity.setLocation(MainApp.class.getResource("views/DeleteDialog.fxml"));
+	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
+
+	        Stage dialogStage = new Stage();
+            dialogStage.setTitle("Quantity");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(quantityOverview);
+            dialogStage.setScene(scene);
+	        
+	        EditQuantityDialogController controllerQuantity = loaderQuantity.getController();
+	        controllerQuantity.setMainApp(this);
+	        controllerQuantity.setAlcool(object);
+	        controllerQuantity.setDialogStage(dialogStage);
+	        dialogStage.showAndWait();
+	        return controllerQuantity.isOkClicked();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
 	
 	public ObservableList<Person> getPersonData() {
         return personData;
