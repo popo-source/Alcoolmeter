@@ -125,7 +125,7 @@ public class MainOverviewController {
 		
 		if()
 		
-		if(mainApp.showDeleteOverview(selectedObject)) {
+		if(mainApp.showDeleteOverview()) {
 			
 		}
 		
@@ -139,7 +139,17 @@ public class MainOverviewController {
 	
 	@FXML
 	private void handleGraphic() {
-		
+		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
+		if(selectedPerson != null) {
+    		mainApp.showGraphicOverview(selectedPerson);
+    	} else {
+    		Alert alert = new Alert(AlertType.WARNING);
+    		alert.initOwner(mainApp.getPrimaryStage());
+    		alert.setTitle("No Selection");
+    		alert.setHeaderText("No Person Selected");
+    		alert.setContentText("Please select a person in the table.");
+    		alert.showAndWait();
+    	}
 	}
 	
 	/*
