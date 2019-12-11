@@ -18,8 +18,8 @@ public class DeleteOverviewController {
 	 * 
 	 */
 	
-	private Person person;
-	private Alcool alcool;
+	//private Person person;
+	//private Alcool alcool;
 	
 	
 	
