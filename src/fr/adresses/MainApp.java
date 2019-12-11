@@ -18,7 +18,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -179,6 +178,8 @@ public class MainApp extends Application {
 	}
 	
 	
+	
+	
 	public ObservableList<Person> getPersonData() {
         return personData;
     }
@@ -191,6 +192,9 @@ public class MainApp extends Application {
 		return selectedAlcoolData;
 	}
 	
+	public Stage getPrimaryStage() {
+        return primaryStage;
+    }
 	
 	public static void main(String[] args) {
 		launch(args);
