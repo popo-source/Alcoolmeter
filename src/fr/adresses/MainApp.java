@@ -74,7 +74,7 @@ public class MainApp extends Application {
 		}
 	}
 	
-	public boolean showGraphicOverview(Person person) {
+	public void showGraphicOverview(Person person) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("views/GraphicOverview.fxml"));
@@ -92,12 +92,10 @@ public class MainApp extends Application {
             graphicOverviewController controller = loader.getController();
             controller.setDialogStage(graphicStage);
             controller.setChart(values.getChart());
-
             graphicStage.showAndWait();
-            return controller.isOkClicked();
+            
 		}catch(IOException e) {
 			e.printStackTrace();
-			return false;
 		}
 	}
 	
@@ -179,14 +177,14 @@ public class MainApp extends Application {
 	}
 	
 	
-	public boolean showDeleteOverview() {
+	public boolean showDeleteOverview(String name) {
 	    try {
 	        FXMLLoader loaderQuantity = new FXMLLoader();
 	        loaderQuantity.setLocation(MainApp.class.getResource("views/DeleteDialog.fxml"));
 	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
 
 	        Stage dialogStage = new Stage();
-            dialogStage.setTitle("Delete ?");
+            dialogStage.setTitle("Delete "+name+" ?");
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(quantityOverview);

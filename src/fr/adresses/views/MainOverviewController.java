@@ -50,24 +50,18 @@ public class MainOverviewController {
 	private void initializePerson() {
 		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
 		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
-		
-		personTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->  );
 	}
 	
 	@FXML
 	private void initializeAlcool() {
 		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
 		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().degreeProperty());
-		
-		alcoolTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> );
 	}
 	
 	@FXML
 	private void initializeSelectedAlcool() {
 		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
 		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
-		
-		selectedAlcoolTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> );
 	}
 	
 	
@@ -80,14 +74,12 @@ public class MainOverviewController {
 		
 		
 		if(tempPerson!=null && tempAlcool==null) {
-			boolean okClicked = mainApp.showPersonEditDialogOverview(tempPerson);
-			if (okClicked) {
+			if (mainApp.showPersonEditDialogOverview(tempPerson)) {
 				mainApp.getPersonData().add(tempPerson);
 			}
 		} else {
 			if(tempPerson==null && tempAlcool!=null) {
-				boolean okClicked = mainApp.showAlcoolEditDialogOverview(tempAlcool);
-				if (okClicked) {
+				if (mainApp.showAlcoolEditDialogOverview(tempAlcool)) {
 					mainApp.getAlcoolData().add(tempAlcool);
 				}
 			}
@@ -109,7 +101,7 @@ public class MainOverviewController {
         		alert.initOwner(mainApp.getPrimaryStage());
         		alert.setTitle("No Selection");
         		alert.setHeaderText("No Item Selected");
-        		alert.setContentText("Please select an item in the tables.");
+        		alert.setContentText("Please select an item in the person and the alcool tables.");
         		alert.showAndWait();
         	}
         }
@@ -123,11 +115,32 @@ public class MainOverviewController {
 		
 		Object selectedObject;
 		
-		if()
+		if (selectedPerson != null && selectedAlcool==null && selectedSelectedAlcool == null) {
+			if(mainApp.showDeleteOverview(selectedPerson.getFirstName())) {
+				personTable.getItems().remove(selectedPerson);
+			}
+        } else {
+        	if(selectedPerson == null && selectedAlcool != null && selectedSelectedAlcool == null) {
+        		if(mainApp.showDeleteOverview(selectedAlcool.getAlcoolName())) {
+        			alcoolTable.getItems().remove(selectedAlcool);
+        		}
+        	} else {
+        		if(selectedPerson == null && selectedAlcool == null && selectedSelectedAlcool != null) {
+        			if(mainApp.showDeleteOverview(selectedSelectedAlcool.getAlcoolName())) {
+        				selectedAlcoolTable.getItems().remove(selectedSelectedAlcool);
+        			}
+        		} else {
+        			Alert alert = new Alert(AlertType.WARNING);
+        		alert.initOwner(mainApp.getPrimaryStage());
+        		alert.setTitle("No Selection");
+        		alert.setHeaderText("No Item Selected");
+        		alert.setContentText("Please select an item in the tables.");
+        		alert.showAndWait();
+        		}
+        	}
+        }
 		
-		if(mainApp.showDeleteOverview()) {
-			
-		}
+		
 		
 		
 	}
@@ -135,20 +148,39 @@ public class MainOverviewController {
 	@FXML
 	private void handleAdd() {
 		Alcool selectedAlcool = alcoolTable.getSelectionModel().getSelectedItem();
+		if (selectedAlcool != null) {
+			if(mainApp.showQuantityEditQuantityOverview(selectedAlcool)) {
+				mainApp.getSelectedAlcoolData().add(selectedAlcool);
+			}
+		} else {
+			Alert alert = new Alert(AlertType.WARNING);
+    		alert.initOwner(mainApp.getPrimaryStage());
+    		alert.setTitle("No Selection");
+    		alert.setHeaderText("No Alcool Selected");
+    		alert.setContentText("Please select an alcool in the table.");
+    		alert.showAndWait();
+    	}
 	}
+	
 	
 	@FXML
 	private void handleGraphic() {
 		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
-		if(selectedPerson != null) {
+		if(selectedPerson != null && selectedAlcoolTable != null) {
     		mainApp.showGraphicOverview(selectedPerson);
     	} else {
     		Alert alert = new Alert(AlertType.WARNING);
     		alert.initOwner(mainApp.getPrimaryStage());
     		alert.setTitle("No Selection");
-    		alert.setHeaderText("No Person Selected");
-    		alert.setContentText("Please select a person in the table.");
-    		alert.showAndWait();
+    		if(selectedAlcoolTable != null) {
+    			alert.setHeaderText("No Person Selected");
+    			alert.setContentText("Please select a person in the table.");
+    			alert.showAndWait();
+    		} else {
+    			alert.setHeaderText("No Alcool Selected");
+    			alert.setContentText("Please select an alcool in the table.");
+    			alert.showAndWait();
+    		}
     	}
 	}
 	
