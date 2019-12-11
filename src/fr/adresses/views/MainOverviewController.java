@@ -51,19 +51,19 @@ public class MainOverviewController {
 		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
 	}
 	
+	
 	@FXML
 	private void initializeAlcool() {
 		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
 		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().getStringPropertyDegree());
 	}
 	
+	
 	@FXML
 	private void initializeSelectedAlcool() {
 		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
 		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().getStringPropertyQuantity());
 	}
-	
-	
 	
 	
 	@FXML
@@ -85,6 +85,7 @@ public class MainOverviewController {
 		}
 	}
 	
+	
 	@FXML
 	private void handleEdit() {
 		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
@@ -104,6 +105,7 @@ public class MainOverviewController {
         	}
         }
 	}
+	
 	
 	@FXML
 	private void handleDelete() {
@@ -137,11 +139,8 @@ public class MainOverviewController {
         		}
         	}
         }
-		
-		
-		
-		
 	}
+	
 	
 	@FXML
 	private void handleAdd() {
