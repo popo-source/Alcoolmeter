@@ -5,6 +5,7 @@ import java.io.IOException;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
 import fr.adresses.utilitary.LineChartsValues;
+import fr.adresses.views.DeleteOverviewController;
 import fr.adresses.views.EditAlcoolDialogController;
 import fr.adresses.views.EditPersonDialogController;
 import fr.adresses.views.EditQuantityDialogController;
@@ -178,25 +179,23 @@ public class MainApp extends Application {
 	}
 	
 	
-	public boolean showDeleteOverview(Object object) {
+	public boolean showDeleteOverview() {
 	    try {
 	        FXMLLoader loaderQuantity = new FXMLLoader();
 	        loaderQuantity.setLocation(MainApp.class.getResource("views/DeleteDialog.fxml"));
 	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
 
 	        Stage dialogStage = new Stage();
-            dialogStage.setTitle("Quantity");
+            dialogStage.setTitle("Delete ?");
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(quantityOverview);
             dialogStage.setScene(scene);
 	        
-	        EditQuantityDialogController controllerQuantity = loaderQuantity.getController();
-	        controllerQuantity.setMainApp(this);
-	        controllerQuantity.setObject(object);
-	        controllerQuantity.setDialogStage(dialogStage);
+	        DeleteOverviewController controllerDelete = loaderQuantity.getController();
+	        controllerDelete.setDialogStage(dialogStage);
 	        dialogStage.showAndWait();
-	        return controllerQuantity.isOkClicked();
+	        return controllerDelete.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	        return false;
