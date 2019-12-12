@@ -75,8 +75,8 @@ public class MainOverviewController {
 		 * 								- Alcool?
 		 * 
 		 */
-		Person tempPerson = personTable.getSelectionModel();
-		Alcool tempAlcool = alcoolTable.getSelectionModel();
+		//Person tempPerson = new Person();
+		//Alcool tempAlcool = new Alcool();
 		
 		
 		if(tempPerson!=null && tempAlcool==null) {
