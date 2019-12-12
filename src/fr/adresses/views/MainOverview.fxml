@@ -12,9 +12,9 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.adresses.views.MainOverviewController">
    <children>
-      <BorderPane>
+      <BorderPane prefHeight="600.0" prefWidth="800.0">
          <left>
-            <TableView fx:id="personTable" prefHeight="298.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="personTable" prefHeight="515.0" prefWidth="260.0" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn fx:id="firstNameColumn" prefWidth="104.0" text="Firstname" />
                 <TableColumn fx:id="lastNameColumn" prefWidth="95.0" text="Lastname" />
@@ -25,7 +25,7 @@
             </TableView>
          </left>
          <right>
-            <TableView fx:id="selectedAlcoolTable" prefHeight="298.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="selectedAlcoolTable" prefHeight="515.0" prefWidth="250.0" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn fx:id="selectedAlcoolColumn" prefWidth="100.0" text="Alcool you drink" />
                 <TableColumn fx:id="quantityColumn" prefWidth="99.0" text="Quantity" />
