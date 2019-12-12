@@ -11,7 +11,7 @@ import javafx.scene.control.TableView;
 
 public class MainOverviewController {
 
-	private MainApp mainApp;
+	
 	
 	@FXML
 	private TableView<Person> personTable;
@@ -35,7 +35,11 @@ public class MainOverviewController {
 	private TableColumn<Alcool, Double> quantityColumn;
 
 	
+	private MainApp mainApp;
 	
+	
+	public MainOverviewController() {
+    }
 	
 	@FXML
 	private void initializePerson() {

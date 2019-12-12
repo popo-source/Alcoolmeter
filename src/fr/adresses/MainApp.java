@@ -39,14 +39,11 @@ public class MainApp extends Application {
         
         alcoolData.add(new Alcool("Jägermeister", 35.0));
         alcoolData.add(new Alcool("Heineken", 5.0));
+        alcoolData.add(new Alcool("B52", 25.0));
 		
 		
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AlcoolApp");
-        
-        
-		
-        
         
         initRootLayout();
         showMainOverview();
@@ -75,7 +72,9 @@ public class MainApp extends Application {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("views/MainOverview.fxml"));
 			AnchorPane mainOverview = (AnchorPane) loader.load();
+			
 			rootLayout.setCenter(mainOverview);
+			
 			MainOverviewController controller = loader.getController();
 			controller.setMainApp(this);
 		} catch (IOException e) {
