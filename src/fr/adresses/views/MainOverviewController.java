@@ -5,11 +5,9 @@ import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TableView.TableViewSelectionModel;
-import javafx.scene.control.Alert.AlertType;
 
 public class MainOverviewController {
 
@@ -187,61 +185,6 @@ public class MainOverviewController {
 		alcoolTable.setItems(mainApp.getAlcoolData());
 		selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
 	}
-	/*
-	
 
-	
-
-	
-
-
-	@FXML
-	private void initializeSelectedAlcool() {
-		// Initialize the person table with the two columns.
-		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().selectedAlcoolProperty());
-		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty());
-
-		// Clear alcool selected details.
-		showSelectedAlcoolDetails(null);
-
-		selectedAlcoolTable.getSelectionModel().selectedItemProperty().addListener(
-				(observable, oldValue, newValue) -> showSelectedAlcoolDetails(newValue));
-	}
-
-	private void showPersonDetails(Person person) {
-		if (person != null) {
-			firstNameLabel.setText(person.getFirstName());
-			lastNameLabel.setText(person.getLastName());
-			weightLabel.setText(Double.toString(person.getWeight()));
-
-		} else {
-			firstNameLabel.setText("");
-			lastNameLabel.setText("");
-			weightLabel.setText("");
-		}
-	}
-
-	private void showAlcoolDetails(Alcool alcool) {
-		if (alcool != null) {
-			alcoolNameLabel.setText(alcool.getAlcoolName());
-			degreeLabel.setText(Double.toString(alcool.getDegree()));
-
-		} else {
-			alcoolNameLabel.setText("");
-			degreeLabel.setText("");
-		}
-	}
-
-	private void showSelectedAlcoolDetails(Alcool alcool) {
-		if (alcool!= null) {
-			selectedAlcoolLabel.setText(alcool.getSelectedAlcool());
-			quantityLabel.setText(alcool.getQuantity());
-		} else {
-			selectedAlcoolLabel.setText("");
-			quantityLabel.setText("");
-		}
-	}
-	
-*/
 
 }
