@@ -26,14 +26,14 @@ public class MainOverviewController {
 	@FXML
 	private TableColumn<Alcool, String> alcoolNameColumn;
 	@FXML
-	private TableColumn<Alcool, String> degreeColumn;
+	private TableColumn<Alcool, Double> degreeColumn;
 
 	@FXML
 	private TableView<Alcool> selectedAlcoolTable;
 	@FXML
 	private TableColumn<Alcool, String> selectedAlcoolColumn;
 	@FXML
-	private TableColumn<Alcool, String> quantityColumn;
+	private TableColumn<Alcool, Double> quantityColumn;
 
 	
 	
@@ -55,14 +55,14 @@ public class MainOverviewController {
 	@FXML
 	private void initializeAlcool() {
 		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
-		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().getStringPropertyDegree());
+		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().degreeProperty().asObject());
 	}
 	
 	
 	@FXML
 	private void initializeSelectedAlcool() {
 		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
-		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().getStringPropertyQuantity());
+		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty().asObject());
 	}
 	
 	
@@ -119,8 +119,6 @@ public class MainOverviewController {
 		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
 		Alcool selectedAlcool = alcoolTable.getSelectionModel().getSelectedItem();
 		Alcool selectedSelectedAlcool = selectedAlcoolTable.getSelectionModel().getSelectedItem();
-		
-		Object selectedObject;
 		
 		if (selectedPerson != null && selectedAlcool==null && selectedSelectedAlcool == null) {
 			if(mainApp.showDeleteOverview(selectedPerson.getFirstName())) {
