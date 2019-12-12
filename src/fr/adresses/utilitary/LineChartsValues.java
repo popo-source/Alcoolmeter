@@ -1,11 +1,13 @@
 package fr.adresses.utilitary;
 
+import fr.adresses.MainApp;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
 import javafx.collections.ObservableList;
 import javafx.scene.chart.XYChart;
 
 public class LineChartsValues {
+	
 	private Person person;
 	private double V;
 	private double M;
@@ -13,10 +15,23 @@ public class LineChartsValues {
 	private boolean eat;
 	private ObservableList<Alcool> selectedAlcoolData;
 	
-	XYChart.Series<Number, Number> series1 = new XYChart.Series<>();
 	
-	public void setAlcool(ObservableList<Alcool> selectedAlcoolData) {
-		this.selectedAlcoolData = selectedAlcoolData;
+	
+	private XYChart.Series<Number, Number> series1 = new XYChart.Series<>();
+	
+	public void setMainApp(MainApp mainApp) {
+		this.selectedAlcoolData = mainApp.getSelectedAlcoolData();
+	}
+	
+	public double getEthanolVolume(){
+		Alcool[] alcool = new Alcool[selectedAlcoolData.size()];
+		alcool = selectedAlcoolData.toArray(alcool);
+		double alcoolVolume = 0;
+		for(int i=0; i<alcool.length;i++) {
+			alcoolVolume += (alcool[i].getDegree() * alcool[i].getQuantity());
+		}
+		alcoolVolume *= 0.789;
+		return alcoolVolume;
 	}
 	
 	public LineChartsValues(Person person) {
@@ -39,14 +54,14 @@ public class LineChartsValues {
 	
 	public Double getAlcoolValue(double t) {
 		final double w = 2.71; //w un coefficient correctif, avec w = 2,71
-		final double T = 0.789;//T le titre volumique en alcool, valeur entre 0 et 1
+		//final double T = 0.789;//T le titre volumique en alcool, valeur entre 0 et 1
 		//double M = 80;//M la masse corporelle (en kg)
-		double m = 12;//m la masse d'éthanol pur (en grammes), où m = 0,79 V, où V est le volume en mL ou en centimètres cubes
+		//double m = 12;//m la masse d'éthanol pur (en grammes), où m = 0,79 V, où V est le volume en mL ou en centimètres cubes
 		//double C = 0.7;//coefficient de diffusion C (qui vaut 0,7 si on est un homme, ou 0,6 si on est une femme),
 		
 		
 		
-		double A = (w*m*T / (C * M))*t*(Math.exp(-t));
+		double A = (w*getEthanolVolume() / (C * M))*t*(Math.exp(-t));
 		return A;
 	}
 	

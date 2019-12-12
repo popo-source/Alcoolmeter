@@ -97,6 +97,7 @@ public class MainApp extends Application {
             graphicStage.setScene(scene);
 
             LineChartsValues values = new LineChartsValues(person);
+            values.setMainApp(this);
             
             graphicOverviewController controller = loader.getController();
             controller.setDialogStage(graphicStage);
