@@ -33,15 +33,19 @@ public class MainApp extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("AlcoolApp");
-        
-        
-        personData.add(new Person("Paul", "Hauser", "männlich", 80.0));
+
+		personData.add(new Person("Paul", "Hauser", "männlich", 80.0));
         personData.add(new Person("Lucas", "Gigondan", "männlich", 66.0));
         
         alcoolData.add(new Alcool("Jägermeister", 35.0));
         alcoolData.add(new Alcool("Heineken", 5.0));
+		
+		
+		this.primaryStage = primaryStage;
+        this.primaryStage.setTitle("AlcoolApp");
+        
+        
+		
         
         
         initRootLayout();
