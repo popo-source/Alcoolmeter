@@ -1,6 +1,8 @@
 package fr.adresses.utilitary;
 
+import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
+import javafx.collections.ObservableList;
 import javafx.scene.chart.XYChart;
 
 public class LineChartsValues {
@@ -9,8 +11,13 @@ public class LineChartsValues {
 	private double M;
 	private double C;
 	private boolean eat;
+	private ObservableList<Alcool> selectedAlcoolData;
 	
 	XYChart.Series<Number, Number> series1 = new XYChart.Series<>();
+	
+	public void setAlcool(ObservableList<Alcool> selectedAlcoolData) {
+		this.selectedAlcoolData = selectedAlcoolData;
+	}
 	
 	public LineChartsValues(Person person) {
 		this.person = person;
