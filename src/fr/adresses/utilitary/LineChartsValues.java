@@ -12,7 +12,7 @@ public class LineChartsValues {
 	private double V;
 	private double M;
 	private double C;
-	private boolean eat;
+	private boolean eat = false;
 	private ObservableList<Alcool> selectedAlcoolData;
 	
 	
@@ -52,6 +52,16 @@ public class LineChartsValues {
 		this.V = quantity;
 	}
 	
+	public int eated() {
+		int eated = 0;
+		if(eat) {
+			eated = 1;
+		} else {
+			eated = 2;
+		}
+		return eated;
+	}
+	
 	public Double getAlcoolValue(double t) {
 		final double w = 2.71; //w un coefficient correctif, avec w = 2,71
 		//final double T = 0.789;//T le titre volumique en alcool, valeur entre 0 et 1
@@ -61,7 +71,8 @@ public class LineChartsValues {
 		
 		
 		
-		double A = (w*getEthanolVolume() / (C * M))*t*(Math.exp(-t));
+		
+		double A = (eated()*w*getEthanolVolume() / (C * M))*t*(Math.exp(-t*eated()));
 		return A;
 	}
 	
