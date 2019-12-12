@@ -37,29 +37,12 @@ public class MainOverviewController {
 	private TableColumn<Alcool, Double> quantityColumn;
 
 	
-	@FXML
-	private Label firstNameLabel;
-	@FXML
-	private Label lastNameLabel;
-	@FXML
-	private Label weightLabel;
-	@FXML
-	private Label alcoolNameLabel;
-	@FXML
-	private Label degreeLabel;
-	@FXML
-	private Label selectedAlcoolLabel;
-	@FXML
-	private Label quantityLabel;
-	
 	
 	
 	@FXML
 	private void initializePerson() {
 		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
 		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
-		showPersonDetails(null);
-		personTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> showPersonDetails(newValue));
 	}
 	
 	
@@ -75,15 +58,6 @@ public class MainOverviewController {
 		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
 		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty().asObject());
 	}
-	
-	
-	private void showPersonDetails(Person person) {
-        if (person != null) {
-            firstNameLabel.setText(person.getFirstName());
-            lastNameLabel.setText(person.getLastName());
-        }
-    }
-	
 	
 	
 	@FXML
