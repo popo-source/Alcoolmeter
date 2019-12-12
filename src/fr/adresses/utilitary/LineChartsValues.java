@@ -12,7 +12,7 @@ public class LineChartsValues {
 	private double V;
 	private double M;
 	private double C;
-	private boolean eat = false;
+	private boolean eat = true;
 	private ObservableList<Alcool> selectedAlcoolData;
 	
 	
