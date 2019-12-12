@@ -47,7 +47,7 @@ public class MainApp extends Application {
         initRootLayout();
         showMainOverview();
         
-        primaryStage.show();
+        this.primaryStage.show();
 	}
 	
 	public void initRootLayout() {

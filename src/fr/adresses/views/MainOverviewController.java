@@ -38,12 +38,7 @@ public class MainOverviewController {
 
 	
 	
-	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp;
-		personTable.setItems(mainApp.getPersonData());
-		alcoolTable.setItems(mainApp.getAlcoolData());
-		selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
-	}
+	
 	
 	
 	@FXML
@@ -187,6 +182,13 @@ public class MainOverviewController {
     	}
 	}
 	
+	
+	public void setMainApp(MainApp mainApp) {
+		this.mainApp = mainApp;
+		personTable.setItems(mainApp.getPersonData());
+		alcoolTable.setItems(mainApp.getAlcoolData());
+		selectedAlcoolTable.setItems(mainApp.getSelectedAlcoolData());
+	}
 	/*
 	@FXML
 	private Label firstNameLabel;
