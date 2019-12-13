@@ -15,6 +15,7 @@ private Stage DialogStage;
 	{
 		click=2;
 		DialogStage.close();
+		//
 	}
 	private void handleCancel() 
 	{
