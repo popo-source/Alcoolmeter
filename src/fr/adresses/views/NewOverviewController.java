@@ -7,20 +7,20 @@ public class NewOverviewController {
 private int click=0;
 private Stage DialogStage;
 	@FXML
-	private void handlePerson() 
+	private void handleNewPerson() 
 	{
 		click=1;
 		DialogStage.close();
 	}
 	@FXML
-	private void handleAlcool() 
+	private void handleNewAlcool() 
 	{
 		click=2;
 		DialogStage.close();
 		
 	}
 	@FXML
-	private void handleCancel() 
+	private void handleNewCancel() 
 	{
 		click=3;
 		DialogStage.close();
