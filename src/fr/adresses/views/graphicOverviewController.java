@@ -2,7 +2,7 @@ package fr.adresses.views;
 
 
 import javafx.fxml.FXML;
-import fr.adresses.classes.Person;
+import fr.adresses.objects.Person;
 import javafx.scene.chart.*;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;

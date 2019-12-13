@@ -1,7 +1,7 @@
 package fr.adresses.views;
 
-import fr.adresses.classes.Alcool;
-import fr.adresses.classes.Person;
+import fr.adresses.objects.Alcool;
+import fr.adresses.objects.Person;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 

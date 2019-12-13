@@ -2,8 +2,8 @@ package fr.adresses;
 
 import java.io.IOException;
 
-import fr.adresses.classes.Alcool;
-import fr.adresses.classes.Person;
+import fr.adresses.objects.Alcool;
+import fr.adresses.objects.Person;
 import fr.adresses.utilitary.LineChartsValues;
 import fr.adresses.views.DeleteOverviewController;
 import fr.adresses.views.EditAlcoolDialogController;

@@ -7,7 +7,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import fr.adresses.MainApp;
-import fr.adresses.classes.Alcool;
+import fr.adresses.objects.Alcool;
 
 
 public class EditQuantityDialogController {
