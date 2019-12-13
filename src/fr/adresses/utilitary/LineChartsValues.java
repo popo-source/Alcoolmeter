@@ -3,6 +3,7 @@ package fr.adresses.utilitary;
 import fr.adresses.MainApp;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
+import fr.adresses.views.EditPersonDialogController;
 import javafx.collections.ObservableList;
 import javafx.scene.chart.XYChart;
 
