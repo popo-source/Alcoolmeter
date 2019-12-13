@@ -12,6 +12,7 @@ import fr.adresses.views.EditQuantityDialogController;
 import fr.adresses.views.MainOverviewController;
 import fr.adresses.views.RootLayoutController;
 import fr.adresses.views.graphicOverviewController;
+import fr.adresses.views.NewOverviewController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -192,18 +193,18 @@ public class MainApp extends Application {
 	
 	public boolean showDeleteOverview(String name) {
 	    try {
-	        FXMLLoader loaderQuantity = new FXMLLoader();
-	        loaderQuantity.setLocation(MainApp.class.getResource("views/DeleteOverview.fxml"));
-	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
+	        FXMLLoader loaderDelete = new FXMLLoader();
+	        loaderDelete.setLocation(MainApp.class.getResource("views/DeleteOverview.fxml"));
+	        AnchorPane deleteOverview = (AnchorPane) loaderDelete.load();
 
 	        Stage DeletedialogStage = new Stage();
             DeletedialogStage.setTitle("Delete "+name+" ?");
             DeletedialogStage.initModality(Modality.WINDOW_MODAL);
             DeletedialogStage.initOwner(primaryStage);
-            Scene scene = new Scene(quantityOverview);
+            Scene scene = new Scene(deleteOverview);
             DeletedialogStage.setScene(scene);
 	        
-	        DeleteOverviewController controllerDelete = loaderQuantity.getController();
+	        DeleteOverviewController controllerDelete = loaderDelete.getController();
 	        controllerDelete.setDialogStage(DeletedialogStage);
 	        DeletedialogStage.showAndWait();
 	        
@@ -213,10 +214,31 @@ public class MainApp extends Application {
 	        return false;
 	    }
 	}
-	public int ShowNewOverview( click)
-	{//
+	public int ShowNewOverview(String newName)
+	{
+		try{
+		 FXMLLoader loaderNew = new FXMLLoader();
+	        loaderNew.setLocation(MainApp.class.getResource("views/NewOverview.fxml"));
+	        AnchorPane newOverview = (AnchorPane) loaderNew.load();
+
+	        Stage newDialogStage = new Stage();
+         newDialogStage.setTitle("New "+newName);
+         newDialogStage.initModality(Modality.WINDOW_MODAL);
+         newDialogStage.initOwner(primaryStage);
+         Scene scene = new Scene(newOverview);
+         newDialogStage.setScene(scene);
+	        
+	        NewOverviewController controllerNew = loaderNew.getController();
+	        controllerNew.setDialogStage(newDialogStage);
+	        newDialogStage.showAndWait();
+	        
+	        return controllerNew.isOkClicked();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	        return false;
 		
-	}//
+	}
+}
 	
 	public ObservableList<Person> getPersonData() {
         return personData;

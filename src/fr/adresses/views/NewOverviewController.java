@@ -2,6 +2,7 @@ package fr.adresses.views;
 
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
+import fr.adresses.MainApp;
 
 public class NewOverviewController {
 private int click=0;
@@ -18,6 +19,7 @@ private Stage DialogStage;
 	{
 		click=2;
 		DialogStage.close();
+		showAlcoolEditDialogOverview();
 		return click;
 	}
 	@FXML
