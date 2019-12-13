@@ -125,7 +125,7 @@ public class MainApp extends Application {
 	        
 	        EditPersonDialogController controllerPerson = loaderPerson.getController();
 	        controllerPerson.setMainApp(this);
-	        controllerPerson.setDialogStage(PersonEditdialogStage);
+	        controllerPerson.setPersonEditDialogStage(PersonEditdialogStage);
 	        PersonEditdialogStage.showAndWait();
 	        
             return controllerPerson.isOkClicked();
@@ -212,6 +212,10 @@ public class MainApp extends Application {
 	        e.printStackTrace();
 	        return false;
 	    }
+	}
+	public int ShowNewOverview( click)
+	{
+		
 	}
 	
 	public ObservableList<Person> getPersonData() {
