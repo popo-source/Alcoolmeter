@@ -12,7 +12,7 @@ import fr.adresses.MainApp;
 public class EditPersonDialogController {
 
 	private MainApp mainApp;
-	private Stage dialogStage;
+	private Stage personEditDialogStage;
 	private boolean okClicked = false;
 
 	
@@ -22,7 +22,8 @@ public class EditPersonDialogController {
 	private TextField lastNameField;
 	@FXML
 	private TextField weightField;
-	
+	@FXML
+	private CheckBox sexCheckbox;
 	/*
 	 * 
 	 * Pour programmer les checkbox:
@@ -36,8 +37,7 @@ public class EditPersonDialogController {
 	 * 
 	 */
 	
-	@FXML
-	private CheckBox sexCheckbox;
+	
 
 	
 	
@@ -49,8 +49,8 @@ public class EditPersonDialogController {
 		this.mainApp = mainApp;
 	}
 
-	public void setDialogStage(Stage dialogStage) {
-		this.dialogStage = dialogStage;
+	public void setPersonEditDialogStage(Stage personEditDialogStage) {
+		this.personEditDialogStage = personEditDialogStage;
 	}
 	
 	public boolean isOkClicked() {
@@ -70,7 +70,7 @@ public class EditPersonDialogController {
 			
 			
 			okClicked = true;
-			dialogStage.close();
+			personEditDilogStage.close();
 		}
 		
 	}
@@ -102,7 +102,7 @@ public class EditPersonDialogController {
 			return true;
 		} else {
 			Alert alert = new Alert(AlertType.ERROR);
-			alert.initOwner(dialogStage);
+			alert.initOwner(personEditDialogStage);
 			alert.setTitle("Invalid Fields");
 			alert.setHeaderText("Please correct invalid fields");
 			alert.setContentText(errorMessage);
