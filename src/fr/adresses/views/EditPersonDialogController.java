@@ -28,11 +28,7 @@ public class EditPersonDialogController {
 	private CheckBox manCheckbox;
 
 	
-	private void {
-	if (womanCheckbox!=null){
-	}
-	if (manCheckbox!=null) {
-	}
+	private void errorCheckbox {
 	if (manCheckbox==null && womanCheckbox==null ) {
 		Alert alertnothingselect = new Alert(AlertType.ERROR);
 		alertnothingselect.initOwner(personEditDialogStage);
