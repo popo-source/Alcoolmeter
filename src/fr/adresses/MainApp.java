@@ -190,7 +190,7 @@ public class MainApp extends Application {
 	public boolean showDeleteOverview(String name) {
 	    try {
 	        FXMLLoader loaderQuantity = new FXMLLoader();
-	        loaderQuantity.setLocation(MainApp.class.getResource("views/DeleteDialog.fxml"));
+	        loaderQuantity.setLocation(MainApp.class.getResource("views/DeleteOverview.fxml"));
 	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
 
 	        Stage dialogStage = new Stage();

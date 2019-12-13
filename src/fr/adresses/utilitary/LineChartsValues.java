@@ -9,7 +9,6 @@ import javafx.scene.chart.XYChart;
 public class LineChartsValues {
 	
 	private Person person;
-	private double V;
 	private double M;
 	private double C;
 	private boolean eat = true;
@@ -46,10 +45,6 @@ public class LineChartsValues {
 	
 	public void setEat(boolean eat) {
 		this.eat = eat;
-	}
-	
-	public void setQuantity(double quantity) {
-		this.V = quantity;
 	}
 	
 	public int eated() {

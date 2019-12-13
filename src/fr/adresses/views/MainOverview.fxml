@@ -51,7 +51,7 @@
                         <Button mnemonicParsing="false" onAction="#handleAdd" text="Add" translateX="300.0" translateY="5.0" />
                         <Button mnemonicParsing="false" onAction="#handleNew" text="New" translateX="375.0" translateY="5.0" />
                         <Button mnemonicParsing="false" onAction="#handleEdit" text="Edit" translateX="375.0" translateY="5.0" />
-                        <Button mnemonicParsing="false" text="Delete" translateX="375.0" translateY="5.0" />
+                        <Button mnemonicParsing="false" onAction="#handleDelete" text="Delete" translateX="375.0" translateY="5.0" />
                      </children>
                   </HBox>
                </children>

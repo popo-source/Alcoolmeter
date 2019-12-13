@@ -112,7 +112,7 @@ public class MainOverviewController {
 	
 	@FXML
 	private void handleDelete() {
-		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
+		Person selectedPerson = personTable.getSelectionModel().;
 		Alcool selectedAlcool = alcoolTable.getSelectionModel().getSelectedItem();
 		Alcool selectedSelectedAlcool = selectedAlcoolTable.getSelectionModel().getSelectedItem();
 		
