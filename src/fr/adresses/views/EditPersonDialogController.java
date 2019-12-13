@@ -23,24 +23,35 @@ public class EditPersonDialogController {
 	@FXML
 	private TextField weightField;
 	@FXML
-	private CheckBox sexCheckbox;
-	/*
-	 * 
-	 * Pour programmer les checkbox:
-	 * 
-	 * créer 2 checkbox 
-	 * 		- masculin
-	 * 		- feminin
-	 * 
-	 * -----> verifier que les deux ne sont pas coché en même temps pour valider l'entrée.
-	 * 
-	 * 
-	 */
-	
-	
+	private CheckBox womanCheckbox;
+	@FXML
+	private CheckBox manCheckbox;
 
 	
-	
+	private void {
+	if (womanCheckbox!=null){
+	}
+	if (manCheckbox!=null) {
+	}
+	if (manCheckbox==null && womanCheckbox==null ) {
+		Alert alertnothingselect = new Alert(AlertType.ERROR);
+		alertnothingselect.initOwner(personEditDialogStage);
+		alertnothingselect.setTitle("Invalid Fields");
+		alertnothingselect.setHeaderText("Please select sex");
+		alertnothingselect.setContentText(errorMessage);
+		alertnothingselect.showAndWait();
+		return false;
+	}
+	if (manCheckbox!=null && womanCheckbox!=null ) {
+		Alert alertallselect = new Alert(AlertType.ERROR);
+		alertallselect.initOwner(personEditDialogStage);
+		alertallselect.setTitle("Invalid Fields");
+		alertallselect.setHeaderText("Please select just woman or man");
+		alertallselect.setContentText(errorMessage);
+		alertallselect.showAndWait();
+		return false;
+	}
+}
 	public EditPersonDialogController() {
 	}
 
