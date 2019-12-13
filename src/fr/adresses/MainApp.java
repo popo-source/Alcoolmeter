@@ -231,7 +231,7 @@ public class MainApp extends Application {
 	        NewOverviewController controllerNew = loaderNew.getController();
 	        controllerNew.setDialogStage(newDialogStage);
 	        newDialogStage.showAndWait();
-	        
+	        //
 	        return controllerNew.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
