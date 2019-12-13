@@ -116,17 +116,17 @@ public class MainApp extends Application {
 	        loaderPerson.setLocation(MainApp.class.getResource("views/EditPersonDialog.fxml"));
 	        AnchorPane personOverview = (AnchorPane) loaderPerson.load();
 
-	        Stage dialogStage = new Stage();
-            dialogStage.setTitle("Person");
-            dialogStage.initModality(Modality.WINDOW_MODAL);
-            dialogStage.initOwner(primaryStage);
+	        Stage PersonEditdialogStage = new Stage();
+            PersonEditdialogStage.setTitle("Person");
+            PersonEditdialogStage.initModality(Modality.WINDOW_MODAL);
+            PersonEditdialogStage.initOwner(primaryStage);
             Scene scene = new Scene(personOverview);
-            dialogStage.setScene(scene);
+            PersonEditdialogStage.setScene(scene);
 	        
 	        EditPersonDialogController controllerPerson = loaderPerson.getController();
 	        controllerPerson.setMainApp(this);
-	        controllerPerson.setDialogStage(dialogStage);
-	        dialogStage.showAndWait();
+	        controllerPerson.setDialogStage(PersonEditdialogStage);
+	        PersonEditdialogStage.showAndWait();
             return controllerPerson.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
@@ -141,19 +141,19 @@ public class MainApp extends Application {
 	        loaderAlcool.setLocation(MainApp.class.getResource("views/EditAlcoolDialog.fxml"));
 	        AnchorPane alcoolOverview = (AnchorPane) loaderAlcool.load();
 	        
-	        Stage dialogStage = new Stage();
-            dialogStage.setTitle("Alcool");
-            dialogStage.initModality(Modality.WINDOW_MODAL);
-            dialogStage.initOwner(primaryStage);
+	        Stage AlcoolEditdialogStage = new Stage();
+            AlcoolEditdialogStage.setTitle("Alcool");
+            AlcoolEditdialogStage.initModality(Modality.WINDOW_MODAL);
+            AlcoolEditdialogStage.initOwner(primaryStage);
             Scene scene = new Scene(alcoolOverview);
-            dialogStage.setScene(scene);
+            AlcoolEditdialogStage.setScene(scene);
 
 	        
 	        EditAlcoolDialogController controllerAlcool = loaderAlcool.getController();
 	        controllerAlcool.setMainApp(this);
 	        controllerAlcool.setAlcool(alcool);
-	        controllerAlcool.setDialogStage(dialogStage);
-	        dialogStage.showAndWait();
+	        controllerAlcool.setDialogStage(AlcoolEditdialogStage);
+	        AlcoolEditdialogStage.showAndWait();
             return controllerAlcool.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
@@ -167,18 +167,18 @@ public class MainApp extends Application {
 	        loaderQuantity.setLocation(MainApp.class.getResource("views/EditQuantityDialog.fxml"));
 	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
 
-	        Stage dialogStage = new Stage();
-            dialogStage.setTitle("Quantity");
-            dialogStage.initModality(Modality.WINDOW_MODAL);
-            dialogStage.initOwner(primaryStage);
+	        Stage QuantitydialogStage = new Stage();
+            QuantitydialogStage.setTitle("Quantity");
+            QuantitydialogStage.initModality(Modality.WINDOW_MODAL);
+            QuantitydialogStage.initOwner(primaryStage);
             Scene scene = new Scene(quantityOverview);
-            dialogStage.setScene(scene);
+            QuantitydialogStage.setScene(scene);
 	        
 	        EditQuantityDialogController controllerQuantity = loaderQuantity.getController();
 	        controllerQuantity.setMainApp(this);
 	        controllerQuantity.setAlcool(alcool);
-	        controllerQuantity.setDialogStage(dialogStage);
-	        dialogStage.showAndWait();
+	        controllerQuantity.setDialogStage(QuantitydialogStage);
+	        QuantitydialogStage.showAndWait();
 	        return controllerQuantity.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
@@ -193,16 +193,16 @@ public class MainApp extends Application {
 	        loaderQuantity.setLocation(MainApp.class.getResource("views/DeleteDialog.fxml"));
 	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
 
-	        Stage dialogStage = new Stage();
-            dialogStage.setTitle("Delete "+name+" ?");
-            dialogStage.initModality(Modality.WINDOW_MODAL);
-            dialogStage.initOwner(primaryStage);
+	        Stage DeletedialogStage = new Stage();
+            DeletedialogStage.setTitle("Delete "+name+" ?");
+            DeletedialogStage.initModality(Modality.WINDOW_MODAL);
+            DeletedialogStage.initOwner(primaryStage);
             Scene scene = new Scene(quantityOverview);
-            dialogStage.setScene(scene);
+            DeletedialogStage.setScene(scene);
 	        
 	        DeleteOverviewController controllerDelete = loaderQuantity.getController();
-	        controllerDelete.setDialogStage(dialogStage);
-	        dialogStage.showAndWait();
+	        controllerDelete.setDialogStage(DeletedialogStage);
+	        DeletedialogStage.showAndWait();
 	        return controllerDelete.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
