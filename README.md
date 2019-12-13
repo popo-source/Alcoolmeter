@@ -2,9 +2,8 @@
 
 # Paul Hauser // Lucas Gigondan // Gil Flassch--Trauth
 
-#Software Engineering
-#Inhaltsverzeichnis
-
+##__Software Engineering
+##Inhaltsverzeichnis
 #Einleitung
 #Build-Anleitung
 #Bedienungsanleitung
@@ -13,4 +12,4 @@
 #Taskliste für die Umsetzung der User Story
 #Umsetzung
 #Klassendiagramm
-#Dokumentation wichtiger Code Snippets
+#Dokumentation wichtiger Code Snippets__
