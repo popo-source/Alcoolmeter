@@ -1,9 +1,7 @@
 package fr.adresses.classes;
 
 import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -28,37 +26,40 @@ public class Alcool {
 	public String getAlcoolName() {
 		return alcoolName.get();
 	}
-
 	public void setAlcoolName(String alcoolName) {
 	    this.alcoolName.set(alcoolName);
 	}
-	    
 	public StringProperty alcoolNameProperty() {
 		return alcoolName;
 	}
 
+	
 	public double getDegree() {
 		return degree.get();
 	}
-
 	public void setDegree(double degree) {
 	    this.degree.set(degree);
 	}
-	
 	public DoubleProperty degreeProperty() {
 		return degree;
 	}
+	public SimpleStringProperty getStringPropertyDegree() {
+		return new SimpleStringProperty(Double.toString(degree.get()));
+	}
+	
+	
 	
 	public double getQuantity() {
 		return quantity.get();
 	}
-
 	public void setQuantity(double dose) {
 	    this.quantity.set(dose);
-	}
-	    
+	}    
 	public DoubleProperty quantityProperty() {
 		return quantity;
+	}
+	public SimpleStringProperty getStringPropertyQuantity() {
+		return new SimpleStringProperty(Double.toString(quantity.get()));
 	}
 	
 	

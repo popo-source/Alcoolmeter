@@ -33,13 +33,22 @@ public class MainApp extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
+
+		personData.add(new Person("Paul", "Hauser", "männlich", 80.0));
+        personData.add(new Person("Lucas", "Gigondan", "männlich", 66.0));
+        
+        alcoolData.add(new Alcool("Jägermeister", 35.0));
+        alcoolData.add(new Alcool("Heineken", 5.0));
+        alcoolData.add(new Alcool("B52", 25.0));
+		
+		
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AlcoolApp");
         
         initRootLayout();
         showMainOverview();
         
-        primaryStage.show();
+        this.primaryStage.show();
 	}
 	
 	public void initRootLayout() {
@@ -74,7 +83,7 @@ public class MainApp extends Application {
 		}
 	}
 	
-	public boolean showGraphicOverview(Person person) {
+	public void showGraphicOverview(Person person) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("views/GraphicOverview.fxml"));
@@ -88,16 +97,15 @@ public class MainApp extends Application {
             graphicStage.setScene(scene);
 
             LineChartsValues values = new LineChartsValues(person);
+            values.setMainApp(this);
             
             graphicOverviewController controller = loader.getController();
             controller.setDialogStage(graphicStage);
             controller.setChart(values.getChart());
-
             graphicStage.showAndWait();
-            return controller.isOkClicked();
+            
 		}catch(IOException e) {
 			e.printStackTrace();
-			return false;
 		}
 	}
 	
@@ -179,14 +187,14 @@ public class MainApp extends Application {
 	}
 	
 	
-	public boolean showDeleteOverview() {
+	public boolean showDeleteOverview(String name) {
 	    try {
 	        FXMLLoader loaderQuantity = new FXMLLoader();
 	        loaderQuantity.setLocation(MainApp.class.getResource("views/DeleteDialog.fxml"));
 	        AnchorPane quantityOverview = (AnchorPane) loaderQuantity.load();
 
 	        Stage dialogStage = new Stage();
-            dialogStage.setTitle("Delete ?");
+            dialogStage.setTitle("Delete "+name+" ?");
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(quantityOverview);
