@@ -10,9 +10,9 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="53.0" layoutY="100.0" mnemonicParsing="false" text="Person" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="100.0" />
-            <Button layoutX="278.0" layoutY="100.0" mnemonicParsing="false" text="Alcool" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="100.0" />
-            <Button layoutX="174.0" layoutY="161.0" mnemonicParsing="false" text="Cancel" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="150.0" />
+            <Button layoutX="53.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleNewPerson" text="Person" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="100.0" />
+            <Button layoutX="278.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleNewAlcool" text="Alcool" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="100.0" />
+            <Button layoutX="174.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleNewCancel" text="Cancel" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="150.0" />
             <Label layoutX="161.0" layoutY="42.0" text="What do you want to add ?" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="30.0">
                <font>
                   <Font size="16.0" />

@@ -8,7 +8,7 @@ private int click=0;
 private Stage DialogStage;
 	@FXML
 	private void handleNewPerson() 
-	{
+	{//
 		click=1;
 		DialogStage.close();
 	}
