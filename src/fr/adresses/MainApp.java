@@ -127,6 +127,7 @@ public class MainApp extends Application {
 	        controllerPerson.setMainApp(this);
 	        controllerPerson.setDialogStage(PersonEditdialogStage);
 	        PersonEditdialogStage.showAndWait();
+	        
             return controllerPerson.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
@@ -154,6 +155,7 @@ public class MainApp extends Application {
 	        controllerAlcool.setAlcool(alcool);
 	        controllerAlcool.setDialogStage(AlcoolEditdialogStage);
 	        AlcoolEditdialogStage.showAndWait();
+	        
             return controllerAlcool.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
@@ -179,6 +181,7 @@ public class MainApp extends Application {
 	        controllerQuantity.setAlcool(alcool);
 	        controllerQuantity.setDialogStage(QuantitydialogStage);
 	        QuantitydialogStage.showAndWait();
+	        
 	        return controllerQuantity.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
@@ -203,6 +206,7 @@ public class MainApp extends Application {
 	        DeleteOverviewController controllerDelete = loaderQuantity.getController();
 	        controllerDelete.setDialogStage(DeletedialogStage);
 	        DeletedialogStage.showAndWait();
+	        
 	        return controllerDelete.isOkClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
