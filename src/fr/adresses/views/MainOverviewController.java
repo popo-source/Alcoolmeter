@@ -77,6 +77,11 @@ public class MainOverviewController {
 	
 	@FXML
 	private void handleNew() {
+		if (newClick=true)
+		{
+			mainApp.showNewOverview;
+		}
+		
 		/*
 		 * --> à compléter:
 		 * 	???? créer une nouvelle fenêtre de choix????:
@@ -88,18 +93,18 @@ public class MainOverviewController {
 		//Alcool tempAlcool = new Alcool();
 		
 		
-		if(tempPerson!=null && tempAlcool==null) {
-			if (mainApp.showPersonEditDialogOverview(tempPerson)) {
-				mainApp.getPersonData().add(tempPerson);
-			}
-		} else {
-			if(tempPerson==null && tempAlcool!=null) {
-				if (mainApp.showAlcoolEditDialogOverview(tempAlcool)) {
-					mainApp.getAlcoolData().add(tempAlcool);
+		//if(tempPerson!=null && tempAlcool==null) {
+		//	if (mainApp.showPersonEditDialogOverview(tempPerson)) {
+		//		mainApp.getPersonData().add(tempPerson);
+			//}
+		//} else {
+			//if(tempPerson==null && tempAlcool!=null) {
+				//if (mainApp.showAlcoolEditDialogOverview(tempAlcool)) {
+					//mainApp.getAlcoolData().add(tempAlcool);
 				}
-			}
-		}
-	}
+			//}
+	//	}
+	//}
 	
 	
 	
