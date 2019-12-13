@@ -73,10 +73,11 @@ public class MainApp extends Application {
 			loader.setLocation(MainApp.class.getResource("views/MainOverview.fxml"));
 			AnchorPane mainOverview = (AnchorPane) loader.load();
 			
-			rootLayout.setCenter(mainOverview);
-			
 			MainOverviewController controller = loader.getController();
 			controller.setMainApp(this);
+			
+			rootLayout.setCenter(mainOverview);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 			
@@ -125,7 +126,7 @@ public class MainApp extends Application {
 	        
 	        EditPersonDialogController controllerPerson = loaderPerson.getController();
 	        controllerPerson.setMainApp(this);
-	        controllerPerson.setDialogStage(PersonEditdialogStage);
+	        controllerPerson.setPersonEditDialogStage(PersonEditdialogStage);
 	        PersonEditdialogStage.showAndWait();
 	        
             return controllerPerson.isOkClicked();
