@@ -12,7 +12,7 @@ import fr.adresses.MainApp;
 public class EditPersonDialogController {
 
 	private MainApp mainApp;
-	private Stage dialogStage;
+	private Stage personEditDialogStage;
 	private boolean okClicked = false;
 
 	
@@ -22,25 +22,32 @@ public class EditPersonDialogController {
 	private TextField lastNameField;
 	@FXML
 	private TextField weightField;
-	
-	/*
-	 * 
-	 * Pour programmer les checkbox:
-	 * 
-	 * créer 2 checkbox 
-	 * 		- masculin
-	 * 		- feminin
-	 * 
-	 * -----> verifier que les deux ne sont pas coché en même temps pour valider l'entrée.
-	 * 
-	 * 
-	 */
-	
 	@FXML
-	private CheckBox sexCheckbox;
+	private CheckBox womanCheckbox;
+	@FXML
+	private CheckBox manCheckbox;
 
 	
-	
+	private void errorCheckbox {
+	if (manCheckbox==null && womanCheckbox==null ) {
+		Alert alertnothingselect = new Alert(AlertType.ERROR);
+		alertnothingselect.initOwner(personEditDialogStage);
+		alertnothingselect.setTitle("Invalid Fields");
+		alertnothingselect.setHeaderText("Please select sex");
+		alertnothingselect.setContentText(errorMessage);
+		alertnothingselect.showAndWait();
+		return false;
+	}
+	if (manCheckbox!=null && womanCheckbox!=null ) {
+		Alert alertallselect = new Alert(AlertType.ERROR);
+		alertallselect.initOwner(personEditDialogStage);
+		alertallselect.setTitle("Invalid Fields");
+		alertallselect.setHeaderText("Please select just woman or man");
+		alertallselect.setContentText(errorMessage);
+		alertallselect.showAndWait();
+		return false;
+	}
+}
 	public EditPersonDialogController() {
 	}
 
@@ -49,8 +56,8 @@ public class EditPersonDialogController {
 		this.mainApp = mainApp;
 	}
 
-	public void setDialogStage(Stage dialogStage) {
-		this.dialogStage = dialogStage;
+	public void setPersonEditDialogStage(Stage personEditDialogStage) {
+		this.personEditDialogStage = personEditDialogStage;
 	}
 	
 	public boolean isOkClicked() {
@@ -70,7 +77,7 @@ public class EditPersonDialogController {
 			
 			
 			okClicked = true;
-			dialogStage.close();
+			personEditDilogStage.close();
 		}
 		
 	}
@@ -102,7 +109,7 @@ public class EditPersonDialogController {
 			return true;
 		} else {
 			Alert alert = new Alert(AlertType.ERROR);
-			alert.initOwner(dialogStage);
+			alert.initOwner(personEditDialogStage);
 			alert.setTitle("Invalid Fields");
 			alert.setHeaderText("Please correct invalid fields");
 			alert.setContentText(errorMessage);

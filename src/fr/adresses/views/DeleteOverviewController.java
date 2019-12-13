@@ -44,7 +44,10 @@ public class DeleteOverviewController {
 		this.dialogStage = dialogStage;
 	}
 	
-	
+	public void selectedObject (Object object) {
+		
+		
+	}
 	/*
 	 * 
 	 * public void selectedAlcool(Alcool alcool) {
