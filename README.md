@@ -104,6 +104,7 @@ Zeitaufwandschätzung |
 | Task 1 | Mehrere Klassen hinzufügen. | 1 Stunde |
 | Task 2 | Logisches Design und liesbar.| 1 Stunde |
 
+* ### __Tacklist__
 * ## __Umsetzung__
 * ## __Klassendiagramm__
 * ## __Dokumentation wichtiger Code Snippets__
