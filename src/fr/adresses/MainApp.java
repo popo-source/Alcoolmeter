@@ -109,7 +109,7 @@ public class MainApp extends Application {
             
             graphicOverviewController controller = loader.getController();
             controller.setDialogStage(graphicStage);
-            controller.setChart(values.getChart());
+            controller.setChart(values.graph());
             graphicStage.showAndWait();
             
 		}catch(IOException e) {
