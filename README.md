@@ -1,7 +1,7 @@
 ## Alcoolmeter
 
 ## Paul Hauser // Lucas Gigondan // Gil Flassch--Trauth
-[GitHub](https://github.com/popo-source/Alcoolmeter)
+https://github.com/popo-source/Alcoolmeter
 
 # __Software Engineering__
 # __Inhaltsverzeichnis__
