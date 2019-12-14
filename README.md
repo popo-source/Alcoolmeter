@@ -2,22 +2,18 @@
 
 # Paul Hauser // Lucas Gigondan // Gil Flassch--Trauth
 
-##__Software Engineering__
-##__Inhaltsverzeichnis__
+__Software Engineering__
+__Inhaltsverzeichnis__
 
-#__Einleitung__
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+__Einleitung__
 
-#__Build-Anleitung
-#Bedienungsanleitung
-#Userstory
-#Releaseplan mit den Ausbaustufen
-#Taskliste für die Umsetzung der User Story
-#Umsetzung
-#Klassendiagramm
-#Dokumentation wichtiger Code Snippets__
+* __Build-Anleitung
+* __Bedienungsanleitung
+* __Userstory
+* __Releaseplan mit den Ausbaustufen
+* __Taskliste für die Umsetzung der User Story
+* __Umsetzung
+* __Klassendiagramm
+* __Dokumentation wichtiger Code Snippets
 
 [GitHub](https://github.com/popo-source/Alcoolmeter)
