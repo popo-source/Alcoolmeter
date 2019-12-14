@@ -35,16 +35,15 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 * __Userstory mit Akzeptanzkriterien__
 
 Us | Name |     | SP | Priorität
--- | ------------------------------ | ------------------------------------------------------------------- | -- | --
+-- | ---------------- | ------------------------------------------------------------------------------------------------ | -- | --
 1 |      | Als Benutzer möchte ich meinen Blutalkoholspiegel als Funktion der Zeit kennenlernen. <br><b> Akezeptanzkriterien: <br></b> Auf dem Bildschirm sollte eine Grafik erscheinen, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.. | 1 | 1 |
 2  |      | Als Benutzer möchte ich meinen Alkoholspiegel anhand meiner persönlichen Eigenschaften berechnen können.
- <br><b> Akezeptanzkriterien: <br></b> Anzeige eines Fensters, in dem Name, Vorname, Gewicht und Geschlecht einer Person eingegeben werden können.Anzeige von Name, Vorname und Gewicht der Person in einer Tabelle. | 1 | 2 |
-3  |      | Als Benutzer möchte ich in der Lage sein, eine vordefinierte Alkoholliste zu erstellen. <br><b> Akezeptanzkriterien: <br></b> Anzeige eines Fensters, in dem der Name des Alkohols und der Prozentsatz davon eingegeben werden können. Anzeige des Namens des Alkohols und des Alkoholanteils in einer Tabelle.|  |  |
+ <br><b> Akezeptanzkriterien: <br></b> Anzeige eines Fensters, in dem Name, Vorname, Gewicht und Geschlecht einer Person eingegeben werden können. Anzeige von Name, Vorname und Gewicht der Person in einer Tabelle. | 1 | 2 |
+3  |      | Als Benutzer möchte ich in der Lage sein, eine vordefinierte Alkoholliste zu erstellen. <br><b> Akezeptanzkriterien: <br></b> Anzeige eines Fensters, in dem der Name des Alkohols und der Prozentsatz davon eingegeben werden können.Anzeige des Namens des Alkohols und des Alkoholanteils in einer Tabelle.|  |  |
 4  |      | Als Anwender möchte ich meinen Alkoholspiegel aus dem Verbrauch verschiedener Alkohole berechnen können. <br><b> Akezeptanzkriterien: <br></b>Anzeige eines Fensters, in dem die Menge jedes konsumierten Alkohols eingegeben werden kann. Anzeige des Alkoholdatensatzes und der Menge in einer Tabelle. |  |  |
-5  |      | Als Benutzer möchte ich einige von mir eingegebene Variablen hinzufügen können.<br><b> Akezeptanzkriterien: <br></b>Erstellung einer " New " Schaltfläche. Anzeige eines Fensters, in dem Sie wählen können, ob Sie neue Personen oder neue Alkohole hinzufügen möchten. |  |  |
-6  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen ändern können.<br><b> Akezeptanzkriterien: <br></b> Erstellung einer Taste " Edit ". Anzeige der Parameter der ausgewählten Zeile.|  |  |
-7  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen löschen können.
-<br><b> Akezeptanzkriterien: <br></b> Erstellung einer Taste "Löschen". Anzeige eines Fensters, das es Ihnen ermöglicht, die Auswahl zu löschen.|  |  |
+5  |      | Als Benutzer möchte ich einige von mir eingegebene Variablen hinzufügen können. <br><b> Akezeptanzkriterien: <br></b>Erstellung einer " New " Schaltfläche. Anzeige eines Fensters, in dem Sie wählen können, ob Sie neue Personen oder neue Alkohole hinzufügen möchten. |  |  |
+6  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen ändern können. <br><b> Akezeptanzkriterien: <br></b> Erstellung einer Taste " Edit ". Anzeige der Parameter der ausgewählten Zeile.|  |  |
+7  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen löschen können. <br><b> Akezeptanzkriterien: <br></b> Erstellung einer Taste "Löschen". Anzeige eines Fensters, das es Ihnen ermöglicht, die Auswahl zu löschen.|  |  |
 8  |      | <br><b> Akezeptanzkriterien: <br></b> |  |  |
 
 
