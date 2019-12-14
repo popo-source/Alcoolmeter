@@ -13,7 +13,7 @@ Es soll ein kleines Programm erstellt werden, bei dem den Blutalkoholspiegel in 
 
 * __Build-Anleitung__
 * __Bedienungsanleitung__
-* > Öffnen Sie das Alkoholtest.
+> Öffnen Sie das Alkoholtest.
 > Klicken Sie auf „New" um Personen und Alkohole hinzuzufügen.
 > Füllen Sie die angezeigten Fenster aus und klicken Sie auf Ok. 
 > Klicken Sie auf „Add" um die konsumierten Alkohole und die Menge zu speichern.
@@ -21,7 +21,7 @@ Es soll ein kleines Programm erstellt werden, bei dem den Blutalkoholspiegel in 
 > Kreuzen Sie eines der beiden Kästchen "Yes" oder "No" an, um die Frage zu beantworten: „Have you eaten?“.
 > Zum Schluss klicken Sie auf „Graphic“. Sie erhalten sie ein Diagramm, das den Blutalkoholgehalt im Laufe der Zeit anzeigt.
 > Sie können immer eine Person, einen Alkohol oder den Alkoholkonsum einer Person jederzeit löschen, indem Sie die Zeile wählen und auf „Delete“ klicken.
-* > Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
+> Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
 
 * __Userstory__
 * __Releaseplan mit den Ausbaustufen__
