@@ -44,22 +44,29 @@ Us | Name |     | SP | Priorität
 6  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen ändern können. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste "Edit". Testanzeige der Parameter der ausgewählten Zeile.|  | 2 |
 7  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen löschen können. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste " Delete ".Testen Sie die Funktion des Fensters, damit Sie die Auswahl löschen können.|  | 3 |
 8  |      | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird.<br><b> Akezeptanzkriterien: <br></b> Test der Anzeige der Fehlermeldung, wenn eine Auswahl fehlt.|  | 2 |
-9  |      | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. <br><b> Akezeptanzkriterien: <br></b> Mehrere Klassen hinzufügen. Logisches Design und liesbar.|  | 4 |
+9  |      | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. <br><b> Akezeptanzkriterien: <br></b> Test der verschiedenen Klassen.|  | 4 |
 
 
 * ## __Releaseplan mit den Ausbaustufen__
 * ## __Taskliste für die Umsetzung der User Story__
-User Story | Name |     | SP | Priorität
--- | ---------------- | ------------------------------------------------------------------------------------------------ | -- | --
-1 |      | Als Benutzer möchte ich meinen Alkoholgehalt im Blut als Funktion der Zeit kennenlernen. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste " Graphic ". Test zur Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.| 1 | 1 |
-2  |      | Als Benutzer möchte ich meinen Alkoholgehalt anhand meiner persönlichen Eigenschaften berechnen können. <br><b> Akezeptanzkriterien: <br></b> Test der Fensterbedienung zur Eingabe von Name, Vorname, Gewicht und Geschlecht einer Person. Test, um den Namen, Vornamen und das Gewicht der Person in einer Tabelle anzuzeigen.| 1 | 1 |
-3  |      | Als Benutzer möchte ich in der Lage sein, eine vordefinierte Alkoholliste zu erstellen. <br><b> Akezeptanzkriterien: <br></b>Test der Funktionsfähigkeit des Fensters, mit dem der Name des Alkohols und der Prozentsatz davon eingegeben werden können. Test zur Anzeige des Namens des Alkohols und des Alkoholanteils in einer Tabelle.|  | 1 |
-4  |      |Als Benutzer möchte ich meinen Alkoholgehalt basierend auf meinem Konsum verschiedener Alkohole berechnen können. <br><b> Akezeptanzkriterien: <br></b> Funktionstest der Taste " Add ". Prüfung der Funktion des Fensters, die es ermöglicht, die Menge jedes aufgenommenen Alkohols einzugeben. Test zur Anzeige des Namens des Alkohols und der Menge in einer Tabelle. |  | 1 |
-5  |      | Als Benutzer möchte ich einige von mir eingegebene Variablen hinzufügen können. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste "Neu". Test der Fensterbedienung, die es ermöglicht, neue Personen oder neue Alkohole hinzuzufügen. |  | 3 |
-6  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen ändern können. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste "Edit". Testanzeige der Parameter der ausgewählten Zeile.|  | 2 |
-7  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen löschen können. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste " Delete ".Testen Sie die Funktion des Fensters, damit Sie die Auswahl löschen können.|  | 3 |
-8  |      | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird.<br><b> Akezeptanzkriterien: <br></b> Test der Anzeige der Fehlermeldung, wenn eine Auswahl fehlt.|  | 2 |
-9  |      | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. <br><b> Akezeptanzkriterien: <br></b> Mehrere Klassen hinzufügen. Logisches Design und liesbar.|  | 4 |
+
+User Story 1 | Als Benutzer möchte ich meinen Alkoholgehalt im Blut als Funktion der Zeit kennenlernen. | 
+Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
+| Task 1 | Testen Sie die Funktion der Taste " Graphic ". | 1 Stunde |
+| Task 2 | Test zur Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.| 1 Stunde |
+User Story 2  |      | Als Benutzer möchte ich meinen Alkoholgehalt anhand meiner persönlichen Eigenschaften berechnen können. | 
+Zeitaufwandschätzung | 
+-- | ---------------------------------------------------------------------------------- | -- 
+| Task 1 | Test der Fensterbedienung zur Eingabe von Name, Vorname, Gewicht und Geschlecht einer Person. | 1 Stunde | 
+| Task 2 | Test, um den Namen, Vornamen und das Gewicht der Person in einer Tabelle anzuzeigen. | 1 Stunde |
+User Story 3  |      | Als Benutzer möchte ich in der Lage sein, eine vordefinierte Alkoholliste zu erstellen. <br><b> Akezeptanzkriterien: <br></b>Test der Funktionsfähigkeit des Fensters, mit dem der Name des Alkohols und der Prozentsatz davon eingegeben werden können. Test zur Anzeige des Namens des Alkohols und des Alkoholanteils in einer Tabelle.|  | 1 |
+User Story 4  |      |Als Benutzer möchte ich meinen Alkoholgehalt basierend auf meinem Konsum verschiedener Alkohole berechnen können. <br><b> Akezeptanzkriterien: <br></b> Funktionstest der Taste " Add ". Prüfung der Funktion des Fensters, die es ermöglicht, die Menge jedes aufgenommenen Alkohols einzugeben. Test zur Anzeige des Namens des Alkohols und der Menge in einer Tabelle. |  | 1 |
+User Story 5  |      | Als Benutzer möchte ich einige von mir eingegebene Variablen hinzufügen können. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste "Neu". Test der Fensterbedienung, die es ermöglicht, neue Personen oder neue Alkohole hinzuzufügen. |  | 3 |
+User Story 6  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen ändern können. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste "Edit". Testanzeige der Parameter der ausgewählten Zeile.|  | 2 |
+User Story 7  |      | Als Benutzer möchte ich einige der von mir eingegebenen Variablen löschen können. <br><b> Akezeptanzkriterien: <br></b> Testen Sie die Funktion der Taste " Delete ".Testen Sie die Funktion des Fensters, damit Sie die Auswahl löschen können.|  | 3 |
+User Story 8  |      | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird.<br><b> Akezeptanzkriterien: <br></b> Test der Anzeige der Fehlermeldung, wenn eine Auswahl fehlt.|  | 2 |
+User Story 9  |      | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. <br><b> Akezeptanzkriterien: <br></b> Mehrere Klassen hinzufügen. Logisches Design und liesbar.|  | 4 |
 
 * ## __Umsetzung__
 * ## __Klassendiagramm__
