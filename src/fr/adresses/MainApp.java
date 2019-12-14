@@ -2,8 +2,8 @@ package fr.adresses;
 
 import java.io.IOException;
 
-import fr.adresses.classes.Alcool;
-import fr.adresses.classes.Person;
+import fr.adresses.objects.Alcool;
+import fr.adresses.objects.Person;
 import fr.adresses.utilitary.LineChartsValues;
 import fr.adresses.views.DeleteOverviewController;
 import fr.adresses.views.EditAlcoolDialogController;
@@ -74,10 +74,11 @@ public class MainApp extends Application {
 			loader.setLocation(MainApp.class.getResource("views/MainOverview.fxml"));
 			AnchorPane mainOverview = (AnchorPane) loader.load();
 			
-			rootLayout.setCenter(mainOverview);
-			
 			MainOverviewController controller = loader.getController();
 			controller.setMainApp(this);
+			
+			rootLayout.setCenter(mainOverview);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 			

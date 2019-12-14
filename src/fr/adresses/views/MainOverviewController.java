@@ -1,9 +1,14 @@
 package fr.adresses.views;
 
 import fr.adresses.MainApp;
+<<<<<<< HEAD
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
 import fr.adresses.views.NewOverviewController;
+=======
+import fr.adresses.objects.Alcool;
+import fr.adresses.objects.Person;
+>>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -43,23 +48,36 @@ public class MainOverviewController {
     }
 	
 	@FXML
-	private void initializePerson() {
+	private void initialize() {
 		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
 		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
-	}
-	
-	
-	@FXML
-	private void initializeAlcool() {
+		
 		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
 		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().degreeProperty().asObject());
-	}
-	
-	
-	@FXML
-	private void initializeSelectedAlcool() {
+		
 		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
 		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty().asObject());
+		
+		personTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+		    if (newSelection != null) {
+		        alcoolTable.getSelectionModel().clearSelection();
+		        selectedAlcoolTable.getSelectionModel().clearSelection();
+		    }
+		});
+		
+		alcoolTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+		    if (newSelection != null) {
+		        personTable.getSelectionModel().clearSelection();
+		        selectedAlcoolTable.getSelectionModel().clearSelection();
+		    }
+		});
+		
+		selectedAlcoolTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+		    if (newSelection != null) {
+		        personTable.getSelectionModel().clearSelection();
+		        alcoolTable.getSelectionModel().clearSelection();
+		    }
+		});
 	}
 	
 	
@@ -92,6 +110,8 @@ public class MainOverviewController {
 			//}
 	//	}
 	//}
+	
+	
 	
 	
 	@FXML

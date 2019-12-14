@@ -27,8 +27,8 @@ public class EditPersonDialogController {
 	@FXML
 	private CheckBox manCheckbox;
 
-	
-	private void errorCheckbox {
+	//
+	private void errorCheckbox() {
 	if (manCheckbox==null && womanCheckbox==null ) {
 		Alert alertnothingselect = new Alert(AlertType.ERROR);
 		alertnothingselect.initOwner(personEditDialogStage);
@@ -77,14 +77,14 @@ public class EditPersonDialogController {
 			
 			
 			okClicked = true;
-			personEditDilogStage.close();
+			personEditDialogStage.close();
 		}
 		
 	}
 	
 	@FXML
 	private void handleCancel() {
-		dialogStage.close();
+		personEditDialogStage.close();
 	}
 	
 	private boolean isInputValid() {
