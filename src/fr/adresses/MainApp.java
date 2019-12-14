@@ -38,7 +38,7 @@ public class MainApp extends Application {
 		personData.add(new Person("Paul", "Hauser", "männlich", 80.0));
         personData.add(new Person("Lucas", "Gigondan", "männlich", 66.0));
         
-        alcoolData.add(new Alcool("J�germeister", 35.0));
+        alcoolData.add(new Alcool("J�germeister", 35.0));
         alcoolData.add(new Alcool("Heineken", 5.0));
         alcoolData.add(new Alcool("B52", 25.0));
         alcoolData.add(new Alcool("Vin", 12.0));
@@ -91,7 +91,7 @@ public class MainApp extends Application {
 		}
 	}
 	
-	public void showGraphicOverview(Person person) {
+	public void showGraphicOverview(Person person, boolean eaten) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("views/GraphicOverview.fxml"));
@@ -106,6 +106,7 @@ public class MainApp extends Application {
 
             LineChartsValues values = new LineChartsValues(person);
             values.setMainApp(this);
+            values.setEat(eaten);
             
             graphicOverviewController controller = loader.getController();
             controller.setDialogStage(graphicStage);
