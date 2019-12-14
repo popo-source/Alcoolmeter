@@ -12,7 +12,7 @@ public class Person {
     private final DoubleProperty weight;
     
     public Person() {
-        this(null, null, null, null);
+        this(null, null, null, 0.0);
     }
     
     public Person(String firstName, String lastName, String sex, Double weight) {

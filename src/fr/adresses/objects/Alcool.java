@@ -11,7 +11,7 @@ public class Alcool {
 	private final DoubleProperty quantity;
 	
 	 public Alcool() {
-	        this(null, null);
+	        this(null, 0.0);
 	    }
 	 
 	public Alcool(String alcoolName, Double degree) {

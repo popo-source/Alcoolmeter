@@ -79,35 +79,26 @@ public class MainOverviewController {
 	private void handleNew() {
 	int newa=0;
 		newa=mainApp.ShowNewOverview();
-	
+		switch(newa) {
+		
+		case 1:
+		
+			Person newPerson= new Person(	);
+			if (mainApp.showPersonEditDialogOverview(newPerson));
+			{
+				mainApp.getPersonData().add(newPerson);
+			}
+		break;
+		case 2:
+		
+			Alcool newAlcool = new Alcool();
+			if (mainApp.showAlcoolEditDialogOverview(newAlcool))
+			{
+				mainApp.getAlcoolData().add(newAlcool);
+			}
+			break;
+		}
 	}
-		/*
-		 * --> à compléter:
-		 * 	???? créer une nouvelle fenêtre de choix????:
-		 * 								- Person?
-		 * 								- Alcool?
-		 * 
-		 */
-		//Person tempPerson = new Person();
-		//Alcool tempAlcool = new Alcool();
-		
-		
-		//if(tempPerson!=null && tempAlcool==null) {
-		//	if (mainApp.showPersonEditDialogOverview(tempPerson)) {
-		//		mainApp.getPersonData().add(tempPerson);
-			//}
-		//} else {
-			//if(tempPerson==null && tempAlcool!=null) {
-				//if (mainApp.showAlcoolEditDialogOverview(tempAlcool)) {
-					//mainApp.getAlcoolData().add(tempAlcool);
-				
-			//}
-	//	}
-	//}
-	
-	
-	
-	
 	@FXML
 	private void handleEdit() {
 		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();

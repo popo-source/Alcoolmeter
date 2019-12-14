@@ -13,7 +13,7 @@ private Stage DialogStage;
 	{
 		clickPerson=1;
 		DialogStage.close();
-	
+		
 	}
 	@FXML
 	private void handleNewAlcool() 
