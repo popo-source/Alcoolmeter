@@ -55,36 +55,52 @@ Zeitaufwandschätzung |
 -- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Testen Sie die Funktion der Taste " Graphic ". | 1 Stunde |
 | Task 2 | Test zur Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.| 1 Stunde |
+
 User Story 2  | Als Benutzer möchte ich meinen Alkoholgehalt anhand meiner persönlichen Eigenschaften berechnen können. | 
 Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Test der Fensterbedienung zur Eingabe von Name, Vorname, Gewicht und Geschlecht einer Person. | 1 Stunde | 
 | Task 2 | Test, um den Namen, Vornamen und das Gewicht der Person in einer Tabelle anzuzeigen. | 1 Stunde |
+
 User Story 3  | Als Benutzer möchte ich in der Lage sein, eine vordefinierte Alkoholliste zu erstellen. | 
 Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Test der Funktionsfähigkeit des Fensters, mit dem der Name des Alkohols und der Prozentsatz davon eingegeben werden können.| 1 Stunde |
 | Task 2 | Test zur Anzeige des Namens des Alkohols und des Alkoholanteils in einer Tabelle.| 1 Stunde |
+
 User Story 4  | Als Benutzer möchte ich meinen Alkoholgehalt basierend auf meinem Konsum verschiedener Alkohole berechnen können. | 
 Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Funktionstest der Taste " Add ". | 1 Stunde |
 | Task 2 | Prüfung der Funktion des Fensters, die es ermöglicht, die Menge jedes aufgenommenen Alkohols einzugeben.| 1 Stunde |
 | Task 3 | Test zur Anzeige des Namens des Alkohols und der Menge in einer Tabelle. | 1 Stunde |
+
 User Story 5  | Als Benutzer möchte ich einige von mir eingegebene Variablen hinzufügen können. | 
 Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Testen Sie die Funktion der Taste "Neu". | 1 Stunde |
 | Task 2 | Test der Fensterbedienung, die es ermöglicht, neue Personen oder neue Alkohole hinzuzufügen. | 1 Stunde |
+
 User Story 6  | Als Benutzer möchte ich einige der von mir eingegebenen Variablen ändern können. | 
 Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Testen Sie die Funktion der Taste "Edit". | 1 Stunde |
 | Task 2 | Testanzeige der Parameter der ausgewählten Zeile.| 1 Stunde |
+
 User Story 7  | Als Benutzer möchte ich einige der von mir eingegebenen Variablen löschen können. | 
 Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Testen Sie die Funktion der Taste " Delete ". | 1 Stunde |
 | Task 2 | Testen Sie die Funktion des Fensters, damit Sie die Auswahl löschen können.| 1 Stunde |
+
 User Story 8  | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird. | 
 Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Test der Anzeige der Fehlermeldung, wenn eine Auswahl fehlt.| 1 Stunde |
+
 User Story 9  | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. | 
 Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Mehrere Klassen hinzufügen. | 1 Stunde |
 | Task 2 | Logisches Design und liesbar.| 1 Stunde |
 
