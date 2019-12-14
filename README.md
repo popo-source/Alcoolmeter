@@ -1,23 +1,47 @@
-# Alcoolmeter
+## Alcoolmeter
 
-# Paul Hauser // Lucas Gigondan // Gil Flassch--Trauth
+## Paul Hauser // Lucas Gigondan // Gil Flassch--Trauth
+https://github.com/popo-source/Alcoolmeter
 
-##__Software Engineering__
-##__Inhaltsverzeichnis__
+# __Software Engineering__
+# __Inhaltsverzeichnis__
 
-#__Einleitung__
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+## __Einleitung__
+Unser Projekt ist ein Alkoholtest. Es wird verwendet, um den Blutalkoholspiegel einer Person basierend auf ihrem Gewicht, Geschlecht und Alkoholkonsum im Laufe der Zeit zu berechnen.
+* ### Ziele:
+Es soll ein kleines Programm erstellt werden, bei dem den Blutalkoholspiegel in einem Diagramm gezeigt werden. Die Verwendung des Programms soll auf dem Desktop eines MAC, Windows oder Linux Computer ausgeführt werden können.
+* ### Randbedingungen:
+Die Programmierung der Anwendung soll in JAVA erfolgen.
+Das Projektteam besteht aus drei Personen. 
+Zur Programmierung wird Eclipse und Scene Builder verwendet.
+Die Klassen des Programms sollen über die entsprechenden Unit-Tests verfügen.
+Das Projekt soll auf GitHub veröffentlich werden.
+Die Buildautomatisierung soll mit MAVEN erfolgen.
+Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-jar xxxxx.jar ausgeführt werden können.
 
-#__Build-Anleitung
-#Bedienungsanleitung
-#Userstory
-#Releaseplan mit den Ausbaustufen
-#Taskliste für die Umsetzung der User Story
-#Umsetzung
-#Klassendiagramm
-#Dokumentation wichtiger Code Snippets__
+* __Build-Anleitung__
 
-[GitHub](https://github.com/popo-source/Alcoolmeter)
+* __Bedienungsanleitung__
+1. Öffnen Sie das Alkoholtest.
+2. Klicken Sie auf „New" um Personen und Alkohole hinzuzufügen.
+3. Füllen Sie die angezeigten Fenster aus und klicken Sie auf Ok. 
+4. Klicken Sie auf „Add" um die konsumierten Alkohole und die Menge zu speichern.
+5. Geben Sie die verbrauchte Alkoholmenge in das angezeigte Fenster ein und klicken Sie auf Ok.
+6. Kreuzen Sie eines der beiden Kästchen "Yes" oder "No" an, um die Frage zu beantworten: „Have you eaten?“.
+7. Zum Schluss klicken Sie auf „Graphic“. Sie erhalten ein Diagramm, das den Blutalkoholgehalt im Laufe der Zeit anzeigt.
+8. Sie können immer eine Person, einen Alkohol oder den Alkoholkonsum einer Person jederzeit löschen, indem Sie die Zeile wählen und auf „Delete“ klicken.
+9. Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
+
+* __Userstory mit Akzeptanzkriterien__
+
+Us | Name |     | SP | Priorität
+--: | ------------------------------ | ------------------------------------------------------------------- | :--: | :--
+1 |      | Als Benutzer möchte ich meinen Blutalkoholspiegel als Funktion der Zeit kennenlernen. <br><b> Akezeptanzkriterien: <br></b> Auf dem Bildschirm sollte eine Grafik erscheinen. | 1 | 1 |
+2  |      | Als Benutzer möchte ich meinen Alkoholspiegel basierend auf meinem Gewicht, meinem Geschlecht und der Tatsache, ob ich gegessen habe oder nicht, berechnen können. <br><b> Akezeptanzkriterien: <br></b> Die Informationen sind vor der Anzeige der Grafik auszuwählen. | 1 | 2 |
+
+
+* __Releaseplan mit den Ausbaustufen__
+* __Taskliste für die Umsetzung der User Story__
+* __Umsetzung__
+* __Klassendiagramm__
+* __Dokumentation wichtiger Code Snippets__

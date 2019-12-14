@@ -50,9 +50,9 @@ public class LineChartsValues {
 	public int eated() {
 		int eated = 0;
 		if(eat) {
-			eated = 1;
+			eated = 15;
 		} else {
-			eated = 2;
+			eated = 10;
 		}
 		return eated;
 	}
@@ -66,8 +66,8 @@ public class LineChartsValues {
 		
 		
 		
-		
-		double A = (eated()*w*getEthanolVolume() / (C * M))*t*(Math.exp(-t*eated()));
+		double A= ((getEthanolVolume()/M*C)-eated()*M*8*t/10000);
+		//double A = (eated()*w*getEthanolVolume() / (C * M))*t*(Math.exp(-t*eated()));
 		return A;
 	}
 	
