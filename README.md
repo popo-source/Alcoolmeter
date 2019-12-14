@@ -33,6 +33,10 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 9. Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
 
 * __Userstory__
+
+Us | Name | SP | Priorität
+-- | ------------- | -- | --
+
 * __Releaseplan mit den Ausbaustufen__
 * __Taskliste für die Umsetzung der User Story__
 * __Umsetzung__
