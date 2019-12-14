@@ -64,7 +64,7 @@ public class LineChartsValues {
 		//double m = 12;//m la masse d'éthanol pur (en grammes), où m = 0,79 V, où V est le volume en mL ou en centimètres cubes
 		//double C = 0.7;//coefficient de diffusion C (qui vaut 0,7 si on est un homme, ou 0,6 si on est une femme),
 		
-		
+		//
 		
 		double A= ((getEthanolVolume()/M*C)-eated()*M*8*t/10000);
 		//double A = (eated()*w*getEthanolVolume() / (C * M))*t*(Math.exp(-t*eated()));
