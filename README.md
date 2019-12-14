@@ -20,5 +20,4 @@ Content in the first column | Content in the second column
 #Klassendiagramm
 #Dokumentation wichtiger Code Snippets__
 
-http://github.com - automatic!
 [GitHub](https://github.com/popo-source/Alcoolmeter)
