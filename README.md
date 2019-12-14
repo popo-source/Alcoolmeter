@@ -12,6 +12,8 @@ Unser Projekt ist ein Alkoholtest. Es wird verwendet, um den Blutalkoholspiegel 
 Es soll ein kleines Programm erstellt werden, bei dem den Blutalkoholspiegel in einem Diagramm gezeigt werden. Die Verwendung des Programms soll auf dem Desktop eines MAC, Windows oder Linux Computer ausgeführt werden können.
 * ### Randbedingungen:
 Die Programmierung der Anwendung soll in JAVA erfolgen.
+Das Projektteam besteht aus vier Personen. 
+Zur Programmierung wird Eclipse und Scene Builder verwendet.
 Die Klassen des Programms sollen über die entsprechenden Unit-Tests verfügen.
 Das Projekt soll auf GitHub veröffentlich werden.
 Die Buildautomatisierung soll mit MAVEN erfolgen.
