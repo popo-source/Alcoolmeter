@@ -19,7 +19,7 @@ Es soll ein kleines Programm erstellt werden, bei dem den Blutalkoholspiegel in 
 4. Klicken Sie auf „Add" um die konsumierten Alkohole und die Menge zu speichern.
 5. Geben Sie die verbrauchte Alkoholmenge in das angezeigte Fenster ein und klicken Sie auf Ok.
 6. Kreuzen Sie eines der beiden Kästchen "Yes" oder "No" an, um die Frage zu beantworten: „Have you eaten?“.
-7. Zum Schluss klicken Sie auf „Graphic“. Sie erhalten sie ein Diagramm, das den Blutalkoholgehalt im Laufe der Zeit anzeigt.
+7. Zum Schluss klicken Sie auf „Graphic“. Sie erhalten ein Diagramm, das den Blutalkoholgehalt im Laufe der Zeit anzeigt.
 8. Sie können immer eine Person, einen Alkohol oder den Alkoholkonsum einer Person jederzeit löschen, indem Sie die Zeile wählen und auf „Delete“ klicken.
 9. Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
 
