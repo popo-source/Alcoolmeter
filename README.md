@@ -2,10 +2,10 @@
 
 # Paul Hauser // Lucas Gigondan // Gil Flassch--Trauth
 
-## __Software Engineering__
-## __Inhaltsverzeichnis__
+# __Software Engineering__
+# __Inhaltsverzeichnis__
 
-# __Einleitung__
+## __Einleitung__
 
 * __Build-Anleitung__
 * __Bedienungsanleitung__
