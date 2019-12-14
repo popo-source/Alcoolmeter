@@ -19,9 +19,9 @@ Das Projekt soll auf GitHub veröffentlich werden.
 Die Buildautomatisierung soll mit MAVEN erfolgen.
 Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-jar xxxxx.jar ausgeführt werden können.
 
-* __Build-Anleitung__
+* ##__Build-Anleitung__
 
-* __Bedienungsanleitung__
+* ##__Bedienungsanleitung__
 1. Öffnen Sie das Alkoholtest.
 2. Klicken Sie auf „New" um Personen und Alkohole hinzuzufügen.
 3. Füllen Sie die angezeigten Fenster aus und klicken Sie auf Ok. 
@@ -32,7 +32,7 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 8. Sie können immer eine Person, einen Alkohol oder den Alkoholkonsum einer Person jederzeit löschen, indem Sie die Zeile wählen und auf „Delete“ klicken.
 9. Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
 
-* __Userstory mit Akzeptanzkriterien__
+* ##__Userstory mit Akzeptanzkriterien__
 
 Us | Name |     | SP | Priorität
 -- | ---------------- | ------------------------------------------------------------------------------------------------ | -- | --
@@ -46,8 +46,8 @@ Us | Name |     | SP | Priorität
 8  |      | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird.<br><b> Akezeptanzkriterien: <br></b> Test der Anzeige der Fehlermeldung, wenn eine Auswahl fehlt.|  | 2 |
 
 
-* __Releaseplan mit den Ausbaustufen__
-* __Taskliste für die Umsetzung der User Story__
-* __Umsetzung__
-* __Klassendiagramm__
-* __Dokumentation wichtiger Code Snippets__
+* ##__Releaseplan mit den Ausbaustufen__
+* ##__Taskliste für die Umsetzung der User Story__
+* ##__Umsetzung__
+* ##__Klassendiagramm__
+* ##__Dokumentation wichtiger Code Snippets__
