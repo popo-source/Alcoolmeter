@@ -7,13 +7,13 @@ __Inhaltsverzeichnis__
 
 __Einleitung__
 
-* __Build-Anleitung
-* __Bedienungsanleitung
-* __Userstory
-* __Releaseplan mit den Ausbaustufen
-* __Taskliste für die Umsetzung der User Story
-* __Umsetzung
-* __Klassendiagramm
-* __Dokumentation wichtiger Code Snippets
+* __Build-Anleitung__
+* __Bedienungsanleitung__
+* __Userstory__
+* __Releaseplan mit den Ausbaustufen__
+* __Taskliste für die Umsetzung der User Story__
+* __Umsetzung__
+* __Klassendiagramm__
+* __Dokumentation wichtiger Code Snippets__
 
 [GitHub](https://github.com/popo-source/Alcoolmeter)
