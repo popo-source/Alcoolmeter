@@ -34,8 +34,14 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 
 * __Userstory__
 
-Us | Name | SP | Priorität
--- | ------------- | -- | --
+Us | Name |     | SP | Priorität
+---- | ------------------------------ | ------------------------------------------------------------------- | ---- | ----
+1 |      | Als Benutzer möchte ich meinen Blutalkoholspiegel als Funktion der Zeit kennenlernen. 
+Auf dem Bildschirm sollte eine Grafik erscheinen. | 1 | 1 |
+
+2  |      | Als Benutzer möchte ich meinen Alkoholspiegel basierend auf meinem Gewicht, meinem Geschlecht und der Tatsache, ob ich gegessen habe oder nicht, berechnen können.
+Die Informationen sind vor der Anzeige der Grafik auszuwählen. | 1 | 2 |
+
 
 * __Releaseplan mit den Ausbaustufen__
 * __Taskliste für die Umsetzung der User Story__
