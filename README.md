@@ -8,10 +8,17 @@ https://github.com/popo-source/Alcoolmeter
 
 ## __Einleitung__
 Unser Projekt ist ein Alkoholtest. Es wird verwendet, um den Blutalkoholspiegel einer Person basierend auf ihrem Gewicht, Geschlecht und Alkoholkonsum im Laufe der Zeit zu berechnen.
-* Ziele:
+* ### Ziele:
 Es soll ein kleines Programm erstellt werden, bei dem den Blutalkoholspiegel in einem Diagramm gezeigt werden. Die Verwendung des Programms soll auf dem Desktop eines MAC, Windows oder Linux Computer ausgeführt werden können.
+* ### Randbedingungen:
+Die Programmierung der Anwendung soll in JAVA erfolgen.
+Die Klassen des Programms sollen über die entsprechenden Unit-Tests verfügen.
+Das Projekt soll auf GitHub veröffentlich werden.
+Die Buildautomatisierung soll mit MAVEN erfolgen.
+Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-jar xxxxx.jar ausgeführt werden können.
 
 * __Build-Anleitung__
+
 * __Bedienungsanleitung__
 1. Öffnen Sie das Alkoholtest.
 2. Klicken Sie auf „New" um Personen und Alkohole hinzuzufügen.
