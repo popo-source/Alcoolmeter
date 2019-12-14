@@ -206,7 +206,7 @@ public class MainOverviewController {
     	String contentText = "";
 		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
 		if(selectedPerson != null && selectedAlcoolTable != null && (yesEatedCheckBox.isSelected()==true || noEatedCheckBox.isSelected()==true)) {
-    		setEaten();
+			setEaten();
 			mainApp.showGraphicOverview(selectedPerson, eated);
     	} else {
     		if(selectedPerson == null) {
