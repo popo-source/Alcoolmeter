@@ -35,9 +35,12 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 * __Userstory mit Akzeptanzkriterien__
 
 Us | Name |     | SP | Priorität
---: | ------------------------------ | ------------------------------------------------------------------- | :--: | :--
+-- | ------------------------------ | ------------------------------------------------------------------- | -- | --
 1 |      | Als Benutzer möchte ich meinen Blutalkoholspiegel als Funktion der Zeit kennenlernen. <br><b> Akezeptanzkriterien: <br></b> Auf dem Bildschirm sollte eine Grafik erscheinen. | 1 | 1 |
 2  |      | Als Benutzer möchte ich meinen Alkoholspiegel basierend auf meinem Gewicht, meinem Geschlecht und der Tatsache, ob ich gegessen habe oder nicht, berechnen können. <br><b> Akezeptanzkriterien: <br></b> Die Informationen sind vor der Anzeige der Grafik auszuwählen. | 1 | 2 |
+3  |      | <br><b> Akezeptanzkriterien: <br></b> |  |  |
+4  |      | <br><b> Akezeptanzkriterien: <br></b> |  |  |
+5  |      | <br><b> Akezeptanzkriterien: <br></b> |  |  |
 
 
 * __Releaseplan mit den Ausbaustufen__
