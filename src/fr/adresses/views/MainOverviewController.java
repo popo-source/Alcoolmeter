@@ -6,6 +6,7 @@ import fr.adresses.objects.Person;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
@@ -35,12 +36,33 @@ public class MainOverviewController {
 	private TableColumn<Alcool, Double> quantityColumn;
 
 	
+	@FXML
+	private CheckBox yesEatedCheckBox;
+	@FXML
+	private CheckBox noEatedCheckBox;
+	
+	private boolean eated = false;
+	
 	private MainApp mainApp;
 	
 	
 	public MainOverviewController() {
     }
 	
+	@FXML
+	private void handleYesEatedCheckBox() {
+		if(yesEatedCheckBox.isSelected()) {
+			noEatedCheckBox.setSelected(false);
+		}
+	}
+	
+	@FXML
+	private void handleNoEatedCheckBox() {
+		if(noEatedCheckBox.isSelected()) {
+			yesEatedCheckBox.setSelected(false);
+		}
+	}
+		
 	@FXML
 	private void initialize() {
 		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
@@ -82,23 +104,22 @@ public class MainOverviewController {
 		switch(newa) {
 		
 		case 1:
-		
 			Person newPerson= new Person(	);
-			if (mainApp.showPersonEditDialogOverview(newPerson));
-			{
+			if (mainApp.showPersonEditDialogOverview(newPerson)){
 				mainApp.getPersonData().add(newPerson);
 			}
-		break;
+			break;
+			
 		case 2:
-		
 			Alcool newAlcool = new Alcool();
-			if (mainApp.showAlcoolEditDialogOverview(newAlcool))
-			{
+			if (mainApp.showAlcoolEditDialogOverview(newAlcool)){
 				mainApp.getAlcoolData().add(newAlcool);
 			}
 			break;
+			
 		}
 	}
+	
 	@FXML
 	private void handleEdit() {
 		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
@@ -170,25 +191,42 @@ public class MainOverviewController {
     	}
 	}
 	
+	private void setEaten() {
+		if(yesEatedCheckBox.isSelected()) {
+			eated = true;
+		}
+		if(noEatedCheckBox.isSelected()) {
+			eated = false;
+		}
+	}
 	
 	@FXML
 	private void handleGraphic() {
+		String headerText = "";
+    	String contentText = "";
 		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
-		if(selectedPerson != null && selectedAlcoolTable != null) {
-    		mainApp.showGraphicOverview(selectedPerson);
+		if(selectedPerson != null && selectedAlcoolTable != null && (yesEatedCheckBox.isSelected()==true || noEatedCheckBox.isSelected()==true)) {
+			setEaten();
+			mainApp.showGraphicOverview(selectedPerson, eated);
     	} else {
-    		Alert alert = new Alert(AlertType.WARNING);
-    		alert.initOwner(mainApp.getPrimaryStage());
-    		alert.setTitle("No Selection");
-    		if(selectedAlcoolTable != null) {
-    			alert.setHeaderText("No Person Selected");
-    			alert.setContentText("Please select a person in the table.");
-    			alert.showAndWait();
-    		} else {
-    			alert.setHeaderText("No Alcool Selected");
-    			alert.setContentText("Please select an alcool in the table.");
-    			alert.showAndWait();
+    		if(selectedPerson == null) {
+    			headerText += "No Person Selected \n";
+    			contentText += "Please select a person in the table. \n";
+    		} 
+    		if(selectedAlcoolTable == null) {
+    			headerText += "No Alcool Selected \n";
+    			contentText += "Please select an alcool in the table. \n";
     		}
+    		if(yesEatedCheckBox.isSelected()==false && noEatedCheckBox.isSelected()==false) {
+    			headerText += "Have you Eaten?";
+    			contentText += "Please specify if you have eaten";
+    		}
+    	Alert alert = new Alert(AlertType.WARNING);
+    	alert.initOwner(mainApp.getPrimaryStage());
+    	alert.setTitle("No Selection");
+    	alert.setHeaderText(headerText);
+    	alert.setContentText(contentText);
+    	alert.showAndWait();
     	}
 	}
 	

@@ -76,6 +76,7 @@ public class LineChartsValues {
 		return A;
 	}
 	
+<<<<<<< HEAD
 	public void graph(Stage stage)
 	{
 		stage.setTitle("Alcool im Blutt Graph");
@@ -101,6 +102,14 @@ public class LineChartsValues {
 		stage.setScene(scene);
 		stage.show();
 		}
+=======
+	public XYChart.Series<Number, Number> getChart() {
+		series1.setName(person.getFirstName());
+		for(double i=0; i<200; i++) {
+	    	series1.getData().add(new XYChart.Data<>((i/10), getAlcoolValue((i/10))));
+	    }
+		return series1;
+>>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
 	}
 	
 
