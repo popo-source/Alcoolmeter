@@ -5,31 +5,36 @@ import javafx.stage.Stage;
 import fr.adresses.MainApp;
 
 public class NewOverviewController {
-private int click=0;
+private int clickPerson=0;
+private boolean clickAlcool=false;
 private Stage DialogStage;
 	@FXML
-	private int handleNewPerson() 
-	{//
-		click=1;
+	private void handleNewPerson() 
+	{
+		clickPerson=1;
 		DialogStage.close();
-		return click;
+	
 	}
 	@FXML
-	private int handleNewAlcool() 
+	private void handleNewAlcool() 
 	{
-		click=2;
+		clickPerson=2;
+		
 		DialogStage.close();
-		showAlcoolEditDialogOverview();
-		return click;
+		
+		
 	}
 	@FXML
-	private int handleNewCancel() 
+	private void handleNewCancel() 
 	{
-		click=3;
 		DialogStage.close();
-		return click;
+		
 	}
 	public void setDialogStage(Stage dialogStage) {
 		this.DialogStage = dialogStage;
+	}
+	public int whatIsClicked()
+	{
+		return clickPerson;
 	}
 }

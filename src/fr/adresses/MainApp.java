@@ -214,15 +214,14 @@ public class MainApp extends Application {
 	        return false;
 	    }
 	}
-	public int ShowNewOverview(String newName)
+	public int ShowNewOverview()
 	{
 		try{
 		 FXMLLoader loaderNew = new FXMLLoader();
 	        loaderNew.setLocation(MainApp.class.getResource("views/NewOverview.fxml"));
 	        AnchorPane newOverview = (AnchorPane) loaderNew.load();
-
 	        Stage newDialogStage = new Stage();
-         newDialogStage.setTitle("New "+newName);
+         newDialogStage.setTitle("New");
          newDialogStage.initModality(Modality.WINDOW_MODAL);
          newDialogStage.initOwner(primaryStage);
          Scene scene = new Scene(newOverview);
@@ -232,10 +231,10 @@ public class MainApp extends Application {
 	        controllerNew.setDialogStage(newDialogStage);
 	        newDialogStage.showAndWait();
 	        //
-	        return controllerNew.isOkClicked();
+	        return controllerNew.whatIsClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();
-	        return false;
+	        return 0;
 		
 	}
 }

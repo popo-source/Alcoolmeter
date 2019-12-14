@@ -3,6 +3,7 @@ package fr.adresses.views;
 import fr.adresses.MainApp;
 import fr.adresses.classes.Alcool;
 import fr.adresses.classes.Person;
+import fr.adresses.views.NewOverviewController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -64,11 +65,10 @@ public class MainOverviewController {
 	
 	@FXML
 	private void handleNew() {
-		if (newClick=true)
-		{
-			mainApp.showNewOverview;
-		}
-		
+	int newa=0;
+		newa=mainApp.ShowNewOverview();
+	
+	}
 		/*
 		 * --> à compléter:
 		 * 	???? créer une nouvelle fenêtre de choix????:
@@ -88,7 +88,7 @@ public class MainOverviewController {
 			//if(tempPerson==null && tempAlcool!=null) {
 				//if (mainApp.showAlcoolEditDialogOverview(tempAlcool)) {
 					//mainApp.getAlcoolData().add(tempAlcool);
-				}
+				
 			//}
 	//	}
 	//}
@@ -117,7 +117,7 @@ public class MainOverviewController {
 	
 	@FXML
 	private void handleDelete() {
-		Person selectedPerson = personTable.getSelectionModel().;
+		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
 		Alcool selectedAlcool = alcoolTable.getSelectionModel().getSelectedItem();
 		Alcool selectedSelectedAlcool = selectedAlcoolTable.getSelectionModel().getSelectedItem();
 		
