@@ -219,16 +219,17 @@ public class MainApp extends Application {
 	{
 		try{
 		 FXMLLoader loaderNew = new FXMLLoader();
-	        loaderNew.setLocation(MainApp.class.getResource("views/NewOverview.fxml"));
-	        AnchorPane newOverview = (AnchorPane) loaderNew.load();
-	        Stage newDialogStage = new Stage();
+	     loaderNew.setLocation(MainApp.class.getResource("views/NewOverview.fxml"));
+	     AnchorPane newOverview = (AnchorPane) loaderNew.load();
+	     
+	     Stage newDialogStage = new Stage();
          newDialogStage.setTitle("New");
          newDialogStage.initModality(Modality.WINDOW_MODAL);
          newDialogStage.initOwner(primaryStage);
          Scene scene = new Scene(newOverview);
          newDialogStage.setScene(scene);
 	        
-	        NewOverviewController controllerNew = loaderNew.getController();
+         	NewOverviewController controllerNew = loaderNew.getController();
 	        controllerNew.setDialogStage(newDialogStage);
 	        newDialogStage.showAndWait();
 	        //

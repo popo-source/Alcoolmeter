@@ -1,14 +1,8 @@
 package fr.adresses.views;
 
 import fr.adresses.MainApp;
-<<<<<<< HEAD
-import fr.adresses.classes.Alcool;
-import fr.adresses.classes.Person;
-import fr.adresses.views.NewOverviewController;
-=======
 import fr.adresses.objects.Alcool;
 import fr.adresses.objects.Person;
->>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
