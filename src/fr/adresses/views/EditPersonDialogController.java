@@ -27,7 +27,7 @@ public class EditPersonDialogController {
 	@FXML
 	private CheckBox manCheckbox;
 
-	
+	//
 	private void errorCheckbox() {
 	if (manCheckbox==null && womanCheckbox==null ) {
 		Alert alertnothingselect = new Alert(AlertType.ERROR);
