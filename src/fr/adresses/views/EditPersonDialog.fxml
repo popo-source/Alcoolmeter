@@ -17,7 +17,7 @@
       <TextField fx:id="firstNameField" layoutX="121.0" layoutY="16.0" prefHeight="25.0" prefWidth="207.0" />
       <TextField fx:id="lastNameField" layoutX="121.0" layoutY="51.0" prefHeight="25.0" prefWidth="207.0" />
       <TextField fx:id="weightField" layoutX="121.0" layoutY="88.0" prefHeight="25.0" prefWidth="207.0" />
-      <CheckBox layoutX="121.0" layoutY="126.0" mnemonicParsing="false" text="Women" />
-      <CheckBox layoutX="255.0" layoutY="126.0" mnemonicParsing="false" text="Men" />
+      <CheckBox fx:id="womanCheckBox" layoutX="121.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleWomanSelection" text="Women" />
+      <CheckBox fx:id="manCheckBox" layoutX="255.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleManSelection" text="Men" />
    </children>
 </AnchorPane>

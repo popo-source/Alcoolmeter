@@ -6,7 +6,9 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import ch.makery.address.util.DateUtil;
 import fr.adresses.MainApp;
+import fr.adresses.objects.Person;
 
 
 public class EditPersonDialogController {
@@ -14,6 +16,8 @@ public class EditPersonDialogController {
 	private MainApp mainApp;
 	private Stage personEditDialogStage;
 	private boolean okClicked = false;
+	
+	private Person person;
 
 	
 	@FXML
@@ -22,35 +26,50 @@ public class EditPersonDialogController {
 	private TextField lastNameField;
 	@FXML
 	private TextField weightField;
+	
+	private TextField sexField;
+	
 	@FXML
-	private CheckBox womanCheckbox;
+	private CheckBox womanCheckBox;
 	@FXML
-	private CheckBox manCheckbox;
+	private CheckBox manCheckBox;
 
-	//
-	private void errorCheckbox() {
-	if (manCheckbox==null && womanCheckbox==null ) {
-		Alert alertnothingselect = new Alert(AlertType.ERROR);
-		alertnothingselect.initOwner(personEditDialogStage);
-		alertnothingselect.setTitle("Invalid Fields");
-		alertnothingselect.setHeaderText("Please select sex");
-		alertnothingselect.setContentText(errorMessage);
-		alertnothingselect.showAndWait();
-		return false;
+
+	@FXML
+	private void handleManSelection() {
+		if(manCheckBox.isSelected()) {
+			womanCheckBox.setSelected(false);
+		}
 	}
-	if (manCheckbox!=null && womanCheckbox!=null ) {
-		Alert alertallselect = new Alert(AlertType.ERROR);
-		alertallselect.initOwner(personEditDialogStage);
-		alertallselect.setTitle("Invalid Fields");
-		alertallselect.setHeaderText("Please select just woman or man");
-		alertallselect.setContentText(errorMessage);
-		alertallselect.showAndWait();
-		return false;
+	
+	@FXML
+	private void handleWomanSelection() {
+		if(womanCheckBox.isSelected()) {
+			manCheckBox.setSelected(false);
+		}
 	}
-}
+	
+	
 	public EditPersonDialogController() {
 	}
+	
+	
+	public void setPerson(Person person) {
+        this.person = person;
 
+        firstNameField.setText(person.getFirstName());
+        lastNameField.setText(person.getLastName());
+        weightField.setText(Double.toString(person.getWeight()));
+        if(person.getSex()=="männlich") {
+        	manCheckBox.setSelected(true);
+        } else {
+        	if(person.getSex()=="weiblich") {
+        		womanCheckBox.setSelected(true);
+        	}
+        	
+        }
+    }
+	
 	
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp;
@@ -64,19 +83,26 @@ public class EditPersonDialogController {
         return okClicked;
     }
 	
+	public String getCheckBoxSex() {
+		String sex ="";
+		if(womanCheckBox.isSelected() == true && manCheckBox.isSelected() == false) {
+			sex = "weiblich";
+		} else {
+			if(womanCheckBox.isSelected() == false && manCheckBox.isSelected() == true) {
+				sex = "männlich";
+			}
+		}
+		return sex;
+	}
 	
 	@FXML
 	private void handleOk() {
 		if(isInputValid()) {
-			
-			/*
-			 * mettre a jour la person ici
-			 * 
-			 * 
-			 */
-			
-			
 			okClicked = true;
+			person.setFirstName(firstNameField.getText());
+            person.setLastName(lastNameField.getText());
+            person.setSex(getCheckBoxSex());
+            person.setWeight(Double.parseDouble(weightField.getText()));
 			personEditDialogStage.close();
 		}
 		
@@ -100,10 +126,13 @@ public class EditPersonDialogController {
 			errorMessage += "No valid weight!\n";
 		} else {
 			try {
-				Integer.parseInt(weightField.getText());
+				Double.parseDouble(weightField.getText());
 			} catch (NumberFormatException e) {
 				errorMessage += "No valid weight (must be an integer)!\n";
 			}
+		}
+		if (womanCheckBox==null || manCheckBox==null) {
+			errorMessage += "No sex validation!\n";
 		}
 		if (errorMessage.length() == 0) {
 			return true;

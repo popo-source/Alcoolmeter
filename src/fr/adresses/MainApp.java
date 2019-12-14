@@ -127,6 +127,7 @@ public class MainApp extends Application {
 	        
 	        EditPersonDialogController controllerPerson = loaderPerson.getController();
 	        controllerPerson.setMainApp(this);
+	        controllerPerson.setPerson(person);
 	        controllerPerson.setPersonEditDialogStage(PersonEditdialogStage);
 	        PersonEditdialogStage.showAndWait();
 	        

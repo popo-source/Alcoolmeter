@@ -73,7 +73,7 @@ public class LineChartsValues {
 	
 	public XYChart.Series<Number, Number> getChart() {
 		series1.setName(person.getFirstName());
-		for(double i=0; i<100; i++) {
+		for(double i=0; i<200; i++) {
 	    	series1.getData().add(new XYChart.Data<>((i/10), getAlcoolValue((i/10))));
 	    }
 		return series1;
