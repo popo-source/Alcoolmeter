@@ -7,11 +7,15 @@ https://github.com/popo-source/Alcoolmeter
 # __Inhaltsverzeichnis__
 
 ## __Einleitung__
-Unser Projekt ist ein Alkoholtest. Es wird verwendet, um den Blutalkoholspiegel einer Person basierend auf ihrem Gewicht, Geschlecht und Alkoholkonsum im Laufe der Zeit zu berechnen.
-* ### Ziele:
-Es soll ein kleines Programm erstellt werden, bei dem den Blutalkoholspiegel in einem Diagramm gezeigt werden. Die Verwendung des Programms soll auf dem Desktop eines MAC, Windows oder Linux Computer ausgeführt werden können.
+Im Rahmen einer Projektarbeit möchten wir Ihnen eine Blutalkohlgehalt-Software vorstellen, die wir mit Hilfe von Software-Engineering-Methoden im Team entwickelt haben. Ziel des Projektes war es, Methoden wie Scrum oder Agile praktisch anzuwenden und alle wichtigen Phasen der strukturierten Softwareentwicklung zu durchlaufen. Um dies zu erreichen, haben wir ein Blutalkohlgehaltdiagramm erstellt, das für jeden anpassbar ist. Der Zweck dieser Anwendung ist es, den Blutalkoholgehalt einer Person im Zeitverlauf zu berechnen.
+
+* ### Ziele des Projekts:
+Wir wollen eine Software entwickeln, die es dem Benutzer ermöglicht, seinen Blutalkoholgehalt im Laufe der Zeit zu berechnen. Er muss in der Möglichkeit sein, seine Charakteristika wie Nachname, Vorname, Geschlecht und Gewicht einzugeben.
+Die Person hat die Möglichkeit, eine Liste von Alkohol und der aufgenommenen Menge zu erstellen. Der Benutzer muss angeben, ob er gegessen hat oder nicht.
+Die Grafik muss an die verschiedenen Parameter angepasst werden.
+
 * ### Randbedingungen:
-Die Programmierung der Anwendung soll in JAVA erfolgen.
+Das Programm wird in der Programmiersprache Java erstellt.
 Das Projektteam besteht aus drei Personen. 
 Zur Programmierung wird Eclipse und Scene Builder verwendet.
 Die Klassen des Programms sollen über die entsprechenden Unit-Tests verfügen.
