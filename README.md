@@ -38,7 +38,7 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 
 * ## __Test Cases__
 Test Case # | Test Case Description | Test Data | Expected Result | Actual Result | Pass/Fail
----- | ---------------- | -------|---------|--------|--------
+- | --------- | ---------- | --------- | --- | ---
 1 | Check results on entering valid PersonData | Gil <br></b>Flassch--Trauth <br></b>65 <br></b>man | No error message should be generated and the person's information is displayed in the table. | As Expected | Pass |
 2 | Check results on entering valid AlcoholData | Vodka <br></b>45 | No error message should be generated and the alcohol's information is displayed in the table. | As Expected | Pass |
 3 | Check results on entering valid QuantityData | 2.5 | No error message should be generated and the quantity and the selected alcohol are displayed in the table. | As Expected | Pass |   
