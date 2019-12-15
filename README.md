@@ -105,6 +105,14 @@ Zeitaufwandschätzung |
 | Task 2 | Logisches Design und liesbar.| 1 Stunde |
 
 * ### __Tacklist__
+Task | Zeitbedarf
+------ | -------
+   | 1 Stunden
+   | 2 Stunden   
+   | 3 Stunden
+   | 2 Stunden
+   | 1 Stunden
+   
 * ## __Umsetzung__
 * ## __Klassendiagramm__
 * ## __Dokumentation wichtiger Code Snippets__
