@@ -104,14 +104,14 @@ Zeitaufwandschätzung |
 | Task 1 | Mehrere Klassen hinzufügen. | 1 Stunde |
 | Task 2 | Logisches Design und liesbar.| 1 Stunde |
 
-* ### __Tacklist__
+* ### __Tasklist__
 Task | Zeitbedarf
 ------ | -------
-   | 1 Stunden
-   | 2 Stunden   
-   | 3 Stunden
-   | 2 Stunden
-   | 1 Stunden
+ Notenberechnung | 1 Stunden
+ Prüfmethode | 2 Stunden   
+ Fenster erstellen | 3 Stunden
+ Design | 2 Stunden
+ Testen | 1 Stunden
    
 * ## __Umsetzung__
 * ## __Klassendiagramm__
