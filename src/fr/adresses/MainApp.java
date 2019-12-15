@@ -112,8 +112,7 @@ public class MainApp extends Application {
             values.setMainApp(this);
             values.setEat(eaten);
         
-            XYChart.Series seriesmain = new XYChart.Series();
-            seriesmain=values.graph();
+            XYChart.Series seriesmain = values.graph();
             graphicOverviewController controller = loader.getController();
             XYChart<Number,Number> line= controller.graphempty();
             line.getData().add(seriesmain);
