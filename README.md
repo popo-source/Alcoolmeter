@@ -159,3 +159,39 @@ public void showMainOverview() {
 	}
    ```
   Diese Methode zeigt die MainOverview (Startseite) in der Mitte unseres RootLayouts an.
+
+initialize()
+  	```@FXML
+	private void initialize() {
+		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
+		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+		
+		alcoolNameColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
+		degreeColumn.setCellValueFactory(cellData -> cellData.getValue().degreeProperty().asObject());
+		
+		selectedAlcoolColumn.setCellValueFactory(cellData -> cellData.getValue().alcoolNameProperty());
+		quantityColumn.setCellValueFactory(cellData -> cellData.getValue().quantityProperty().asObject());
+		
+		personTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+		    if (newSelection != null) {
+		        alcoolTable.getSelectionModel().clearSelection();
+		        selectedAlcoolTable.getSelectionModel().clearSelection();
+		    }
+		});
+		
+		alcoolTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+		    if (newSelection != null) {
+		        personTable.getSelectionModel().clearSelection();
+		        selectedAlcoolTable.getSelectionModel().clearSelection();
+		    }
+		});
+		
+		selectedAlcoolTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+		    if (newSelection != null) {
+		        personTable.getSelectionModel().clearSelection();
+		        alcoolTable.getSelectionModel().clearSelection();
+		    }
+		});
+	}```
+
+Diese Methode ermöglicht es die gesamte MainOverview zu initialisieren. 
