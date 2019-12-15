@@ -23,8 +23,6 @@ Das Projekt soll auf GitHub veröffentlich werden.
 Die Buildautomatisierung soll mit MAVEN erfolgen.
 Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-jar xxxxx.jar ausgeführt werden können.
 
-* ## __Build-Anleitung__
-
 * ## __Bedienungsanleitung__
 1. Öffnen Sie das Alkoholtest.
 2. Klicken Sie auf „New" um Personen und Alkohole hinzuzufügen.
