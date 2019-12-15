@@ -161,7 +161,7 @@ public void showMainOverview() {
   Diese Methode zeigt die MainOverview (Startseite) in der Mitte unseres RootLayouts an.
 
 initialize()
-  	```
+
 	@FXML
 	private void initialize() {
 		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
@@ -194,5 +194,5 @@ initialize()
 		    }
 		});
 	}
-```
+
 Diese Methode ermöglicht es die gesamte MainOverview zu initialisieren. 
