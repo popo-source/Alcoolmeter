@@ -54,7 +54,7 @@ User Story 1 | Als Benutzer möchte ich meinen Alkoholgehalt im Blut als Funktio
 Zeitaufwandschätzung |
 -- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Erstellung der Taste " Graphic ". | 15 Minuten |
-| Task 2 | Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.| 5 Stunde |
+| Task 2 | Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.| 3 Stunde |
 
 User Story 2  | Als Benutzer möchte ich meinen Alkoholgehalt anhand meiner persönlichen Eigenschaften berechnen können. | 
 Zeitaufwandschätzung |
