@@ -36,6 +36,13 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 8. Sie können immer eine Person, einen Alkohol oder den Alkoholkonsum einer Person jederzeit löschen, indem Sie die Zeile wählen und auf „Delete“ klicken.
 9. Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
 
+* ## __Test Cases__
+Test Case # | Test Case Description | Input | Expected Output | Actual Output | Test Result
+---- | ---------------- | -------|---------|--------|----------
+1 | Check results on entering valid User Id & Password |   |   |   | Passed
+2 | Return number based on letter |   |   |   | Passed
+3 | Caps-insensitivity of Test Nr 2 |   |   |   | Passed
+
 * ## __Userstory mit Akzeptanzkriterien__
 
 Us | Name | Beschreibung | SP | Priorität
@@ -130,6 +137,4 @@ Diagrammseite erstellen | 2 St
 Design | 2 St
 Testen | 3 St
    
-* ## __Umsetzung__
-* ## __Klassendiagramm__
 * ## __Dokumentation wichtiger Code Snippets__
