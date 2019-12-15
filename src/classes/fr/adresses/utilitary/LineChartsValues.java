@@ -1,8 +1,8 @@
-package fr.adresses.utilitary;
+package classes.fr.adresses.utilitary;
 
-import fr.adresses.MainApp;
-import fr.adresses.objects.Alcool;
-import fr.adresses.objects.Person;
+import classes.fr.adresses.MainApp;
+import classes.fr.adresses.objects.Alcool;
+import classes.fr.adresses.objects.Person;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;

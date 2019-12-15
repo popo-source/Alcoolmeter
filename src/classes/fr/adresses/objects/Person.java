@@ -1,4 +1,4 @@
-package fr.adresses.objects;
+package classes.fr.adresses.objects;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;

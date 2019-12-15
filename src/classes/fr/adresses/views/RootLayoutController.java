@@ -1,6 +1,6 @@
-package fr.adresses.views;
+package classes.fr.adresses.views;
 
-import fr.adresses.MainApp;
+import classes.fr.adresses.MainApp;
 
 public class RootLayoutController {
 	private MainApp mainApp;

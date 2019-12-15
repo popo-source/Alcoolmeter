@@ -1,8 +1,8 @@
-package fr.adresses.views;
+package classes.fr.adresses.views;
 
-import fr.adresses.MainApp;
-import fr.adresses.objects.Alcool;
-import fr.adresses.objects.Person;
+import classes.fr.adresses.MainApp;
+import classes.fr.adresses.objects.Alcool;
+import classes.fr.adresses.objects.Person;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;

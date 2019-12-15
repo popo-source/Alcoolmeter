@@ -1,18 +1,18 @@
-package fr.adresses;
+package classes.fr.adresses;
 
 import java.io.IOException;
 
-import fr.adresses.objects.Alcool;
-import fr.adresses.objects.Person;
-import fr.adresses.utilitary.LineChartsValues;
-import fr.adresses.views.DeleteOverviewController;
-import fr.adresses.views.EditAlcoolDialogController;
-import fr.adresses.views.EditPersonDialogController;
-import fr.adresses.views.EditQuantityDialogController;
-import fr.adresses.views.MainOverviewController;
-import fr.adresses.views.RootLayoutController;
-import fr.adresses.views.graphicOverviewController;
-import fr.adresses.views.NewOverviewController;
+import classes.fr.adresses.objects.Alcool;
+import classes.fr.adresses.objects.Person;
+import classes.fr.adresses.utilitary.LineChartsValues;
+import classes.fr.adresses.views.DeleteOverviewController;
+import classes.fr.adresses.views.EditAlcoolDialogController;
+import classes.fr.adresses.views.EditPersonDialogController;
+import classes.fr.adresses.views.EditQuantityDialogController;
+import classes.fr.adresses.views.MainOverviewController;
+import classes.fr.adresses.views.RootLayoutController;
+import classes.fr.adresses.views.graphicOverviewController;
+import classes.fr.adresses.views.NewOverviewController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
