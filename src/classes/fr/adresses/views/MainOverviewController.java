@@ -12,8 +12,6 @@ import javafx.scene.control.TableView;
 
 public class MainOverviewController {
 
-	
-	
 	@FXML
 	private TableView<Person> personTable;
 	@FXML
@@ -35,7 +33,6 @@ public class MainOverviewController {
 	@FXML
 	private TableColumn<Alcool, Double> quantityColumn;
 
-	
 	@FXML
 	private CheckBox yesEatedCheckBox;
 	@FXML
@@ -199,6 +196,7 @@ public class MainOverviewController {
 			eated = false;
 		}
 	}
+	
 	
 	@FXML
 	private void handleGraphic() {
