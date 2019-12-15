@@ -1,4 +1,4 @@
-## Alcoolmeter
+## Alcoholmeter
 
 ## Paul Hauser // Lucas Gigondan // Gil Flassch--Trauth
 https://github.com/popo-source/Alcoolmeter
@@ -138,3 +138,21 @@ Design | 2 St
 Testen | 3 St
    
 * ## __Dokumentation wichtiger Code Snippets__
+
+```public void showMainOverview() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainApp.class.getResource("views/MainOverview.fxml"));
+			AnchorPane mainOverview = (AnchorPane) loader.load();
+			
+			MainOverviewController controller = loader.getController();
+			controller.setMainApp(this);
+			
+			rootLayout.setCenter(mainOverview);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+			
+		}
+	}```
+   
