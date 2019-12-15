@@ -7,40 +7,19 @@ import org.junit.Test;
 
 public class AlcoolTest {
 	
-	@Test
-	public void testNewAlcool() throws Exception {
-		Alcool beer = new Alcool("beer", 5.0);
-	}
 	
 	@Test
-	public void testGetAndSetDegree() throws Exception {
-		Alcool beer = new Alcool("beer", 5.0);
-
-		Alcool testBeer = new Alcool();
-		testBeer.setDegree(beer.getDegree());
-		
-		assertEquals(beer, testBeer);
-	}
-	
-	@Test
-	public void testGetAndSetQuantity() throws Exception {
+	public void testGettersAndSetters() throws Exception {
 		Alcool beer = new Alcool();
-		beer.setQuantity(900);
+		beer.setAlcoolName("beer");
+		beer.setDegree(100);
+		beer.setQuantity(100);
 		
-		Alcool testBeer = new Alcool();
+		Alcool testBeer = new Alcool(beer.getAlcoolName(), beer.getDegree());
 		testBeer.setQuantity(beer.getQuantity());
-
-		assertEquals(beer.quantityProperty(), testBeer.quantityProperty());
-	}
-	
-	@Test
-	public void testGatAndSetAlcoolName() throws Exception {
-		Alcool beer = new Alcool("beer", 5.0);
 		
-		Alcool testBeer = new Alcool();
-		testBeer.setAlcoolName(beer.getAlcoolName());
-		
-		assertEquals(beer.alcoolNameProperty(), testBeer.alcoolNameProperty());
+		assertEquals(beer.alcoolNameProperty().get(), testBeer.alcoolNameProperty().get());
+		assertEquals(beer.degreeProperty().get(), testBeer.degreeProperty().get(), 0.0);
+		assertEquals(beer.quantityProperty().get(), testBeer.quantityProperty().get(), 0.0);
 	}
-	
 }
