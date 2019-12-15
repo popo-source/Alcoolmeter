@@ -37,11 +37,11 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 9. Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
 
 * ## __Test Cases__
-Test Case # | Test Case Description | Test Data | Expected Result | Actual Result 
----- | ---------------- | -------|---------|--------
-1 | Check results on entering valid User Id & Password |   |   |   
-2 | Return number based on letter |   |   |   
-3 | Caps-insensitivity of Test Nr 2 |   |   |   
+Test Case # | Test Case Description | Test Data | Expected Result | Actual Result | Pass/Fail
+---- | ---------------- | -------|---------|--------|--------
+1 | Check results on entering valid User Id & Password |   |   |   | Pass |
+2 | Return number based on letter |   |   |   | Pass |
+3 | Caps-insensitivity of Test Nr 2 |   |   |   | Pass |   
 
 * ## __Userstory mit Akzeptanzkriterien__
 
