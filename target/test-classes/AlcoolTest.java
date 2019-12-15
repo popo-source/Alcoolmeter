@@ -1,6 +1,7 @@
 package fr.adresses.objects;
 
 import static org.junit.Assert.*;
+import fr.adresses.objects.*;
 
 import org.junit.Test;
 
@@ -37,4 +38,5 @@ public class AlcoolTest {
 		//quantity Test
 		assertEquals(0, quantityTest, 0.01);
 	}
+	
 }
