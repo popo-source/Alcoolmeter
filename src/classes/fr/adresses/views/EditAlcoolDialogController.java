@@ -1,12 +1,12 @@
-package fr.adresses.views;
+package classes.fr.adresses.views;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
-import fr.adresses.MainApp;
-import fr.adresses.objects.Alcool;
+import classes.fr.adresses.MainApp;
+import classes.fr.adresses.objects.Alcool;
 
 public class EditAlcoolDialogController {
 	

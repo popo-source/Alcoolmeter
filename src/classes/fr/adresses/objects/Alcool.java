@@ -1,4 +1,4 @@
-package fr.adresses.objects;
+package classes.fr.adresses.objects;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -22,7 +22,6 @@ public class Alcool {
 	}
 
 	
-	
 	public String getAlcoolName() {
 		return alcoolName.get();
 	}
@@ -43,10 +42,6 @@ public class Alcool {
 	public DoubleProperty degreeProperty() {
 		return degree;
 	}
-	public SimpleStringProperty getStringPropertyDegree() {
-		return new SimpleStringProperty(Double.toString(degree.get()));
-	}
-	
 	
 	
 	public double getQuantity() {
@@ -57,9 +52,6 @@ public class Alcool {
 	}    
 	public DoubleProperty quantityProperty() {
 		return quantity;
-	}
-	public SimpleStringProperty getStringPropertyQuantity() {
-		return new SimpleStringProperty(Double.toString(quantity.get()));
 	}
 	
 	

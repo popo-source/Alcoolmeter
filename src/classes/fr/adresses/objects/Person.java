@@ -1,4 +1,4 @@
-package fr.adresses.objects;
+package classes.fr.adresses.objects;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -64,8 +64,5 @@ public class Person {
 	}
 	public DoubleProperty weightProperty() {
 		return weight;
-	}
-	public SimpleStringProperty getStringWeight() {
-		return new SimpleStringProperty(Double.toString(weight.get()));
 	}
 }

@@ -1,8 +1,8 @@
-package fr.adresses.views;
+package classes.fr.adresses.views;
 
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
-import fr.adresses.MainApp;
+import classes.fr.adresses.MainApp;
 
 public class NewOverviewController {
 private int clickPerson=0;
