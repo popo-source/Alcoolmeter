@@ -196,3 +196,11 @@ initialize()
 	}
 
 Diese Methode ermöglicht es die gesamte MainOverview zu initialisieren. Die Spalten jeder Tabelle werden dann initialisiert. 
+
+getPersonData()
+```
+public ObservableList<Person> getPersonData() {
+        return personData;
+    }
+```
+Mit dieser Methode kann man die Informationen, die eine Person gerade im Fenster "EditPersonDialog" eingegeben hat, erhalten und in der Personentabelle auflisten.
