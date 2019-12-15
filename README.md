@@ -40,18 +40,23 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 
 Us | Name | Beschreibung | SP | Priorität
 -- | ---------------- | ------------------------------------------------------------------------------------------------ | -- | --
-1 | Diagramminitializierung | Als Benutzer möchte ich meinen Alkoholgehalt im Blut als Funktion der Zeit kennenlernen. <br><b> Akzeptanzkriterien: <br></b>- Testen Sie die Funktion der Taste " Graphic ".<br></b>- Test zur Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.|  | 1 |
-2  | Personanzeige | Als Benutzer möchte ich meinen Alkoholgehalt anhand meiner persönlichen Eigenschaften berechnen können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Fensterbedienung zur Eingabe von Name, Vorname, Gewicht und Geschlecht einer Person fonctionniert. <br></b>- Test, um den Namen, Vornamen und das Gewicht der Person in einer Tabelle anzuzeigen.|  | 1 |
-3  | Alkohlanzeige | Als Benutzer möchte ich in der Lage sein, eine vordefinierte Alkoholliste zu erstellen. <br><b> Akzeptanzkriterien: <br></b>- Test der Funktionsfähigkeit des Fensters, mit dem der Name des Alkohols und der Prozentsatz davon eingegeben werden können. <br></b>- Test zur Anzeige des Namens des Alkohols und des Alkoholanteils in einer Tabelle.|  | 1 |
-4  | Mengenanzeige |Als Benutzer möchte ich meinen Alkoholgehalt basierend auf meinem Konsum verschiedener Alkohole berechnen können. <br><b> Akzeptanzkriterien: <br></b>- Funktionstest der Taste " Add ". <br></b>- Prüfung der Funktion des Fensters, die es ermöglicht, die Menge jedes aufgenommenen Alkohols einzugeben. <br></b>- Test zur Anzeige des Namens des Alkohols und der Menge in einer Tabelle. |  | 1 |
-5  | Newmethode | Als Benutzer möchte ich einige von mir eingegebene Variablen hinzufügen können. <br><b> Akzeptanzkriterien: <br></b>- Testen Sie die Funktion der Taste "New". <br></b>- Test der Fensterbedienung, die es ermöglicht, neue Personen oder neue Alkohole hinzuzufügen. |  | 3 |
-6  | Editmethode | Als Benutzer möchte ich einige der von mir eingegebenen Variablen ändern können. <br><b> Akzeptanzkriterien: <br></b>- Testen Sie die Funktion der Taste "Edit". <br></b>- Testanzeige der Parameter der ausgewählten Zeile.|  | 2 |
-7  | Deletemethode | Als Benutzer möchte ich einige der von mir eingegebenen Variablen löschen können. <br><b> Akzeptanzkriterien: <br></b>- Testen Sie die Funktion der Taste " Delete ". <br></b>- Testen Sie die Funktion des Fensters, damit Sie die Auswahl löschen können.|  | 3 |
-8  | Fehlermeldunganzeige | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird.<br><b> Akzeptanzkriterien: <br></b>- Test der Anzeige der Fehlermeldung, wenn eine Auswahl fehlt.|  | 2 |
-9  | Testmethode | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die verschiedenen Klassen fonctionnieren.|  | 4 |
+1 | Diagramminitializierung | Als Benutzer möchte ich meinen Alkoholgehalt im Blut als Funktion der Zeit kennenlernen. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Funktion der Taste " Graphic " funktioniert.<br></b>- Test zur Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.|  | 1 |
+2  | Personanzeige | Als Benutzer möchte ich meinen Alkoholgehalt anhand meiner persönlichen Eigenschaften berechnen können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Fensterbedienung zur Eingabe von Name, Vorname, Gewicht und Geschlecht einer Person fonctioniert. <br></b>- Test, um den Namen, Vornamen und das Gewicht der Person in einer Tabelle anzuzeigen.|  | 1 |
+3  | Alkohlanzeige | Als Benutzer möchte ich in der Lage sein, eine vordefinierte Alkoholliste zu erstellen. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Funktionsfähigkeit des Fensters, mit dem der Name des Alkohols und der Prozentsatz davon eingegeben werden können, funktionieren. <br></b>- Test zur Anzeige des Namens des Alkohols und des Alkoholanteils in einer Tabelle.|  | 1 |
+4  | Mengenanzeige |Als Benutzer möchte ich meinen Alkoholgehalt basierend auf meinem Konsum verschiedener Alkohole berechnen können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Function der Taste " Add " funktioniert. <br></b>- Test, ob die Funktion des Fensters, die es ermöglicht, die Menge jedes aufgenommenen Alkohols einzugeben, funktionieren. <br></b>- Test zur Anzeige des Namens des Alkohols und der Menge in einer Tabelle. |  | 1 |
+5  | Newmethode | Als Benutzer möchte ich einige von mir eingegebene Variablen hinzufügen können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Funktion der Taste "New" funktioniert. <br></b>- Test, ob die Fensterbedienung, die es ermöglicht, neue Personen oder neue Alkohole hinzuzufügen, funktioniert. |  | 3 |
+6  | Editmethode | Als Benutzer möchte ich einige der von mir eingegebenen Variablen ändern können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Funktion der Taste "Edit" funktiniert. <br></b>- Test, ob die Anzeige der Parameter der ausgewählten Zeile funktioniert.|  | 2 |
+7  | Deletemethode | Als Benutzer möchte ich einige der von mir eingegebenen Variablen löschen können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Funktion der Taste " Delete " funktioniert. <br></b>- Test, ob die Funktion des Fensters, damit Sie die Auswahl löschen können, funktionieren.|  | 3 |
+8  | Two-Choicemethode | Als Benutzer möchte ich angeben können, ob ich gegessen habe oder nicht. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die beiden Kontrollkästchen "Yes" und "No" funktionieren..|  | 4 |
+9  | Fehlermeldunganzeige | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird.<br><b> Akzeptanzkriterien: <br></b>- Test, ob der Anzeige der Fehlermeldung funktioniert, wenn eine Auswahl fehlt.|  | 2 |
+10  | Testmethode | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die verschiedenen Klassen fonctionnieren.|  | 4 |
 
 
 * ## __Releaseplan mit den Ausbaustufen__
+Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4
+------|------|------|------
+US 1, 3, 4, 5, 6, 7 | US 2 | US 8 | US 9, 10
+
 * ## __Taskliste für die Umsetzung der User Story__
 
 User Story 1 | Als Benutzer möchte ich meinen Alkoholgehalt im Blut als Funktion der Zeit kennenlernen. | 
@@ -97,12 +102,17 @@ Zeitaufwandschätzung |
 | Task 1 | Erstellung der Taste " Delete ". | 15 Minuten |
 | Task 2 | Anzeige des Fensters, mit dem die Auswahl löschen kann.| 1 Stunde |
 
-User Story 8  | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird. | 
+User Story 8  | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. | 
+Zeitaufwandschätzung |
+-- | ---------------------------------------------------------------------------------- | -- 
+| Task 1 | Erstellen einer Two-Choice-Frage "Have you eaten?". | 1 Stunde |
+
+User Story 9  | Als Programmierer möchte ich, dass alle Informationen ausgewählt werden, bevor das Diagramm angezeigt wird. | 
 Zeitaufwandschätzung |
 -- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Anzeige einer Fehlermeldung.| 1 Stunde |
 
-User Story 9  | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. | 
+User Story 10  | Als Entwickler möchte ich ein einfach wartbares Programm damit alle Informatiker es bearbeiten können. | 
 Zeitaufwandschätzung |
 -- | ---------------------------------------------------------------------------------- | -- 
 | Task 1 | Mehrere Klassen hinzufügen. | 1 Stunde |
