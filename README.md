@@ -34,7 +34,7 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 
 * ## __Userstory mit Akzeptanzkriterien__
 
-Us | Name |     | SP | Priorität
+Us | Name | Beschreibung | SP | Priorität
 -- | ---------------- | ------------------------------------------------------------------------------------------------ | -- | --
 1 |      | Als Benutzer möchte ich meinen Alkoholgehalt im Blut als Funktion der Zeit kennenlernen. <br><b> Akezeptanzkriterien: <br></b>- Testen Sie die Funktion der Taste " Graphic ".<br></b>- Test zur Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.| 1 | 1 |
 2  |      | Als Benutzer möchte ich meinen Alkoholgehalt anhand meiner persönlichen Eigenschaften berechnen können. <br><b> Akezeptanzkriterien: <br></b>- Test, ob die Fensterbedienung zur Eingabe von Name, Vorname, Gewicht und Geschlecht einer Person fonctionniert. <br></b>- Test, um den Namen, Vornamen und das Gewicht der Person in einer Tabelle anzuzeigen.| 1 | 1 |
