@@ -139,7 +139,7 @@ Testen | 3 St
    
 * ## __Dokumentation wichtiger Code Snippets__
 
-showMainOverview()
+__showMainOverview()__
 ```
 public void showMainOverview() {
 		try {
@@ -160,7 +160,7 @@ public void showMainOverview() {
    ```
   Diese Methode zeigt die MainOverview (Startseite) in der Mitte unseres RootLayouts an.
 
-initialize()
+__initialize()__
 
 	@FXML
 	private void initialize() {
@@ -197,7 +197,7 @@ initialize()
 
 Diese Methode ermöglicht es die gesamte MainOverview zu initialisieren. Die Spalten jeder Tabelle werden dann initialisiert. 
 
-getPersonData()
+__getPersonData()__
 ```
 public ObservableList<Person> getPersonData() {
         return personData;
