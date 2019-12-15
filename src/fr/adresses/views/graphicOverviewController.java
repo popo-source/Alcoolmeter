@@ -14,8 +14,19 @@ public class graphicOverviewController{
 	
 	private Stage dialogStage;
 	
+	//@FXML
+	//private LineChart<Number, Number> chart1;
+	@FXML 
+	private NumberAxis x=new NumberAxis(0,8,0.2);
+	
 	@FXML
-	private LineChart<Number, Number> chart1;
+	private NumberAxis y=new NumberAxis(0,16,1);
+	@FXML
+	private LineChart<Number,Number>Linechart;
+	public LineChart<Number,Number> graphempty() 
+	{
+		return Linechart;
+	}
 	
 	@FXML
 	private void handleOk() {
@@ -23,9 +34,6 @@ public class graphicOverviewController{
 		dialogStage.close();
 	}
 	
-	public void setChart(XYChart.Series<Number, Number> serie) {
-		chart1.getData().add(serie);
-	}
 	
 	public boolean isOkClicked() {
         return okClicked;

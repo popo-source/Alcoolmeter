@@ -76,34 +76,36 @@ public class LineChartsValues {
 		return A;
 	}
 	
-<<<<<<< HEAD
-	public void graph(Stage stage)
+
+	public  XYChart.Series<Number,Number> graph()
 	{
-		stage.setTitle("Alcool im Blutt Graph");
+		
 		//defining the axes
-		final NumberAxis xAxis= new NumberAxis(0,8,0.2);
-		final NumberAxis yAxis = new NumberAxis(0,16,0);
-		xAxis.setLabel("Number of hours");
-		yAxis.setLabel("Alcool im Blutt (g)");
+		//final NumberAxis xAxis= new NumberAxis(0,8,0.2);
+		//final NumberAxis yAxis = new NumberAxis(0,16,0.5);
+		//xAxis.setLabel("Number of hours");
+		//yAxis.setLabel("Alcool im Blutt (g)");
 		
 		//creating the chart
-		final LineChart<Number,Number> lineChart = 
-				new LineChart<Number,Number>(xAxis,yAxis);
+		//final LineChart<Number,Number> lineChart = 
+			//	new LineChart<Number,Number>(xAxis,yAxis);
 
-		lineChart.setTitle("Alcool");
+		//lineChart.setTitle("Alcool");
 		XYChart.Series series = new XYChart.Series();
 		for (int i = 0;i<480;i++)
 		{
-		series.getData().add(new XYChart.Data(getAlcoolValue(),t/480));
+		series.getData().add(new XYChart.Data(getAlcoolValue(),i/480));
 		}
-		Scene scene  = new Scene(lineChart,800,600);
-		lineChart.getData().add(series);
+		//Scene scene  = new Scene(lineChart,400,200);
+		//lineChart.getData().add(series);
+		return series;
+		//stage.setScene(scene);
+		//stage.show();
+		}
+}
 
-		stage.setScene(scene);
-		stage.show();
-		}
-=======
-	public XYChart.Series<Number, Number> getChart() {
+
+	/*public XYChart.Series<Number, Number> getChart() {
 		series1.setName(person.getFirstName());
 		for(double i=0; i<200; i++) {
 	    	series1.getData().add(new XYChart.Data<>((i/10), getAlcoolValue((i/10))));

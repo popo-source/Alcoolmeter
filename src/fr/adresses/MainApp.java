@@ -16,8 +16,12 @@ import fr.adresses.views.NewOverviewController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -107,17 +111,22 @@ public class MainApp extends Application {
             LineChartsValues values = new LineChartsValues(person);
             values.setMainApp(this);
             values.setEat(eaten);
-            
+        
+            XYChart.Series seriesmain = new XYChart.Series();
+            seriesmain=values.graph();
             graphicOverviewController controller = loader.getController();
-            controller.setDialogStage(graphicStage);
-            controller.setChart(values.graph());
-            graphicStage.showAndWait();
+            XYChart<Number,Number> line= controller.graphempty();
+            line.getData().add(seriesmain);
+            Scene graphscene  = new Scene(line,400,200);
+        	Stage graphstage=new Stage();
+            graphstage.setScene(graphscene);
+    		graphstage.show();
+    		graphstage.showAndWait();
             
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
 	
 	public boolean showPersonEditDialogOverview(Person person) {
 	    try {
