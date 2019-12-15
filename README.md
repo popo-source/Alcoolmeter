@@ -129,7 +129,7 @@ Zeitaufwandschätzung |
 Task | Zeitbedarf
 ------ | -------
 Diagrammgleichung erstellen | 3 St
-Startseite erstellen | 2 St
+Startseite erstellen | 4 St
 Personseite erstellen | 1 St
 Alkohlseite erstellen | 1 St
 Mengeseite erstellen | 1 St
