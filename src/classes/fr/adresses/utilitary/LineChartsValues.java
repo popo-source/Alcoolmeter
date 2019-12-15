@@ -62,7 +62,7 @@ public class LineChartsValues {
 		return eated;
 	}
 	
-	public Double getAlcoolValue() {
+	public Double getAlcoolValue(double d) {
 		//final double w = 2.71; //w un coefficient correctif, avec w = 2,71
 		//final double T = 0.789;//T le titre volumique en alcool, valeur entre 0 et 1
 		//double M = 80;//M la masse corporelle (en kg)
@@ -76,7 +76,7 @@ public class LineChartsValues {
 		return A;
 	}
 	
-<<<<<<< HEAD
+
 	public void graph(Stage stage)
 	{
 		stage.setTitle("Alcool im Blutt Graph");
@@ -94,23 +94,46 @@ public class LineChartsValues {
 		XYChart.Series series = new XYChart.Series();
 		for (int i = 0;i<480;i++)
 		{
-		series.getData().add(new XYChart.Data(getAlcoolValue(),t/480));
+		series.getData().add(new XYChart.Data(getAlcoolValue(),t/480));  ////////////////////-----> WTF?
 		}
 		Scene scene  = new Scene(lineChart,800,600);
 		lineChart.getData().add(series);
 
-		stage.setScene(scene);
-		stage.show();
+		/*
+		 * POUR LULU:
+		 * 
+		 * le stage.setScene n'a rien a faire la
+		 * le stage.show non plus d'ailleurs
+		 * 
+		 * 
+		 * 
+		 * --> créer un getter dans cette classe qui renvoit la lineChart crée et appelle la dans la la fonction
+		 * 
+		 * 
+		 * --> et crée la courbe comme il faut dans une méthode séparée
+		 * 
+		 * 
+		 * 
+		 */
+		
+		
+		
+		
+		
+		
+
 		}
-=======
+
 	public XYChart.Series<Number, Number> getChart() {
 		series1.setName(person.getFirstName());
 		for(double i=0; i<200; i++) {
 	    	series1.getData().add(new XYChart.Data<>((i/10), getAlcoolValue((i/10))));
 	    }
 		return series1;
->>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
 	}
+	
+	
+}
 	
 
 
