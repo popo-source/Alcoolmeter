@@ -195,4 +195,4 @@ initialize()
 		});
 	}
 
-Diese Methode ermöglicht es die gesamte MainOverview zu initialisieren. 
+Diese Methode ermöglicht es die gesamte MainOverview zu initialisieren. Die Spalten jeder Tabelle werden dann initialisiert. 
