@@ -107,11 +107,14 @@ Zeitaufwandschätzung |
 * ### __Tasklist__
 Task | Zeitbedarf
 ------ | -------
- Notenberechnung | 1 Stunden
- Prüfmethode | 2 Stunden   
- Fenster erstellen | 3 Stunden
- Design | 2 Stunden
- Testen | 1 Stunden
+Diagrammgleichung erstellen | 3 St
+Startseite erstellen | 2 St
+Personseite erstellen | 1 St
+Alkohlseite erstellen | 1 St
+Mengeseite erstellen | 1 St
+Diagrammseite erstellen | 2 St
+Design | 2 St
+Testen | 3 St
    
 * ## __Umsetzung__
 * ## __Klassendiagramm__
