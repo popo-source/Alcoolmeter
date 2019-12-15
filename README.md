@@ -139,7 +139,9 @@ Testen | 3 St
    
 * ## __Dokumentation wichtiger Code Snippets__
 
-```public void showMainOverview() {
+showMainOverview()
+```
+public void showMainOverview() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("views/MainOverview.fxml"));
