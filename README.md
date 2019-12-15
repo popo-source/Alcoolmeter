@@ -37,15 +37,15 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 9. Sie können die Informationen ändern, indem Sie die Zeile auswählen und auf „Edit" klicken.
 
 * ## __Test Cases__
-Test Case # | Test Case Description | Input | Expected Output | Actual Output | Test Result
----- | ---------------- | -------|---------|--------|----------
-1 | Check results on entering valid User Id & Password |   |   |   | Passed
-2 | Return number based on letter |   |   |   | Passed
-3 | Caps-insensitivity of Test Nr 2 |   |   |   | Passed
+Test Case # | Test Case Description | Test Data | Expected Result | Actual Result 
+---- | ---------------- | -------|---------|--------
+1 | Check results on entering valid User Id & Password |   |   |   
+2 | Return number based on letter |   |   |   
+3 | Caps-insensitivity of Test Nr 2 |   |   |   
 
 * ## __Userstory mit Akzeptanzkriterien__
 
-Us | Name | Beschreibung | SP | Priorität
+US | Name | Beschreibung | SP | Priorität
 -- | ---------------- | ------------------------------------------------------------------------------------------------ | -- | --
 1 | Diagramminitializierung | Als Benutzer möchte ich meinen Alkoholgehalt im Blut als Funktion der Zeit kennenlernen. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Funktion der Taste " Graphic " funktioniert.<br></b>- Test zur Darstellung einer Grafik, die den Blutalkoholspiegel als Funktion der Zeit anzeigt.|  | 1 |
 2  | Personanzeige | Als Benutzer möchte ich meinen Alkoholgehalt anhand meiner persönlichen Eigenschaften berechnen können. <br><b> Akzeptanzkriterien: <br></b>- Test, ob die Fensterbedienung zur Eingabe von Name, Vorname, Gewicht und Geschlecht einer Person fonctioniert. <br></b>- Test, um den Namen, Vornamen und das Gewicht der Person in einer Tabelle anzuzeigen.|  | 1 |
