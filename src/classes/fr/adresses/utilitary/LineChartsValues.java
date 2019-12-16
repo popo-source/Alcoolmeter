@@ -75,11 +75,9 @@ public class LineChartsValues {
 		//double A = (eated()*w*getEthanolVolume() / (C * M))*t*(Math.exp(-t*eated()));
 		return A;
 	}
-<<<<<<< HEAD
-=======
 	
 
->>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
+//>>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
 	public void graph(Stage stage)
 	{
 		//stage.setTitle("Alcool im Blutt Graph");
@@ -101,7 +99,15 @@ public class LineChartsValues {
 		}
 		Scene scene  = new Scene(lineChart,800,600);
 		lineChart.getData().add(series);
+	}
+public LineChart<Number,Number> getLineChart()
+{
+	return this.LineChart;
+	}
+public void setLineChart(LineChart<Number,Number> LineChart)
+{
 
+}
 		/*
 		 * POUR LULU:
 		 * 
@@ -125,9 +131,9 @@ public class LineChartsValues {
 		
 		
 
-		}
+		
 <<<<<<< HEAD
-}
+
 
 /*public XYChart.Series<Number, Number> getChart() {
 =======
