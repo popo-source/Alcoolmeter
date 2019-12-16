@@ -113,6 +113,7 @@ public class MainApp extends Application {
             values.setEat(eaten);
         
             XYChart.Series seriesmain = values.graph();
+            seriesmain.setName("Alcoolimblutt");
             graphicOverviewController controller = loader.getController();
             XYChart<Number,Number> line= controller.graphempty();
             line.getData().add(seriesmain);

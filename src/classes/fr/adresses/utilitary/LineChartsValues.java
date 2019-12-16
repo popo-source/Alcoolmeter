@@ -75,11 +75,9 @@ public class LineChartsValues {
 		//double A = (eated()*w*getEthanolVolume() / (C * M))*t*(Math.exp(-t*eated()));
 		return A;
 	}
-	
-<<<<<<< HEAD
 	public void graph(Stage stage)
 	{
-		stage.setTitle("Alcool im Blutt Graph");
+		//stage.setTitle("Alcool im Blutt Graph");
 		//defining the axes
 		final NumberAxis xAxis= new NumberAxis(0,8,0.2);
 		final NumberAxis yAxis = new NumberAxis(0,16,0);
@@ -87,7 +85,7 @@ public class LineChartsValues {
 		yAxis.setLabel("Alcool im Blutt (g)");
 		
 		//creating the chart
-		final LineChart<Number,Number> lineChart = 
+		LineChart<Number,Number> lineChart = 
 				new LineChart<Number,Number>(xAxis,yAxis);
 
 		lineChart.setTitle("Alcool");
@@ -102,16 +100,15 @@ public class LineChartsValues {
 		stage.setScene(scene);
 		stage.show();
 		}
-=======
-	public XYChart.Series<Number, Number> getChart() {
+}
+
+/*public XYChart.Series<Number, Number> getChart() {
 		series1.setName(person.getFirstName());
 		for(double i=0; i<200; i++) {
 	    	series1.getData().add(new XYChart.Data<>((i/10), getAlcoolValue((i/10))));
 	    }
 		return series1;
->>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
-	}
-	
+	}}
 
 
 	 /*public XYChart.Series<Number, Number>Linechart=new Linechart<Number,Number>(xAxis,yAxis) 
