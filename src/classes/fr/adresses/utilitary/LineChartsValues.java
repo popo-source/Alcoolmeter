@@ -15,7 +15,7 @@ public class LineChartsValues {
 	
 	private Person person;
 	private double M;//en kilos 
-	private double C;//constante
+	private double C;//constante dde diffusion
 	private boolean eat = true;
 	private ObservableList<Alcool> selectedAlcoolData;
 	private XYChart.Series<Number, Number> series1 = new XYChart.Series<>();
@@ -64,7 +64,7 @@ public class LineChartsValues {
 	}
 	
 	public XYChart.Series<Number, Number> getGraph() {
-		series1.setName(person.getFirstName().toString());
+		series1.setName(person.getFirstName().toString()+"mit " + Double.toString(getEthanolVolume())+ "g Alcool consumiert");
 		for(double i=0; i<10000; i++) {
 			double alcoolemicValue = getAlcoolValue(i);
 			if(alcoolemicValue >= 0) {
