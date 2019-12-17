@@ -6,10 +6,8 @@ import classes.fr.adresses.objects.Alcool;
 import classes.fr.adresses.objects.Person;
 import javafx.collections.ObservableList;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.chart.XYChart.Series;
-import javafx.stage.Stage;
+
 
 public class LineChartsValues {
 	
@@ -92,70 +90,3 @@ public class LineChartsValues {
 	}
 	
 }
-		/*
-		 * POUR LULU:
-		 * 
-		 * le stage.setScene n'a rien a faire la
-		 * le stage.show non plus d'ailleurs
-		 * 
-		 * 
-		 * 
-		 * --> créer un getter dans cette classe qui renvoit la lineChart crée et appelle la dans la la fonction
-		 * 
-		 * 
-		 * --> et crée la courbe comme il faut dans une méthode séparée
-		 * 
-		 * 
-		 * 
-		 */
-		
-		
-		
-		
-		
-		
-
-		
-
-
-
-/*public XYChart.Series<Number, Number> getChart() {
-=======
-
-	public XYChart.Series<Number, Number> getChart() {
->>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
-		series1.setName(person.getFirstName());
-		for(double i=0; i<200; i++) {
-	    	series1.getData().add(new XYChart.Data<>((i/10), getAlcoolValue((i/10))));
-	    }
-		return series1;
-<<<<<<< HEAD
-	}}
-=======
-	}
-	
-	
-}
-	
->>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
-
-
-	 /*public XYChart.Series<Number, Number>Linechart=new Linechart<Number,Number>(xAxis,yAxis) 
-	 
-	 
-		series1.setName(person.getFirstName());
-		//for(double i=0; i<100; i++) {
-	   // 	series1.getData().add(new XYChart.Data<>((i/10), getAlcoolValue((i/10))));
-	    for (double j=0; j<480;j++)
-	    {
-	    	series1.getData().add(new XYChart.Data<>(t/480, getAlcoolValue()));
-	    	t=j/60;
-	    }
-	    
-		return series1;
-	}
-	 
-}
-	*/
-
-
