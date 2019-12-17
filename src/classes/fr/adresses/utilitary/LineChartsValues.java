@@ -1,13 +1,14 @@
 package classes.fr.adresses.utilitary;
 
+
 import classes.fr.adresses.MainApp;
 import classes.fr.adresses.objects.Alcool;
 import classes.fr.adresses.objects.Person;
 import javafx.collections.ObservableList;
-import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.chart.XYChart.Series;
 import javafx.stage.Stage;
 
 public class LineChartsValues {
@@ -16,11 +17,7 @@ public class LineChartsValues {
 	private double M;//en kilos 
 	private double C;//constante
 	private boolean eat = true;
-	private double t=0;
 	private ObservableList<Alcool> selectedAlcoolData;
-	
-	
-	
 	private XYChart.Series<Number, Number> series1 = new XYChart.Series<>();
 	
 	public void setMainApp(MainApp mainApp) {
@@ -34,7 +31,6 @@ public class LineChartsValues {
 		for(int i=0; i<alcool.length;i++) {
 			alcoolVolume += (alcool[i].getDegree() * alcool[i].getQuantity());
 		}
-		alcoolVolume *= 0.789;//en grammes
 		return alcoolVolume;
 	}
 	
@@ -62,51 +58,24 @@ public class LineChartsValues {
 		return eated;
 	}
 	
-	public Double getAlcoolValue(double d) {
-		//final double w = 2.71; //w un coefficient correctif, avec w = 2,71
-		//final double T = 0.789;//T le titre volumique en alcool, valeur entre 0 et 1
-		//double M = 80;//M la masse corporelle (en kg)
-		//double m = 12;//m la masse d'éthanol pur (en grammes), où m = 0,79 V, où V est le volume en mL ou en centimètres cubes
-		//double C = 0.7;//coefficient de diffusion C (qui vaut 0,7 si on est un homme, ou 0,6 si on est une femme),
-		
-		//
-		
-		double A= ((getEthanolVolume()/M*C)-eated()*M*8*t/600000);
-		//double A = (eated()*w*getEthanolVolume() / (C * M))*t*(Math.exp(-t*eated()));
+	public Double getAlcoolValue(double t) {
+		double A= ((getEthanolVolume()*0.789/M*C)-eated()*M*8*t/600000);
 		return A;
 	}
 	
-
-//>>>>>>> branch 'master' of https://github.com/popo-source/Alcoolmeter
-	public void graph(Stage stage)
-	{
-		//stage.setTitle("Alcool im Blutt Graph");
-		//defining the axes
-		final NumberAxis xAxis= new NumberAxis(0,8,0.2);
-		final NumberAxis yAxis = new NumberAxis(0,16,0);
-		xAxis.setLabel("Number of hours");
-		yAxis.setLabel("Alcool im Blutt (g)");
-		
-		//creating the chart
-		LineChart<Number,Number> lineChart = 
-				new LineChart<Number,Number>(xAxis,yAxis);
-
-		lineChart.setTitle("Alcool");
-		XYChart.Series series = new XYChart.Series();
-		for (int i = 0;i<480;i++)
-		{
-		series.getData().add(new XYChart.Data(getAlcoolValue(),t/480));  ////////////////////-----> WTF?
+	public XYChart.Series<Number, Number> getGraph() {
+		series1.setName(person.getFirstName().toString());
+		for(double i=0; i<480; i++) {
+	    	series1.getData().add(new XYChart.Data<>(i, getAlcoolValue(i)));
 		}
-		Scene scene  = new Scene(lineChart,800,600);
-		lineChart.getData().add(series);
+		return series1;
 	}
-public LineChart<Number,Number> getLineChart()
-{
-	return this.LineChart;
-	}
-public void setLineChart(LineChart<Number,Number> LineChart)
-{
+	
+	
+	public void setLineChart(LineChart<Number,Number> LineChart){
 
+	}
+	
 }
 		/*
 		 * POUR LULU:
@@ -132,7 +101,7 @@ public void setLineChart(LineChart<Number,Number> LineChart)
 		
 
 		
-<<<<<<< HEAD
+
 
 
 /*public XYChart.Series<Number, Number> getChart() {

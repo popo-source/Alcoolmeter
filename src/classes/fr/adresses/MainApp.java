@@ -107,34 +107,14 @@ public class MainApp extends Application {
             LineChartsValues values = new LineChartsValues(person);
             values.setMainApp(this);
             values.setEat(eaten);
-        /*
-         * 
-         * 
-         * 
-         * -> LineChartsValues values = new LineChartsValues(person) --> créer une lineChart avec la person selectionné
-         * -> values.setMainApp(this) --> set la mainApp dans le linechartvalues
-         * -> values.setEat(eaten) --> dis a la linechartValues si la personne a mangé ou non
-         * -> values.getChart() --> récupérer la XYchartseries
-         * 
-         * 
-         * 
-         * -> controller.setChart() --> injecter la chart dans le graphicOverviewController
-         * 
-         * 
-         */
             
             graphicOverviewController controller = loader.getController();
-            /*
-             * 
-             * -> controller.setChart()
-             * -> controller.setDialogStage(graphicStage) --> injecte la stage dans le graphicoverviewcontroller
-             * 
-             * -> tu peux directement faire controller.setChart(values.getChart());
-             * 
-             * 
-             */
+            controller.setDialogStage(graphicStage);
+            controller.initGraph(values.getGraph());
             
     		graphicStage.showAndWait();
+    		
+    		
 		}catch(IOException e) {
 			e.printStackTrace();
 		}

@@ -11,12 +11,12 @@
    <children>
       <BorderPane prefHeight="400.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <LineChart fx:id="chart1" title="Alcooltest" BorderPane.alignment="CENTER">
+            <LineChart fx:id="chart" title="Alcooltest" BorderPane.alignment="CENTER">
               <xAxis>
-                <NumberAxis side="BOTTOM" />
+                <NumberAxis label="Time in hours" side="BOTTOM" fx:id="xAxis" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis fx:id="yAxis" label="Alcool in blood (g/L)" side="LEFT" />
               </yAxis>
             </LineChart>
          </center>
