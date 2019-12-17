@@ -114,7 +114,6 @@ public class MainApp extends Application {
             
     		graphicStage.showAndWait();
     		
-    		
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
@@ -135,9 +134,9 @@ public class MainApp extends Application {
             PersonEditdialogStage.setScene(scene);
 	        
 	        EditPersonDialogController controllerPerson = loaderPerson.getController();
-	        controllerPerson.setMainApp(this);
 	        controllerPerson.setPerson(person);
 	        controllerPerson.setPersonEditDialogStage(PersonEditdialogStage);
+	        
 	        PersonEditdialogStage.showAndWait();
 	        
             return controllerPerson.isOkClicked();
@@ -163,9 +162,9 @@ public class MainApp extends Application {
 
 	        
 	        EditAlcoolDialogController controllerAlcool = loaderAlcool.getController();
-	        controllerAlcool.setMainApp(this);
 	        controllerAlcool.setAlcool(alcool);
 	        controllerAlcool.setDialogStage(AlcoolEditdialogStage);
+	        
 	        AlcoolEditdialogStage.showAndWait();
 	        
             return controllerAlcool.isOkClicked();
@@ -189,9 +188,9 @@ public class MainApp extends Application {
             QuantitydialogStage.setScene(scene);
 	        
 	        EditQuantityDialogController controllerQuantity = loaderQuantity.getController();
-	        controllerQuantity.setMainApp(this);
 	        controllerQuantity.setAlcool(alcool);
 	        controllerQuantity.setDialogStage(QuantitydialogStage);
+	        
 	        QuantitydialogStage.showAndWait();
 	        
 	        return controllerQuantity.isOkClicked();
@@ -217,6 +216,7 @@ public class MainApp extends Application {
 	        
 	        DeleteOverviewController controllerDelete = loaderDelete.getController();
 	        controllerDelete.setDialogStage(DeletedialogStage);
+	        
 	        DeletedialogStage.showAndWait();
 	        
 	        return controllerDelete.isOkClicked();
@@ -225,24 +225,23 @@ public class MainApp extends Application {
 	        return false;
 	    }
 	}
-	public int ShowNewOverview()
-	{
-		try{
-		 FXMLLoader loaderNew = new FXMLLoader();
-	     loaderNew.setLocation(MainApp.class.getResource("views/NewOverview.fxml"));
-	     AnchorPane newOverview = (AnchorPane) loaderNew.load();
+	public int ShowNewOverview() {
+		try {
+			FXMLLoader loaderNew = new FXMLLoader();
+			loaderNew.setLocation(MainApp.class.getResource("views/NewOverview.fxml"));
+			AnchorPane newOverview = (AnchorPane) loaderNew.load();
 	     
-	     Stage newDialogStage = new Stage();
-         newDialogStage.setTitle("New");
-         newDialogStage.initModality(Modality.WINDOW_MODAL);
-         newDialogStage.initOwner(primaryStage);
-         Scene scene = new Scene(newOverview);
-         newDialogStage.setScene(scene);
+			Stage newDialogStage = new Stage();
+			newDialogStage.setTitle("New");
+			newDialogStage.initModality(Modality.WINDOW_MODAL);
+			newDialogStage.initOwner(primaryStage);
+			Scene scene = new Scene(newOverview);
+			newDialogStage.setScene(scene);
 	        
-         	NewOverviewController controllerNew = loaderNew.getController();
-	        controllerNew.setDialogStage(newDialogStage);
-	        newDialogStage.showAndWait();
-	        //
+			NewOverviewController controllerNew = loaderNew.getController();
+			controllerNew.setDialogStage(newDialogStage);
+			newDialogStage.showAndWait();
+	        
 	        return controllerNew.whatIsClicked();
 	    } catch (IOException e) {
 	        e.printStackTrace();

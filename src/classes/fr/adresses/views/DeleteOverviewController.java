@@ -1,27 +1,12 @@
 package classes.fr.adresses.views;
 
-import classes.fr.adresses.objects.Alcool;
-import classes.fr.adresses.objects.Person;
+
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 
 public class DeleteOverviewController {
 	private boolean okClicked=false;
 	private Stage dialogStage;
-	
-	/*
-	 * 
-	 * à faire avec les tableau selectionnées 
-	 * sinon cela ne marche pas
-	 * --> tableview...
-	 * 
-	 * 
-	 */
-	
-	//private Person person;
-	//private Alcool alcool;
-	
-	
 	
 	@FXML
 	private void handleOk(){
@@ -48,17 +33,4 @@ public class DeleteOverviewController {
 		
 		
 	}
-	/*
-	 * 
-	 * public void selectedAlcool(Alcool alcool) {
-			this.alcool = alcool;
-		}
-	
-		public void selectedPerson(Person person) {
-			this.person = person;
-		}
-	 * 
-	 * 
-	 */
-	
 }

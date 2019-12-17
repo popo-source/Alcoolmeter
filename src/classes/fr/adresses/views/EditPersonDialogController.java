@@ -6,13 +6,12 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import classes.fr.adresses.MainApp;
 import classes.fr.adresses.objects.Person;
 
 
 public class EditPersonDialogController {
 
-	private MainApp mainApp;
+
 	private Stage personEditDialogStage;
 	private boolean okClicked = false;
 	
@@ -26,7 +25,6 @@ public class EditPersonDialogController {
 	@FXML
 	private TextField weightField;
 	
-	private TextField sexField;
 	
 	@FXML
 	private CheckBox womanCheckBox;
@@ -70,9 +68,6 @@ public class EditPersonDialogController {
     }
 	
 	
-	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp;
-	}
 
 	public void setPersonEditDialogStage(Stage personEditDialogStage) {
 		this.personEditDialogStage = personEditDialogStage;

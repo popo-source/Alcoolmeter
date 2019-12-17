@@ -5,12 +5,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
-import classes.fr.adresses.MainApp;
 import classes.fr.adresses.objects.Alcool;
 
 public class EditAlcoolDialogController {
 	
-	private MainApp mainApp;
 	private Stage dialogStage;
 	private boolean okClicked = false;
 	private Alcool alcool;
@@ -81,8 +79,4 @@ public class EditAlcoolDialogController {
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
     }
-    
-	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp;
-	}
 }

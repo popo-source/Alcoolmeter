@@ -6,13 +6,11 @@ import javafx.scene.control.Alert.AlertType;
 
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import classes.fr.adresses.MainApp;
 import classes.fr.adresses.objects.Alcool;
 
 
 public class EditQuantityDialogController {
 	
-	private MainApp mainApp;
 	private Stage dialogStage;
 	private Alcool alcool;
 	private boolean okClicked = false;
@@ -45,10 +43,6 @@ public class EditQuantityDialogController {
 	public boolean isOkClicked() {
         return okClicked;
     }
-	
-	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp;
-	}
 	
 	public void setDialogStage(Stage dialogStage) {
 		this.dialogStage = dialogStage;
