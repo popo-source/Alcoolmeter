@@ -29,7 +29,7 @@ public class LineChartsValues {
 		alcool = selectedAlcoolData.toArray(alcool);
 		double alcoolVolume = 0;
 		for(int i=0; i<alcool.length;i++) {
-			alcoolVolume += (alcool[i].getDegree() * alcool[i].getQuantity());
+			alcoolVolume += ((alcool[i].getDegree()/100) * alcool[i].getQuantity());
 		}
 		return alcoolVolume;
 	}
@@ -59,14 +59,20 @@ public class LineChartsValues {
 	}
 	
 	public Double getAlcoolValue(double t) {
-		double A= ((getEthanolVolume()*0.789/M*C)-eated()*M*8*t/600000);
+		double A= (((getEthanolVolume()*0.789)/(M*C))-(eated()*0.01*(t/60)));
 		return A;
 	}
 	
 	public XYChart.Series<Number, Number> getGraph() {
 		series1.setName(person.getFirstName().toString());
 		for(double i=0; i<480; i++) {
-	    	series1.getData().add(new XYChart.Data<>(i, getAlcoolValue(i)));
+			double alcoolemicValue = getAlcoolValue(i);
+			if(alcoolemicValue < 0) {
+				series1.getData().add(new XYChart.Data<>(i/60, 0));
+			} else {
+				series1.getData().add(new XYChart.Data<>(i/60, alcoolemicValue));
+			}
+	    	
 		}
 		return series1;
 	}

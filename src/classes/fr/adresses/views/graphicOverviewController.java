@@ -25,17 +25,7 @@ public class graphicOverviewController{
 		dialogStage.close();
 	}
 	
-	public void initGraph(XYChart.Series<Number, Number> serie){
-		final NumberAxis xAxis= new NumberAxis(0, 8, 1);
-		final NumberAxis yAxis = new NumberAxis(0, 16, 1);
-		
-		this.xAxis = xAxis;
-		//this.xAxis.setAutoRanging(false);
-		
-		this.yAxis = yAxis;
-		//this.yAxis.setAutoRanging(false);
-		
-		
+	public void initGraph(XYChart.Series<Number, Number> serie){		
 		this.chart.getData().add(serie);
 		
 	}
