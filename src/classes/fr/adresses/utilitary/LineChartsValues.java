@@ -65,7 +65,7 @@ public class LineChartsValues {
 	
 	public XYChart.Series<Number, Number> getGraph() {
 		series1.setName(person.getFirstName().toString());
-		for(double i=0; i<480; i++) {
+		for(double i=0; i<10000; i++) {
 			double alcoolemicValue = getAlcoolValue(i);
 			if(alcoolemicValue >= 0) {
 				series1.getData().add(new XYChart.Data<>(i/60, alcoolemicValue));
