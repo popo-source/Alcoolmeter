@@ -64,11 +64,22 @@ public class LineChartsValues {
 	}
 	
 	public XYChart.Series<Number, Number> getGraph() {
-		series1.setName(person.getFirstName().toString()+"mit " + Double.toString(getEthanolVolume())+ "g Alcool consumiert");
+		series1.setName(person.getFirstName().toString()+" mit " + Double.toString(getEthanolVolume())+ "g Alcool consumiert");
+		double start;
+		series1.getData().add(new XYChart.Data<>(0, 0));
+		
+		if(eat) {
+			series1.getData().add(new XYChart.Data<>(1, getAlcoolValue(0)));
+			start = 1;
+		} else {
+			series1.getData().add(new XYChart.Data<>(1, getAlcoolValue(0)));
+			start = 0.5;
+		}
+		
 		for(double i=0; i<10000; i++) {
 			double alcoolemicValue = getAlcoolValue(i);
 			if(alcoolemicValue >= 0) {
-				series1.getData().add(new XYChart.Data<>(i/60, alcoolemicValue));
+				series1.getData().add(new XYChart.Data<>(start + i/60, alcoolemicValue));
 			}
 	    	
 		}
