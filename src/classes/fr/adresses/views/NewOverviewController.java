@@ -2,7 +2,6 @@ package classes.fr.adresses.views;
 
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
-import classes.fr.adresses.MainApp;
 
 public class NewOverviewController {
 	private int clickOption=0;
