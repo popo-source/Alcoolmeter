@@ -28,10 +28,10 @@ Speichern Sie Ihre src Datei von Ihre Git Projekt auf Ihre Rechner.
 Löschen Sie Ihre src Datei von Ihre Git Projekt.
 Fügen Sie die pom.xml Datei mit die geeignete Initialiesierung in das Git Projekt.
 Fügen Sie die src Ordner von einen Maven Projekt in das Git Projekt.
-Klicken Sie auf den rechten Maus Taste in "trinat-EBAE": ->Configure ->Convert to Maven.
+Klicken Sie auf den rechten Maus Taste in "AlcoolTest": ->Configure ->Convert to Maven.
 Fügen Sie Ihre eigene Package in das Ordner src/main/java.
-Klicken Sie auf den rechten Maus Taste in "trinat-EBAE": ->Run as ->Maven clean.
-Klicken Sie auf den rechten Maus Taste in "trinat-EBAE": ->Run as ->Maven install.
+Klicken Sie auf den rechten Maus Taste in "AlcoolTest": ->Run as ->Maven clean.
+Klicken Sie auf den rechten Maus Taste in "AlcoolTest": ->Run as ->Maven install.
 Prüfen Sie in das Ordner "target" ob Sie eine Datei .jar haben.
 
 * ## __Bedienungsanleitung__
