@@ -23,6 +23,25 @@ Das Projekt soll auf GitHub veröffentlich werden.
 Die Buildautomatisierung soll mit MAVEN erfolgen.
 Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-jar xxxxx.jar ausgeführt werden können.
 
+* ## __Buildanleitung__
+Speichern Sie Ihre src Datei von Ihre Git Projekt auf Ihre Rechner.
+
+Löschen Sie Ihre src Datei von Ihre Git Projekt.
+
+Fügen Sie die pom.xml Datei mit die geeignete Initialiesierung in das Git Projekt.
+
+Fügen Sie die src Ordner von einen Maven Projekt in das Git Projekt.
+
+Klicken Sie auf den rechten Maus Taste in "AlcoolTest": ->Configure ->Convert to Maven.
+
+Fügen Sie Ihre eigene Package in das Ordner src/main/java.
+
+Klicken Sie auf den rechten Maus Taste in "AlcoolTest": ->Run as ->Maven clean.
+
+Klicken Sie auf den rechten Maus Taste in "AlcoolTest": ->Run as ->Maven install.
+
+Prüfen Sie in das Ordner "target" ob Sie eine Datei .jar haben.
+
 * ## __Bedienungsanleitung__
 1. Öffnen Sie das Alkoholtest.
 2. Klicken Sie auf „New" um Personen und Alkohole hinzuzufügen.
@@ -38,8 +57,8 @@ Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-
 Test Case # | Test Case Description | Test Data | Expected Result | Actual Result | Pass/Fail
 -- | --- | ------------ | --------- | --- | ---
 1 | Check results on entering valid PersonData | Firstname: Julien <br></b>Lastname: Dupont <br></b>Weight: 65 <br></b>Sex: man | No error message should be generated and the person's information is displayed in the table. | As Expected | Pass |
-2 | Check results on entering valid AlcoholData | Alcoholname: Vodka <br></b>Degrees: 45 | No error message should be generated and the alcohol's information is displayed in the table. | As Expected | Pass |
-3 | Check results on entering valid QuantityData | Quantity: 2.5 | No error message should be generated and the quantity and the selected alcohol are displayed in the table. | As Expected | Pass |   
+2 | Check results on entering valid AlcoholData | Alcoholname: beer <br></b>Degrees: 5 <br></b>Quantity: 100cl| No error message should be generated and the alcohol's information is displayed in the table. | As Expected | Pass |
+
 
 * ## __Userstory mit Akzeptanzkriterien__
 
