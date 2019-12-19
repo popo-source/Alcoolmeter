@@ -34,8 +34,8 @@ public class MainApp extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 
-		personData.add(new Person("Paul", "Hauser", "männlich", 80.0));
-        personData.add(new Person("Lucas", "Gigondan", "männlich", 66.0));
+		personData.add(new Person("Paul", "Hauser", "man", 80.0));
+        personData.add(new Person("Lucas", "Gigondan", "man", 66.0));
         
         alcoolData.add(new Alcool("Jagermeister", 35.0));
         alcoolData.add(new Alcool("Heineken", 5.0));

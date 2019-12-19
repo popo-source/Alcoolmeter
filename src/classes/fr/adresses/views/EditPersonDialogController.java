@@ -57,10 +57,10 @@ public class EditPersonDialogController {
         firstNameField.setText(person.getFirstName());
         lastNameField.setText(person.getLastName());
         weightField.setText(Double.toString(person.getWeight()));
-        if(person.getSex()=="männlich") {
+        if(person.getSex()=="man") {
         	manCheckBox.setSelected(true);
         } else {
-        	if(person.getSex()=="weiblich") {
+        	if(person.getSex()=="woman") {
         		womanCheckBox.setSelected(true);
         	}
         	

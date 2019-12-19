@@ -35,7 +35,7 @@ public class LineChartsValues {
 	public LineChartsValues(Person person) {
 		this.person = person;
 		this.M = person.getWeight();
-		if(person.getSex().toString()=="weiblich") {
+		if(person.getSex().toString()=="woman") {
 			this.C = 0.6;
 		} else {
 			this.C = 0.7;
@@ -62,7 +62,7 @@ public class LineChartsValues {
 	}
 	
 	public XYChart.Series<Number, Number> getGraph() {
-		series1.setName(person.getFirstName().toString()+" mit " + Double.toString(getEthanolVolume())+ "g Alcool consumiert");
+		series1.setName(person.getFirstName().toString());
 		double start;
 		series1.getData().add(new XYChart.Data<>(0, 0));
 		
