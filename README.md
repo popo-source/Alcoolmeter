@@ -23,6 +23,17 @@ Das Projekt soll auf GitHub veröffentlich werden.
 Die Buildautomatisierung soll mit MAVEN erfolgen.
 Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-jar xxxxx.jar ausgeführt werden können.
 
+*## __Buildanleitung__
+Speichern Sie Ihre src Datei von Ihre Git Projekt auf Ihre Rechner.
+Löschen Sie Ihre src Datei von Ihre Git Projekt.
+Fügen Sie die pom.xml Datei mit die geeignete Initialiesierung in das Git Projekt.
+Fügen Sie die src Ordner von einen Maven Projekt in das Git Projekt.
+Klicken Sie auf den rechten Maus Taste in "trinat-EBAE": ->Configure ->Convert to Maven.
+Fügen Sie Ihre eigene Package in das Ordner src/main/java.
+Klicken Sie auf den rechten Maus Taste in "trinat-EBAE": ->Run as ->Maven clean.
+Klicken Sie auf den rechten Maus Taste in "trinat-EBAE": ->Run as ->Maven install.
+Prüfen Sie in das Ordner "target" ob Sie eine Datei .jar haben.
+
 * ## __Bedienungsanleitung__
 1. Öffnen Sie das Alkoholtest.
 2. Klicken Sie auf „New" um Personen und Alkohole hinzuzufügen.
