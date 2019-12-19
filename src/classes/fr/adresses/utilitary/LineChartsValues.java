@@ -12,8 +12,8 @@ import javafx.scene.chart.XYChart;
 public class LineChartsValues {
 	
 	private Person person;
-	private double M;//en kilos 
-	private double C;//constante dde diffusion
+	private double M;//Gewicht in Kg
+	private double C;//Diffusion Konstante
 	private boolean eat = true;
 	private ObservableList<Alcool> selectedAlcoolData;
 	private XYChart.Series<Number, Number> series1 = new XYChart.Series<>();
@@ -27,7 +27,7 @@ public class LineChartsValues {
 		alcool = selectedAlcoolData.toArray(alcool);
 		double alcoolVolume = 0;
 		for(int i=0; i<alcool.length;i++) {
-			alcoolVolume += ((alcool[i].getDegree()/100) * alcool[i].getQuantity());
+			alcoolVolume += ((alcool[i].getDegree()/100) * (alcool[i].getQuantity()*10));
 		}
 		return alcoolVolume;
 	}

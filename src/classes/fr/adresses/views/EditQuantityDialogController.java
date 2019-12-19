@@ -57,7 +57,7 @@ public class EditQuantityDialogController {
 			try {
 				Integer.parseInt(quantityField.getText());
 			} catch (NumberFormatException e) {
-				errorMessage += "No valid quantity (must be a double)!\n";
+				errorMessage += "No valid quantity (must be a double: format = xxx.xxx)!\n";
 			}
 		}
 		if (errorMessage.length() == 0) {
