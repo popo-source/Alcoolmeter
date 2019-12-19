@@ -7,8 +7,8 @@
 
 <AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.fr.adresses.views.EditAlcoolDialogController">
    <children>
-      <Button layoutX="296.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleOk" text="Ok" />
-      <Button layoutX="334.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+      <Button defaultButton="true" layoutX="296.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleOk" text="Ok" />
+      <Button cancelButton="true" layoutX="334.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
       <TextField fx:id="alcoolNameField" layoutX="141.0" layoutY="37.0" prefHeight="25.0" prefWidth="219.0" />
       <TextField fx:id="degreeLabelField" layoutX="141.0" layoutY="88.0" prefHeight="25.0" prefWidth="219.0" />
       <Label layoutX="72.0" layoutY="41.0" text="Alcool" />
