@@ -23,7 +23,7 @@ Das Projekt soll auf GitHub veröffentlich werden.
 Die Buildautomatisierung soll mit MAVEN erfolgen.
 Das Programm soll mittels einer dafür erstellten JAR-Datei und dem Befehl java-jar xxxxx.jar ausgeführt werden können.
 
-*## __Buildanleitung__
+* ## __Buildanleitung__
 Speichern Sie Ihre src Datei von Ihre Git Projekt auf Ihre Rechner.
 Löschen Sie Ihre src Datei von Ihre Git Projekt.
 Fügen Sie die pom.xml Datei mit die geeignete Initialiesierung in das Git Projekt.
