@@ -18,7 +18,7 @@ public class AlcoolTest {
 	}
 	
 	@Test
-	public void testGettersAndSetters() throws Exception {
+	public void testGettersAndSettersAndConstructors() throws Exception {
 		Alcool beer = new Alcool();
 		beer.setAlcoolName("beer");
 		beer.setDegree(100);
