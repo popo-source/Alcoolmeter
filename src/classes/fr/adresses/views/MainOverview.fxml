@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -45,13 +47,44 @@
                         <CheckBox fx:id="noEatedCheckBox" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleNoEatedCheckBox" text="No" translateX="65.0" translateY="15.0" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="100.0">
+                  <HBox prefHeight="100.0" prefWidth="724.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#handleGraphic" text="Gaphic" translateX="250.0" translateY="5.0" />
-                        <Button mnemonicParsing="false" onAction="#handleAdd" text="Add" translateX="300.0" translateY="5.0" />
-                        <Button mnemonicParsing="false" onAction="#handleNew" text="New" translateX="375.0" translateY="5.0" />
-                        <Button mnemonicParsing="false" onAction="#handleEdit" text="Edit" translateX="375.0" translateY="5.0" />
-                        <Button mnemonicParsing="false" onAction="#handleDelete" text="Delete" translateX="375.0" translateY="5.0" />
+                        <Button mnemonicParsing="false" onAction="#handleGraphic" prefHeight="27.0" prefWidth="149.0" text="Gaphic" translateX="5.0" translateY="3.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0" translateX="395.0" translateY="2.0">
+                           <buttons>
+                              <Button mnemonicParsing="false" onAction="#handleNew" text="New">
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleEdit" text="Edit">
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleDelete" text="Delete">
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                           </buttons>
+                           <padding>
+                              <Insets bottom="5.0" right="5.0" />
+                           </padding>
+                        </ButtonBar>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                           <buttons>
+                              <Button mnemonicParsing="false" onAction="#handleAdd" prefHeight="28.0" prefWidth="198.0" text="Add Alcool" translateX="-110.0">
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                           </buttons>
+                        </ButtonBar>
                      </children>
                   </HBox>
                </children>
