@@ -3,34 +3,52 @@ package test.fr.adresses.objects;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-
-import classes.fr.adresses.objects.*;
-
 import org.junit.Test;
 
+import classes.fr.adresses.objects.Alcool;
+
 public class AlcoolTest {
+
 	private Alcool randomAlcool;
 	
 	@Before
-	public void setRandomAlcool() {
-		randomAlcool = new Alcool("beer", 100.0);
-		randomAlcool.setQuantity(100);
+	public void initTest() {
+		randomAlcool = new Alcool("name", 100.0);
+		randomAlcool.setQuantity(100.0);
 	}
 	
 	@Test
-	public void testGettersAndSettersAndConstructors() throws Exception {
+	public void testAlcoolProperties() {
+		String name = "name";
+		double degree = 100;
+		double quantity = 100;
+		
+		assertEquals(name, randomAlcool.alcoolNameProperty().get());
+		assertEquals(degree , randomAlcool.degreeProperty().get(), 0);
+		assertEquals(quantity, randomAlcool.quantityProperty().get(), 0);
+	}
+
+	@Test
+	public void testAlcoolGetters() {
+		String name = "name";
+		double degree = 100;
+		double quantity = 100;
+		
+		assertEquals(name, randomAlcool.getAlcoolName());
+		assertEquals(degree, randomAlcool.getDegree(), 0);
+		assertEquals(quantity, randomAlcool.getQuantity(), 0);
+	}
+
+	@Test
+	public void testAlcoolSetters() {
 		Alcool beer = new Alcool();
+		
 		beer.setAlcoolName("beer");
-		beer.setDegree(100);
+		beer.setDegree(5);
 		beer.setQuantity(100);
 		
-		Alcool testBeer = new Alcool(beer.getAlcoolName(), beer.getDegree());
-		testBeer.setQuantity(beer.getQuantity());
-		
-		assertEquals(beer.alcoolNameProperty().get(), testBeer.alcoolNameProperty().get());
-		assertEquals(beer.degreeProperty().get(), testBeer.degreeProperty().get(), 0.0);
-		assertEquals(beer.quantityProperty().get(), testBeer.quantityProperty().get(), 0.0);
-		
-		assertEquals(beer.getClass(), randomAlcool.getClass());
+		assertEquals("beer", beer.getAlcoolName());
+		assertEquals(5, beer.getDegree(), 0);
+		assertEquals(100, beer.getQuantity(), 0);
 	}
 }
