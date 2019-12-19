@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
@@ -21,10 +22,13 @@
             </LineChart>
          </center>
          <bottom>
-            <Button mnemonicParsing="false" onAction="#handleOk" prefHeight="27.0" prefWidth="57.0" text="Ok" BorderPane.alignment="CENTER_RIGHT">
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" prefHeight="27.0" prefWidth="57.0" text="Ok" BorderPane.alignment="CENTER_RIGHT">
                <BorderPane.margin>
                   <Insets bottom="7.0" right="7.0" />
                </BorderPane.margin>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
             </Button>
          </bottom>
       </BorderPane>
