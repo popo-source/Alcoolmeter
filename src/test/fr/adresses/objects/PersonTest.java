@@ -18,21 +18,44 @@ public class PersonTest {
 	
 	
 	@Test
-	public void testGettersAndSetters() throws Exception {
-		Person person = new Person();
-		person.setFirstName("name");
-		person.setLastName("last name");
-		person.setSex("sex");
-		person.setWeight(0.0);
+	public void testPersonProperties(){
+		String name = "name";
+		String lastName = "last name";
+		String sex = "sex";
+		int weight = 0;
 		
-		Person testPerson = new Person(person.getFirstName(), person.getLastName(), person.getSex(), person.getWeight());
+		assertEquals(name, randomPerson.firstNameProperty().get());
+		assertEquals(lastName, randomPerson.lastNameProperty().get());
+		assertEquals(sex, randomPerson.sexProperty().get());
+		assertEquals(weight, randomPerson.weightProperty().get(), 0);
+	}
+	
+	@Test
+	public void testPersonGetters() {
+		String name = "name";
+		String lastName = "last name";
+		String sex = "sex";
+		int weight = 0;
 		
-		assertEquals(person.firstNameProperty().get(), testPerson.firstNameProperty().get());
-		assertEquals(person.lastNameProperty().get(), testPerson.lastNameProperty().get());
-		assertEquals(person.sexProperty().get(), testPerson.sexProperty().get());
-		assertEquals(person.weightProperty().get(), testPerson.weightProperty().get(), 0.0);
+		assertEquals(name, randomPerson.getFirstName());
+		assertEquals(lastName, randomPerson.getLastName());
+		assertEquals(sex, randomPerson.getSex());
+		assertEquals(weight, randomPerson.getWeight(), 0);
+	}
+	
+	@Test
+	public void testPersonSetters() {
+		Person testPerson = new Person();
 		
-		assertEquals(person.getClass(), randomPerson.getClass());
+		testPerson.setFirstName("name");
+		testPerson.setLastName("lastName");
+		testPerson.setSex("sex");
+		testPerson.setWeight(0.0);
+		
+		assertEquals(testPerson.getFirstName(), randomPerson.getFirstName());
+		assertEquals(testPerson.getLastName(), randomPerson.getLastName());
+		assertEquals(testPerson.getSex(), randomPerson.getSex());
+		assertEquals(testPerson.getWeight(), randomPerson.getWeight(), 0);
 	}
 
 }
