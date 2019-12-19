@@ -56,7 +56,7 @@ Prüfen Sie in das Ordner "target" ob Sie eine Datei .jar haben.
 * ## __Test Cases__
 Test Case # | Test Case Description | Test Data | Expected Result | Actual Result | Pass/Fail
 -- | --- | ------------ | --------- | --- | ---
-1 | Check results on entering valid PersonData | Firstname: Julien <br></b>Lastname: Dupont <br></b>Weight: 65 <br></b>Sex: man | No error message should be generated and the person's information is displayed in the table. | As Expected | Pass |
+1 | Check results on entering valid PersonData | Firstname: Paul <br></b>Lastname: Muster <br></b>Weight: 80 kg <br></b>Sex: man | No error message should be generated and the person's information is displayed in the table. | As Expected | Pass |
 2 | Check results on entering valid AlcoholData | Alcoholname: beer <br></b>Degrees: 5 <br></b>Quantity: 100cl| No error message should be generated and the alcohol's information is displayed in the table. | As Expected | Pass |
 
 
