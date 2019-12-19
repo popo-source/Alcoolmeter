@@ -80,10 +80,10 @@ public class EditPersonDialogController {
 	public String getCheckBoxSex() {
 		String sex ="";
 		if(womanCheckBox.isSelected() == true && manCheckBox.isSelected() == false) {
-			sex = "weiblich";
+			sex = "woman";
 		} else {
 			if(womanCheckBox.isSelected() == false && manCheckBox.isSelected() == true) {
-				sex = "männlich";
+				sex = "man";
 			}
 		}
 		return sex;
