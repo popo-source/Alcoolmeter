@@ -36,6 +36,7 @@ public class MainApp extends Application {
 
 		personData.add(new Person("Paul", "Hauser", "man", 80.0));
         personData.add(new Person("Lucas", "Gigondan", "man", 66.0));
+        personData.add(new Person("Gil", "Flassch--Trauth", "man", 65.0));
         
         alcoolData.add(new Alcool("Jagermeister", 35.0));
         alcoolData.add(new Alcool("Heineken", 5.0));
