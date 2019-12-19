@@ -13,16 +13,16 @@ public class PersonTest {
 	
 	@Before
 	public void setRandomPerson() {
-		randomPerson = new Person("name", "last name", "sex", 0.0);
+		randomPerson = new Person("Paul", "Muster", "man", 80.0);
 	}
 	
 	
 	@Test
 	public void testPersonProperties(){
-		String name = "name";
-		String lastName = "last name";
-		String sex = "sex";
-		int weight = 0;
+		String name = "Paul";
+		String lastName = "Muster";
+		String sex = "man";
+		double weight = 80;
 		
 		assertEquals(name, randomPerson.firstNameProperty().get());
 		assertEquals(lastName, randomPerson.lastNameProperty().get());
@@ -32,10 +32,10 @@ public class PersonTest {
 	
 	@Test
 	public void testPersonGetters() {
-		String name = "name";
-		String lastName = "last name";
-		String sex = "sex";
-		int weight = 0;
+		String name = "Paul";
+		String lastName = "Muster";
+		String sex = "man";
+		double weight = 80;
 		
 		assertEquals(name, randomPerson.getFirstName());
 		assertEquals(lastName, randomPerson.getLastName());
@@ -47,10 +47,10 @@ public class PersonTest {
 	public void testPersonSetters() {
 		Person testPerson = new Person();
 		
-		testPerson.setFirstName("name");
-		testPerson.setLastName("lastName");
-		testPerson.setSex("sex");
-		testPerson.setWeight(0.0);
+		testPerson.setFirstName("Paul");
+		testPerson.setLastName("Muster");
+		testPerson.setSex("man");
+		testPerson.setWeight(80.0);
 		
 		assertEquals(testPerson.getFirstName(), randomPerson.getFirstName());
 		assertEquals(testPerson.getLastName(), randomPerson.getLastName());

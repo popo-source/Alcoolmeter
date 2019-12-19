@@ -13,14 +13,14 @@ public class AlcoolTest {
 	
 	@Before
 	public void initTest() {
-		randomAlcool = new Alcool("name", 100.0);
+		randomAlcool = new Alcool("beer", 5.0);
 		randomAlcool.setQuantity(100.0);
 	}
 	
 	@Test
 	public void testAlcoolProperties() {
-		String name = "name";
-		double degree = 100;
+		String name = "beer";
+		double degree = 5;
 		double quantity = 100;
 		
 		assertEquals(name, randomAlcool.alcoolNameProperty().get());
@@ -30,8 +30,8 @@ public class AlcoolTest {
 
 	@Test
 	public void testAlcoolGetters() {
-		String name = "name";
-		double degree = 100;
+		String name = "beer";
+		double degree = 5;
 		double quantity = 100;
 		
 		assertEquals(name, randomAlcool.getAlcoolName());
