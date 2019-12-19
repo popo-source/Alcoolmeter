@@ -54,13 +54,13 @@ public class EditAlcoolDialogController {
         if (alcoolNameField.getText() == null || alcoolNameField.getText().length() == 0) {
             errorMessage += "No valid alcool name!\n";
         }
-        if (degreeLabelField.getText() == null || degreeLabelField.getText().length() == 0) {
-            errorMessage += "No valid last name!\n";
+        if (degreeLabelField.getText() == null || degreeLabelField.getText().length() == 0 || Double.parseDouble(degreeLabelField.getText()) <=0) {
+            errorMessage += "No valid degree!\n";
         } else {
 			try {
 				Double.parseDouble(degreeLabelField.getText());
 			} catch (NumberFormatException e) {
-				errorMessage += "No valid quantity (must be an integer)!\n";
+				errorMessage += "No valid Degree (must be a double)!\n";
 			}
 		}
         if (errorMessage.length() == 0) {

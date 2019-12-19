@@ -51,13 +51,13 @@ public class EditQuantityDialogController {
 	private boolean isInputValid() {
 		String errorMessage = "";
 		
-		if (quantityField.getText() == null || quantityField.getText().length() == 0) {
+		if (quantityField.getText() == null || quantityField.getText().length() == 0 || Double.parseDouble(quantityField.getText()) <= 0) {
 			errorMessage += "No valid quantity!\n";
 		} else {
 			try {
 				Integer.parseInt(quantityField.getText());
 			} catch (NumberFormatException e) {
-				errorMessage += "No valid quantity (must be an integer)!\n";
+				errorMessage += "No valid quantity (must be a double)!\n";
 			}
 		}
 		if (errorMessage.length() == 0) {

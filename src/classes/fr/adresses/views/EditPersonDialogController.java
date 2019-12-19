@@ -116,13 +116,13 @@ public class EditPersonDialogController {
 		if (lastNameField.getText() == null || lastNameField.getText().length() == 0) {
 			errorMessage += "No valid last name!\n";
 		}
-		if (weightField.getText() == null || weightField.getText().length() == 0) {
+		if (weightField.getText() == null || weightField.getText().length() == 0 || Double.parseDouble(weightField.getText()) <=0) {
 			errorMessage += "No valid weight!\n";
 		} else {
 			try {
 				Double.parseDouble(weightField.getText());
 			} catch (NumberFormatException e) {
-				errorMessage += "No valid weight (must be an integer)!\n";
+				errorMessage += "No valid weight (must be a double)!\n";
 			}
 		}
 		if (womanCheckBox==null || manCheckBox==null) {
