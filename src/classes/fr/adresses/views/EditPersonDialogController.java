@@ -125,7 +125,7 @@ public class EditPersonDialogController {
 				errorMessage += "No valid weight (must be a double)!\n";
 			}
 		}
-		if (womanCheckBox==null || manCheckBox==null) {
+		if (womanCheckBox==null && manCheckBox==null) {
 			errorMessage += "No sex validation!\n";
 		}
 		if (errorMessage.length() == 0) {
