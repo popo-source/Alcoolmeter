@@ -121,18 +121,23 @@ public class MainOverviewController {
 	private void handleEdit() {
 		Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
 		Alcool selectedAlcool = alcoolTable.getSelectionModel().getSelectedItem();
-        if (selectedPerson != null && selectedAlcool==null) {
+		Alcool selectedSelectedAlcool = selectedAlcoolTable.getSelectionModel().getSelectedItem();
+        if (selectedPerson != null && selectedAlcool==null && selectedSelectedAlcool == null) {
             mainApp.showPersonEditDialogOverview(selectedPerson);
         } else {
-        	if(selectedPerson == null && selectedAlcool != null) {
+        	if(selectedPerson == null && selectedAlcool != null && selectedSelectedAlcool == null) {
         		mainApp.showAlcoolEditDialogOverview(selectedAlcool);
         	} else {
-        		Alert alert = new Alert(AlertType.WARNING);
+        		if(selectedPerson == null && selectedAlcool == null && selectedSelectedAlcool != null) {
+        			mainApp.showQuantityEditQuantityOverview(selectedSelectedAlcool);
+        		} else {
+        			Alert alert = new Alert(AlertType.WARNING);
         		alert.initOwner(mainApp.getPrimaryStage());
         		alert.setTitle("No Selection");
         		alert.setHeaderText("No Item Selected");
         		alert.setContentText("Please select an item in the person and the alcool tables.");
         		alert.showAndWait();
+        		}
         	}
         }
 	}
